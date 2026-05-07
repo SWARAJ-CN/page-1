@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Wedding | The Wedding Co.</title>
+    <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/eva-icons"></script>
+    <style>
+        .card-img {
+            height: 220px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        @media (max-width: 640px) {
+            .card-img {
+                height: 200px;
+            }
+        }
+
+        .sticky-btn-apply {
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased">
+
+    <!-- nav section  -->
+    <div class="w-full bg-pink-700 flex flex-col md:flex-row justify-between items-center gap-4 p-5 md:p-8">
+        <p class="text-white text-3xl md:text-5xl font-bold flex flex-wrap items-center gap-2">
+            <a href="/index.html"
+                class="text-sm md:text-base text-pink-950 underline transition hover:text-white">back/Home</a>
+            <span class="inline-block">Wedding Venues in Noida</span>
+        </p>
+        <div
+            class="border-white overflow-hidden bg-pink-900 rounded-2xl border-2 flex flex-row items-center px-4 text-white w-full md:w-auto max-w-md">
+            <i class="fa fa-search"></i>
+            <input type="search"
+                class="h-full w-full bg-transparent text-white placeholder:text-white px-3 py-2 outline-none appearance-none [&::-webkit-search-cancel-button]:appearance-none"
+                placeholder="Search Vendor...">
+        </div>
+    </div>
+
+    <!-- filter + grid cards -->
+    <div class="flex flex-col lg:flex-row gap-6 lg:gap-14 w-full h-full px-4 sm:px-6 lg:px-32 py-6 lg:py-20">
+
+        <!-- filter section (updated for Noida) -->
+        <div
+            class="h-[70vh] md:h-[78vh] relative overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:hidden px-4 pb-4 border rounded-2xl flex flex-col gap-5 w-full lg:w-80 xl:w-96 shadow-sm bg-white">
+            <p class="font-semibold pt-3 text-lg">Filters</p>
+            <hr>
+            <span class="flex flex-row items-center justify-between">
+                <p class="font-semibold">Event city</p> <i class="fa-solid fa-location-crosshairs"
+                    style="color: rgb(238, 7, 136);"></i>
+            </span>
+            <span class="border rounded-[8px] flex flex-row gap-2 items-center text-gray-600 px-5 py-1.5 bg-gray-50">
+                <i data-eva="pin-outline"></i>
+                <p class="text-sm text-gray-700 px-1">Noida</p>
+            </span>
+            <hr>
+            <div
+                class="p-3 bg-[url('./BangloreAssets/minimap.webp')] bg-cover bg-center items-center justify-center flex h-20 rounded-2xl border-2 w-full">
+                <button
+                    class="rounded-3xl font-semibold text-white bg-pink-400 w-full py-2 px-3 text-sm hover:bg-pink-500 transition">View
+                    on map</button>
+            </div>
+
+            <!-- Locality dropdown (Noida specific) -->
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Locality</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <div
+                        class="w-full border-2 rounded-2xl overflow-hidden flex flex-row gap-1 items-center px-2 text-gray-400">
+                        <i class="fa fa-search"></i>
+                        <input type="search" placeholder="search locality" class="p-3 object-cover outline-none w-full">
+                    </div>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Sector 18</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Sector 62</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Sector 50</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Greater Noida</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Sector 135</p>
+                    </span>
+                    <span class="flex gap-5 mt-5">
+                        <p class="text-pink-500 cursor-pointer">View All</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>No of guests</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">&lt; 100</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">100 - 250</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">250 - 500</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">500 - 1000</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">&gt; 1000</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Pricing Type</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5">
+                        <p class="text-black text-sm underline font-semibold">Per plate</p>
+                        <p class="text-sm text-gray-400">Per day</p>
+                    </span>
+                    <span
+                        class="flex flex-row items-center justify-between gap-2 w-full relative h-2 bg-pink-800 mt-5 rounded-2xl">
+                        <span class="h-5 w-5 bg-pink-100 border border-pink-400 absolute rounded-full left-0"></span>
+                        <span class="h-5 w-5 bg-pink-100 border border-pink-400 absolute rounded-full right-0"></span>
+                    </span>
+                    <span class="w-full flex flex-row justify-between items-center mt-3">
+                        <p class="text-xs bg-gray-200 px-1">₹0</p>
+                        <p class="text-xs bg-gray-200 px-1">₹5,000</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Food preference</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Vegetarian</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Non - Vegetarian</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Vegan</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Venue Type</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">5 Star Venues</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">4 Star Venues</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">3 Star Venues</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Resorts</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Convention Halls</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Farm Houses</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Kalyan Mantapas</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Heritage Property</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Venue Area</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-black font-bold">Indoor</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Banquet Halls</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Function Halls</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Party Halls</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Amphitheatre</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-black font-bold">Outdoor</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Pool Side</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Open Terrace</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Open Lawn</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Facilities</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <p class="text-black font-bold">Catering</p>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">In-house Catering Only</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside Catering Allowed</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside Catering Only</p>
+                    </span>
+                    <p class="text-black font-bold">Alcohol Policy</p>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">In-house Alcohol Only</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside Alcohol Allowed</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside Alcohol Only</p>
+                    </span>
+                    <p class="text-black font-bold">Decor</p>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">In-house Decoration Only</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside Decoration Allowed</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside Decoration Only</p>
+                    </span>
+                    <p class="text-black font-bold">Entertainment</p>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">In-house DJ Only</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside DJ Allowed</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside DJ Only</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Room Counts</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">&lt; 30</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">30 - 60</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">61 - 100</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">100 - 200</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">200 - 1000</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Ratings</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Rated <i class="fa fa-star"></i> 4.5+</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Rated <i class="fa fa-star"></i> 4+</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Rated <i class="fa fa-star"></i> 3+</p>
+                    </span>
+                </div>
+            </label>
+
+            <!--  FILTER BUTTON -->
+            <div class="sticky bottom-3 z-20 mt-6 mb-1 w-full border-0">
+                <button
+                    class="w-full bg-gray-500 hover:bg-gray-600 text-white font-semibold py-3 rounded-xl shadow-lg transition-all duration-200 flex items-center justify-center gap-2 text-base border-0">
+                    <i class="fa-solid fa-sliders-h"></i> Apply Filters
+                </button>
+            </div>
+        </div>
+        <!-- end filter section -->
+
+        <!-- card section -->
+        <div
+            class="flex flex-col gap-6 h-[70vh] md:h-[78vh] overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:hidden w-full">
+            <p class="text-gray-400 text-xs font-semibold">The Wedding Company / Wedding Venues / <span
+                    class="text-gray-600">Noida</span></p>
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 w-full">
+                <p class="text-xl md:text-3xl text-gray-400 font-semibold">Showing <span class="text-gray-600">285
+                        results</span> as per your search criteria</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-sm bg-pink-200 px-3 py-1 rounded-[3px] text-pink-500 cursor-pointer">All</span>
+                    <span
+                        class="text-sm bg-gray-200 px-3 py-1 rounded-[3px] text-gray-500 cursor-pointer">Bestsellers</span>
+                    <span
+                        class="text-sm bg-gray-200 px-3 py-1 rounded-[3px] text-gray-500 cursor-pointer">Premium</span>
+                    <span class="text-sm bg-gray-200 px-3 py-1 rounded-[3px] text-gray-500 cursor-pointer">Budget
+                        Friendly</span>
+                    <span class="text-sm bg-gray-200 px-3 py-1 rounded-[3px] text-gray-500 cursor-pointer">TWC's
+                        choice</span>
+                </div>
+            </div>
+
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                <!-- card 1 - Mahadev Farm -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex flex-row items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full">
+                        <img src="../assets/asset_1.webp" class="card-img">
+                        <p class="absolute bottom-8 bg-pink-500 text-white px-4 left-0 shadow-lg text-sm py-1">Bestseller</p>
+                        <p class="absolute bottom-16 bg-pink-500 text-white px-4 left-0 shadow-lg text-sm py-1">TWC's choice</p>
+                    </div>
+                    <div class="px-5 py-4 space-y-1">
+                        <p class="text-lg font-semibold">Mahadev Farm</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.1 <span class="text-gray-400 text-xs">(2018 users)</span></p>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sector 135, Noida</p>
+                        </span>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹1100+</p> <i class="fa-solid fa-user-group ml-1"></i>
+                            <p>100 - 150</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 2 - ARANYA FARMS -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex flex-row items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full">
+                        <img src="../assets/asset_2.jpg" class="card-img">
+                    </div>
+                    <div class="px-5 py-4 space-y-1">
+                        <p class="text-lg font-semibold">ARANYA FARMS</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.3 <span class="text-gray-400 text-xs">(57 users)</span></p>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Chattarpur, Noida</p>
+                        </span>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹1500+</p> <i class="fa-solid fa-user-group ml-1"></i>
+                            <p>400 - 700</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 3 - Advick Boutique -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex flex-row items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full">
+                        <img src="../assets/asset_3.jpg" class="card-img">
+                    </div>
+                    <div class="px-5 py-4 space-y-1">
+                        <p class="text-lg font-semibold">Advick Boutique</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4 <span class="text-gray-400 text-xs">(26 users)</span></p>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sector 168, Noida</p>
+                        </span>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹1250+</p> <i class="fa-solid fa-user-group ml-1"></i>
+                            <p>150 - 1000</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 4 - Sandal Suites by Lemon Tree Hotels -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex flex-row items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full">
+                        <img src="../assets/asset_4.jpg" class="card-img">
+                    </div>
+                    <div class="px-5 py-4 space-y-1">
+                        <p class="text-lg font-semibold">Sandal Suites, by Lemon Tree Hotels</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.4 <span class="text-gray-400 text-xs">(5054 users)</span></p>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sector 135, Noida</p>
+                        </span>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹2400+</p> <i class="fa-solid fa-user-group ml-1"></i>
+                            <p>300 - 1050</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 5 - The City Light Banquet Hall -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="../assets/asset_5.webp" class="card-img"></div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">The City Light Banquet Hall</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.4 <span class="text-gray-400 text-xs">(159 users)</span></p><span class="flex gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Aimnabad, Noida</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹1200+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>250 - 300</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 6 - Radisson Noida -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="../assets/asset_6.webp" class="card-img"></div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Radisson Noida</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.3 <span class="text-gray-400 text-xs">(9048 users)</span></p><span class="flex gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sector 55, Noida</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹2000+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>150 - 750</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 7 - Riveria Valley Hotel and Resort -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="../assets/asset_7.webp" class="card-img"></div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Riveria Valley Hotel and Resort</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.3 <span class="text-gray-400 text-xs">(32 users)</span></p><span class="flex gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sector 2, Noida</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹2500+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>200 - 4000</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 8 - Park Ascent -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="../assets/asset_8.webp" class="card-img"></div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Park Ascent</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.2 <span class="text-gray-400 text-xs">(5466 users)</span></p><span class="flex gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sector 62, Noida</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹2000+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>60 - 300</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 9 - Nandan Farm -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="../assets/asset_9.webp" class="card-img"></div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Nandan Farm</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.2 <span class="text-gray-400 text-xs">(146 users)</span></p><span class="flex gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Dadri, Noida</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹1400+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>150 - 3000</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 10 - Mahadev Farm (repeat) -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="../assets/asset_10.webp" class="card-img">
+                        <p class="absolute bottom-8 bg-pink-500 text-white px-4 left-0 text-sm py-1">Bestseller</p>
+                        <p class="absolute bottom-16 bg-pink-500 text-white px-4 left-0 text-sm py-1">TWC's choice</p>
+                    </div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Mahadev Farm</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.1 <span class="text-gray-400 text-xs">(2018 users)</span></p><span class="flex gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sector 135, Noida</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹1100+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>100 - 150</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 11 - ARANYA FARMS (repeat) -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="../assets/asset_11.webp" class="card-img"></div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">ARANYA FARMS</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.3 <span class="text-gray-400 text-xs">(57 users)</span></p><span class="flex gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Chattarpur, Noida</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹1500+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>400 - 700</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 12 - Advick Boutique (repeat) -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="../assets/asset_12.jpeg" class="card-img"></div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Advick Boutique</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4 <span class="text-gray-400 text-xs">(26 users)</span></p><span class="flex gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sector 168, Noida</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹1250+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>150 - 1000</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="translate-y-[-0px] flex flex-row flex-wrap gap-4 w-full sticky bottom-0 Z-5 items-center justify-center">
+        <button
+            class="bg-pink-800 text-white font-semibold text-lg rounded-3xl  px-8 py-3 cursor-pointer hover:bg-pink-900  mb-2">Get
+            Free Quote</button>
+        <button
+            class="bg-green-600 text-white font-semibold text-lg rounded-3xl px-8 py-3 cursor-pointer hover:bg-green-700 mb-2"><i
+                class="fa-brands fa-whatsapp"></i> Chat with us</button>
+    </div>
+
+    <!-- Footer - Noida content -->
+    <footer class="mt-4 flex flex-col gap-3 bg-gray-50 px-10 py-5">
+        <p class="text-gray-500 text-xs">Noida has become a popular choice for couples planning weddings in Delhi NCR. The city offers a wide mix of venues, including modern banquet halls, premium resorts, and open-air lawns. With its easy connectivity and variety of venues, Noida makes hosting a wedding both convenient and memorable. The Wedding Company helps you explore the best options by budget, theme, and location, ensuring your planning journey stays smooth and stress-free.</p>
+        <p class="text-gray-500 text-xs">Here you’ll find venues by budget, location, and style to help you plan your dream wedding.</p>
+        <p class="text-black font-semibold text-lg">Wedding Venues in Noida with Price</p>
+        <p class="text-gray-500 text-xs">Noida offers venues for every wedding style, from grand celebrations to small gatherings. With our platform, you can compare options by price, capacity, and services to find the perfect space with ease.</p>
+        
+        <p class="text-black text-base ">Wedding venues under INR 1000 per plate</p>
+        <p class="text-gray-500 text-xs">These budget venues in Noida offer value-packed options that are affordable yet stylish for intimate weddings.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Riveria Valley Hotel and Resort</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Ch. Hariram Palace</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">TravAmigo Riverside Farm & Resort</span></p>
+
+        <p class="text-black text-base ">Wedding venues with Cost between INR 1000 & INR 3000 per plate</p>
+        <p class="text-gray-500 text-xs">Mid-range venues in Noida offer a perfect blend of comfort and elegance, providing excellent facilities at affordable prices.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Mahadev Farm</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Advick Boutique</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">GTL FARMS</span></p>
+
+        <p class="text-black text-base ">Which are the budget wedding venues in Noida under ₹5 lakhs?</p>
+        <p class="text-gray-500 text-xs">For couples on a tight budget, these venues offer beautiful spaces for weddings while keeping costs low.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Radisson Noida</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Signature Banquet and Party Lawn</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Rajdhani Party Lawn</span></p>
+
+        <p class="text-black text-base ">What are the best wedding venues in Noida under ₹10 lakhs?</p>
+        <p class="text-gray-500 text-xs">These venues strike the right balance between affordability and style, making them ideal for budget-conscious couples.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">The White Palace</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">The Dwelling Inn</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Tivoli Omnia</span></p>
+
+        <p class="text-black text-base ">Wedding Venues in Noida Between ₹10-20 Lakhs</p>
+        <p class="text-gray-500 text-xs">If you want a classy wedding without overspending, these venues offer elegant settings at mid-premium prices.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">The Shaurya Banquet</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">The City Pride by Rama</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">ITC Fortune 27 Noida</span></p>
+
+        <p class="text-black text-base ">Luxury Venues ₹20 Lakhs+ (₹3000+ per plate)</p>
+        <p class="text-gray-500 text-xs">For couples dreaming of a lavish celebration, these luxury venues in Noida provide grandeur, premium service, and top-tier experiences.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline text-black">Radisson Blu MBD Hotel Noida</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Jaypee Greens</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline text-black">The Mayfair Grand</span></p>
+
+        <p class="text-black text-2xl font-bold">Top 10 Wedding Venues in Noida With Price & Capacity</p>
+        <p class="text-gray-500 text-xs">1. <span class="underline">Radisson Blu MBD Hotel, Sector 18</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 50-500 guests</li>
+            <li>Price: ₹15-25L+</li>
+            <li>Best For: Luxury destination weddings with adventure-themed experiences.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">2. <span class="underline">The City Pride by Rama, Sector 51</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 130-450 guests</li>
+            <li>Rental Cost: ₹3-5L+</li>
+            <li>Best For: Mid-sized gatherings with versatile banquet halls.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">3. <span class="underline">Milantra Green Banquet, Sector 49</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 100-800 guests</li>
+            <li>Rental Cost: ₹3-5 lakh</li>
+            <li>Best For: Large-scale outdoor weddings with lush lawns.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">4. <span class="underline">Grand Vilas, Sector 116</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 400-1000 guests</li>
+            <li>Rental Cost: ₹2.5-4 lakh</li>
+            <li>Best For: Spacious celebrations with both indoor and outdoor options.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">5. <span class="underline">Riveria Valley Hotel and Resort, Sector 2</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 200-4000 guests</li>
+            <li>Rental Cost: ₹6-10 lakh</li>
+            <li>Best For: Grand events with extensive guest lists and multiple halls.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">6. <span class="underline">Swarn Banquet, Sector 62</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 200-400 guests</li>
+            <li>Rental Cost: ₹2-3 lakh</li>
+            <li>Best For: Intimate to mid-sized weddings with personalized services.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">7. <span class="underline">Park Ascent, Sector 62</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 70-500 guests</li>
+            <li>Rental Cost: ₹1.5-3 lakh</li>
+            <li>Best For: Mid-sized gatherings with comfortable accommodations.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">8. <span class="underline">The White Palace, Sector 70</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 40-150 guests</li>
+            <li>Rental Cost: ₹5-8 lakh</li>
+            <li>Best For: Small, intimate ceremonies with personalized decor.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">9. <span class="underline">Sandal Suites by Lemon Tree Hotels, Sector 135</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 200-400 guests</li>
+            <li>Rental Cost: ₹7-15 lakh</li>
+            <li>Best For: Corporate-style weddings with professional ambiance.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">10. <span class="underline">Golden Tree, Sector 31</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 450-600 guests</li>
+            <li>Rental Cost: ₹0.5-1 lakh</li>
+            <li>Best For: Small, intimate ceremonies with personalized decor.</li>
+        </ul>
+
+        <p class="text-black text-2xl font-bold">Destination Wedding Venues Near Noida</p>
+        <p class="text-gray-500 text-xs">Noida is surrounded by several scenic spots perfect for destination weddings:</p>
+        <ul class="text-gray-500 text-md list-disc px-8">
+            <li><span class="text-black font-semibold">Agra & Fatehpur Sikri:</span> Heritage resorts and palaces ideal for royal-themed weddings.</li>
+            <li><span class="text-black font-semibold">Jaipur:</span> Forts, havelis, and luxury resorts for grand destination celebrations.</li>
+            <li><span class="text-black font-semibold">Rishikesh & Haridwar:</span> Riverside resorts, boutique hotels, and spiritual settings for serene weddings.</li>
+            <li><span class="text-black font-semibold">Mussoorie & Nainital:</span> Hill-station resorts and open lawns with panoramic mountain views.</li>
+            <li><span class="text-black font-semibold">Neemrana:</span> Historic forts and heritage hotels for regal weddings with a vintage charm.</li>
+        </ul>
+
+        <p class="text-black text-2xl font-bold">How to Find the Best Wedding Venues in Noida</p>
+        <p class="text-gray-500 text-xs px-8">Choosing the right wedding venue in Noida depends on your budget, guest list, and event style.  We make it easier by:</p>
+        <ul class="text-gray-500 text-md list-disc px-8">
+            <li>Suggesting hotels, resorts, and banquet halls that fit your budget and guest count.</li>
+            <li>Comparing options across luxury resorts, boutique stays, and outdoor lawns.</li>
+            <li>Reviewing catering, décor, and vendor policies before your booking.</li>
+            <li>Organising site visits and negotiating the best deals for you.</li>
+            <p class="text-gray-500 text-xs mt-2">This ensures your wedding venue matches both your vision and budget.</p>
+        </ul>
+
+        <p class="text-black text-xl font-semibold mt-5">What to Consider Before Booking a Wedding Venue in Noida</p>
+        <ul class="text-gray-500 text-md list-disc px-8">
+            <li><span class="font-semibold text-black">Date:</span> Venues in Noida book fast, so secure your dates early.</li>
+            <li><span class="font-semibold text-black">Guest count:</span> Confirm seating and floating capacity.</li>
+            <li><span class="font-semibold text-black">Budget:</span> Check rental, per-plate rates, and package inclusions.</li>
+            <li><span class="font-semibold text-black">Location:</span> Ensure easy access from Delhi NCR airports or railways.</li>
+            <li><span class="font-semibold text-black">Parking:</span> Verify availability of parking for guests.</li>
+            <li><span class="font-semibold text-black">Timings:</span> Review music curfews, late-night permissions, and multi-day event rules.</li>
+        </ul>
+
+        <p class="text-black text-xl font-semibold mt-5">Frequently asked questions</p>
+        <p class="text-black text-md font-semibold">What is the average cost of wedding venues in Noida?</p>
+        <p class="text-gray-500 text-xs">Luxury resorts in Noida usually cost between ₹6-9 lakhs for a two-day wedding, and higher for an extended celebration. Mid-range venues fall in the ₹4-6 lakh range. Smaller banquets and boutique stays can host weddings under ₹5 lakhs, depending on guest count and services.</p>
+
+        <p class="text-black text-md font-semibold mt-5">Which are the most popular wedding venues in Noida?</p>
+        <p class="text-gray-500 text-xs">Some of the top venues include Jaypee Greens Golf & Spa Resort, Radisson Blu Hotel, ExpoInn, The Shaurya, and Le Grand Regency.</p>
+
+        <p class="text-black text-md font-semibold mt-5">What is the best time of year to get married in Noida?</p>
+        <p class="text-gray-500 text-xs">The ideal season is from November to February, when the weather is pleasant and suitable for outdoor functions.</p>
+
+        <p class="text-black text-md font-semibold mt-5">Do Noida venues allow overnight weddings?</p>
+        <p class="text-gray-500 text-xs">Yes, most resorts and banquet halls in Noida allow overnight stays and multi-day celebrations. However, rules regarding music, outdoor events, and curfews vary by property. Always confirm with the venue in advance.</p>
+
+        <p class="text-black text-md font-semibold mt-5">Which localities near me in Noida have the best wedding venues?</p>
+        <p class="text-gray-500 text-xs">Popular areas for weddings in Noida and Greater Noida include Sector 73, Sector 51, Knowledge Park, Surajpur, and Noida Extension, which offer a mix of luxury resorts, banquet halls, and outdoor lawns.</p>
+
+        <p class="text-black text-md font-semibold mt-5">How to find wedding venues in Noida near me?</p>
+        <p class="text-gray-500 text-xs">With The Wedding Company, you can filter venues by budget, guest capacity, and location. Our team helps with property visits, vendor policies, and bookings so your wedding planning is simple and stress-free.</p>
+
+        <hr class="mt-10 w-full">
+
+        <div class="flex flex-col gap-10 mt-5">
+            <p class="text-black font-semibold text-xl">Types Of Venues in Noida</p>
+            <div class="flex flex-row justify-between flex-wrap gap-5">
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best 5 Star Wedding Venues in Noida</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best 4 Star Wedding Venues in Noida</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best 3 Star Wedding Venues in Noida</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Wedding Resorts in Noida</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Convention Halls in Noida</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Farm House for Wedding in Noida</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Kalyan Mandap/Mantapa in Noida</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Banquet Halls in Noida</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Function Halls in Noida</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Party Halls in Noida</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Pool Side Wedding Venues in Noida</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Marriage Lawns in Noida</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Heritage Properties in Noida</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Open Terraces in Noida</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Amphitheatres in Noida</p>
+                </span>
+            </div>
+        </div>
+
+        <hr class="mt-5 w-full border-pink-200">
+
+        <div class="flex flex-col gap-10 mt-5">
+            <p class="text-black font-semibold text-xl">Venues based on locality</p>
+            <div class="flex flex-row justify-between flex-wrap gap-5">
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Sector 18</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Sector 62</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Greater Noida</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Sector 50</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues In Gurgaon</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues In South Delhi</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues In West Delhi</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues In Ghaziabad</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues In Faridabad</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues In East Delhi</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues In Noida</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues In New Delhi</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues In North Delhi</p>
+                </span>
+            </div>
+        </div>
+
+        <hr class="mt-5 w-full border-pink-200">
+
+        <div class="flex flex-col gap-10 mt-5">
+            <p class="text-black font-semibold text-xl">Destination Wedding Venues</p>
+            <div class="flex flex-row justify-between flex-wrap gap-5">
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Goa</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Udaipur</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Jaipur</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Jim Corbett</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Lonavala</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Rishikesh</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Lakshadweep</p>
+                </span>
+            </div>
+        </div>
+
+        <hr class="mt-5 w-full border-pink-200">
+
+        <div class="flex flex-col gap-10 mt-5">
+            <p class="text-black font-semibold text-xl">Other Wedding Services</p>
+            <div class="flex flex-row gap-72 flex-wrap">
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Photographers in Noida</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Decorators in Noida</p>
+                </span>
+            </div>
+        </div>
+
+        <hr class="mt-5 w-full border-pink-200">
+
+        <div class="flex flex-col gap-10 mt-5">
+            <p class="text-black font-semibold text-xl">Explore Wedding Ideas</p>
+            <div class="flex flex-row justify-between flex-wrap gap-5">
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Bridal Lehenga Designs</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Cakes Ideas</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Invitations Design</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Mehendi Design Photos</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Saree Design</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Blouse Design Photos</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Decoration Ideas</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Photoshoot Poses</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Bridal Makeup</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Jewellery Designs</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Dresses</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Groom Dresses</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Accessories</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Gift Ideas</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Hairstyles</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Pre Wedding Photoshoot Ideas</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Themes</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Venue Ideas</p>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <section
+        class="w-full h-full bg-gradient-to-r from-pink-950 via-purple-950 to-blue-950 px-14 py-10 mt-10 flex flex-row justify-between">
+        <span class="flex flex-col gap-3">
+            <p class="text-xl text-white hover:text-pink-700 font-semibold cursor-none">Company</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Careers</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Register as Partner</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Client Terms</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Vendor Terms</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Privacy Policy</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Refund Policy</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Service Payment Plan</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">About Us</p>
+        </span>
+
+        <span class="flex flex-col gap-3">
+            <p class="text-xl text-white hover:text-pink-700 font-semibold cursor-none">Explore</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Ideas</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Venues</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Decorators</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Photgraphers</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Services</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Invitation Card</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Blog</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Price Beat Challenge</p>
+        </span>
+
+        <span class="flex flex-col gap-3">
+            <p class="text-xl text-white hover:text-pink-700 font-semibold cursor-none">Contact Us</p>
+            <p class="text-sm text-gray-500">For Wedding Services</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa fa-phone"></i> +918884090499
+            </p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">For Customer Support</p>
+            <p class="text-sm text-gray-500">Wedding Photgraphers</p>
+            <p class="text-sm text-black hover:text-pink-700 cursor-pointer"><i class="fa fa-mailbox"></i>
+                support@theweddingcompany.com</p>
+            <p class="text-sm text-gray-500">Bangalore - Bussiness address/operating address</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Ground Floor, 375,</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">5th Mail Rd,HSR Layout Sector 6,
+                Bangaluru,Karnataka 560102</p>
+        </span>
+
+        <span class="flex flex-col gap-3">
+            <p class="text-xl text-white hover:text-pink-700 font-semibold cursor-none">Follow Us On</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa-brands fa-instagram"></i>
+                Instagram</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa-brands fa-facebook"></i>
+                Facebook</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa-brands fa-youtube"></i>
+                Youtube</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa-brands fa-linkedin"></i>
+                LinkedIn</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer flex "><svg
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3500 3500"
+                    class="fill-white hover:fill-pink-700 cursor-pointer"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                    <path
+                        d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z" />
+                </svg> <span class="absolute ml-10 font-semibold">X</span></p>
+        </span>
+    </section>
+    <script src="./script.js"></script>
+    <script>lucide.createIcons();</script>
+    <script>eva.replace();</script>
+</body>
+
+</html>
