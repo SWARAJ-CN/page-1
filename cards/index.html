@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Wedding Invitation Cards | Fully Responsive</title>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <!-- Hero Section - responsive: column on mobile, row on desktop -->
+    <div class="flex flex-col md:flex-row w-full bg-gradient-to-t from-yellow-50 to-yellow-100">
+        <!-- Left content -->
+        <div class="flex flex-col gap-3 py-10 md:py-20 px-5 md:px-10 items-center text-center md:text-left">
+            <p class="font-semibold text-2xl md:text-3xl w-full md:w-80 text-red-950">Create your Wedding Invitation Card</p>
+            <p class="text-sm w-full">It’s your special day. Invite others in a more special way.</p>
+            <button class="bg-purple-700 px-8 md:px-12 py-2 font-bold text-white rounded-xl cursor-pointer w-fit mx-auto md:mx-0">CREATE NOW</button>
+        </div>
+        <!-- Right image -->
+        <div class="flex items-center justify-center w-full p-4">
+            <img class="h-auto max-h-80 w-auto object-contain" src="./card.webp" alt="Wedding invitation hero">
+        </div>
+    </div>
+
+    <!-- Section Title -->
+    <div class="flex flex-col gap-3 w-full items-center justify-center py-8 px-4 text-center">
+        <p class="font-semibold text-2xl md:text-3xl">Pick your wedding card design</p>
+        <p class="text-sm max-w-2xl">Choose from a range of premium designs for your wedding invitation card. Share the happy news of your wedding with loved ones.</p>
+    </div>
+
+    <!-- Cards Grid - fully responsive with Tailwind grid/flex -->
+    <div class="flex flex-wrap gap-6 w-full items-center justify-center px-4 md:px-8 py-4">
+        <!-- Card 1 -->
+        <div class="flex flex-col gap-2 overflow-hidden hover:scale-105 transition-all duration-300 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.5rem)] xl:w-[calc(25%-1.5rem)] max-w-[280px] sm:max-w-none">
+            <img class="w-full h-auto object-cover aspect-[2/3]" src="./card1.webp" alt="Aqua Marble">
+            <p class="font-semibold">Aqua Marble</p>
+            <span class="flex flex-row gap-2 flex-wrap">
+                <p class="font-bold">₹99 <strike class="text-gray-500">₹299</strike></p>
+                <p class="font-bold text-red-500">66% OFF</p>
+            </span>
+        </div>
+        <!-- Card 2 -->
+        <div class="flex flex-col gap-2 overflow-hidden hover:scale-105 transition-all duration-300 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.5rem)] xl:w-[calc(25%-1.5rem)] max-w-[280px] sm:max-w-none">
+            <img class="w-full h-auto object-cover aspect-[2/3]" src="./card2.webp" alt="Golden Petals">
+            <p class="font-semibold">Golden Petals</p>
+            <span class="flex flex-row gap-2 flex-wrap">
+                <p class="font-bold">₹249 <strike class="text-gray-500">₹499</strike></p>
+                <p class="font-bold text-red-500">50% OFF</p>
+            </span>
+        </div>
+        <!-- Card 3 -->
+        <div class="flex flex-col gap-2 overflow-hidden hover:scale-105 transition-all duration-300 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.5rem)] xl:w-[calc(25%-1.5rem)] max-w-[280px] sm:max-w-none">
+            <img class="w-full h-auto object-cover aspect-[2/3]" src="./card3.webp" alt="Aqua Marble variant">
+            <p class="font-semibold">Aqua Marble</p>
+            <span class="flex flex-row gap-2 flex-wrap">
+                <p class="font-bold">₹149 <strike class="text-gray-500">₹399</strike></p>
+                <p class="font-bold text-red-500">62% OFF</p>
+            </span>
+        </div>
+        <!-- Card 4 -->
+        <div class="flex flex-col gap-2 overflow-hidden hover:scale-105 transition-all duration-300 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.5rem)] xl:w-[calc(25%-1.5rem)] max-w-[280px] sm:max-w-none">
+            <img class="w-full h-auto object-cover aspect-[2/3]" src="./card4.webp" alt="Fuchsia Floresta">
+            <p class="font-semibold">Fuchsia Floresta</p>
+            <span class="flex flex-row gap-2 flex-wrap">
+                <p class="font-bold">₹149 <strike class="text-gray-500">₹399</strike></p>
+                <p class="font-bold text-red-500">62% OFF</p>
+            </span>
+        </div>
+        <!-- Card 5 -->
+        <div class="flex flex-col gap-2 overflow-hidden hover:scale-105 transition-all duration-300 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.5rem)] xl:w-[calc(25%-1.5rem)] max-w-[280px] sm:max-w-none">
+            <img class="w-full h-auto object-cover aspect-[2/3]" src="./card5.webp" alt="Kesariya">
+            <p class="font-semibold">Kesariya</p>
+            <span class="flex flex-row gap-2 flex-wrap">
+                <p class="font-bold">₹249 <strike class="text-gray-500">₹499</strike></p>
+                <p class="font-bold text-red-500">50% OFF</p>
+            </span>
+        </div>
+        <!-- Card 6 -->
+        <div class="flex flex-col gap-2 overflow-hidden hover:scale-105 transition-all duration-300 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.5rem)] xl:w-[calc(25%-1.5rem)] max-w-[280px] sm:max-w-none">
+            <img class="w-full h-auto object-cover aspect-[2/3]" src="./card6.webp" alt="Prem Mandir">
+            <p class="font-semibold">Prem Mandir</p>
+            <span class="flex flex-row gap-2 flex-wrap">
+                <p class="font-bold">₹149 <strike class="text-gray-500">₹399</strike></p>
+                <p class="font-bold text-red-500">62% OFF</p>
+            </span>
+        </div>
+        <!-- Card 7 -->
+        <div class="flex flex-col gap-2 overflow-hidden hover:scale-105 transition-all duration-300 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.5rem)] xl:w-[calc(25%-1.5rem)] max-w-[280px] sm:max-w-none">
+            <img class="w-full h-auto object-cover aspect-[2/3]" src="./card7.webp" alt="Mauve">
+            <p class="font-semibold">Mauve</p>
+            <span class="flex flex-row gap-2 flex-wrap">
+                <p class="font-bold">₹149 <strike class="text-gray-500">₹399</strike></p>
+                <p class="font-bold text-red-500">62% OFF</p>
+            </span>
+        </div>
+        <!-- Card 8 -->
+        <div class="flex flex-col gap-2 overflow-hidden hover:scale-105 transition-all duration-300 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.5rem)] xl:w-[calc(25%-1.5rem)] max-w-[280px] sm:max-w-none">
+            <img class="w-full h-auto object-cover aspect-[2/3]" src="./card8.webp" alt="Emerald Royalty">
+            <p class="font-semibold">Emerald Royalty</p>
+            <span class="flex flex-row gap-2 flex-wrap">
+                <p class="font-bold">₹149 <strike class="text-gray-500">₹399</strike></p>
+                <p class="font-bold text-red-500">62% OFF</p>
+            </span>
+        </div>
+        <!-- Card 9 -->
+        <div class="flex flex-col gap-2 overflow-hidden hover:scale-105 transition-all duration-300 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.5rem)] xl:w-[calc(25%-1.5rem)] max-w-[280px] sm:max-w-none">
+            <img class="w-full h-auto object-cover aspect-[2/3]" src="./card9.webp" alt="Blooming Blue">
+            <p class="font-semibold">Blooming Blue</p>
+            <span class="flex flex-row gap-2 flex-wrap">
+                <p class="font-bold">₹249 <strike class="text-gray-500">₹499</strike></p>
+                <p class="font-bold text-red-500">50% OFF</p>
+            </span>
+        </div>
+        <!-- Card 10 -->
+        <div class="flex flex-col gap-2 overflow-hidden hover:scale-105 transition-all duration-300 w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.33%-1.5rem)] xl:w-[calc(25%-1.5rem)] max-w-[280px] sm:max-w-none">
+            <img class="w-full h-auto object-cover aspect-[2/3]" src="./card10.webp" alt="Sasuraal Genda Phool">
+            <p class="font-semibold">Sasuraal Genda Phool</p>
+            <span class="flex flex-row gap-2 flex-wrap">
+                <p class="font-bold">₹149 <strike class="text-gray-500">₹399</strike></p>
+                <p class="font-bold text-red-500">62% OFF</p>
+            </span>
+        </div>
+    </div>
+
+    <!-- Extensive Text Content - fully responsive widths -->
+    <div class="flex flex-row gap-3 max-w-7xl mx-auto p-6 md:p-15">
+        <div class="w-full">
+            <p class="text-2xl font-bold mb-4 text-gray-500">What is a Wedding Invitation Card?</p>
+            <p class="text-gray-500 mb-4 text-sm md:text-xs w-full max-w-full">You’ve found your soulmate. The date is fixed. The venue is booked. All the preparations have started. Now you want to tell your loved ones about the biggest day in your life.</p>
+
+            <p class="text-gray-500 text-sm md:text-xs w-full max-w-full mb-4 leading-5">So, what would be the perfect way for the same? Well, a wedding invitation card should be the first thing which must be coming to your mind. Right? We’re sure that you must have received numerous wedding cards all your life. And you must have a basic idea about an invitation card for a wedding that people usually send. If we were to define it, a wedding invitation card is simply a letter inviting your loved ones to your special day—your wedding day. And since it is your special day, the wedding invitation card design should be top-notch. No, right?</p>
+
+            <p class="text-gray-500 text-sm md:text-xs mb-4 leading-5 w-full max-w-full">Sending a formal invitation through a wedding card has been in the culture for a long time. However, the practice of sending a wedding invitation card has seen many transformations over the years. And since the current time is dominated by technology all around us, the newest trend is to send e-wedding cards or e-wedding invites (online invitation card for wedding) on WhatsApp or email. The reason behind its popularity is the convenience it provides to people who want to send invites for their weddings. Also, the online wedding invitation card option allows people to give an extra personal touch to their invites. They can customize the same by using different templates, photos, innovative texts, etc.</p>
+
+            <p class="text-2xl font-bold mb-4 text-gray-500">How to Make a Digital Wedding Invitation Card Online?</p>
+
+            <p class="text-gray-500 text-sm md:text-xs mb-4 leading-5 w-full max-w-full">Now that you have a basic idea about digital wedding invitation cards, you must want to know how to make the same online. In the age of the Internet, it is really easy to make a digital wedding invitation card. To make your wedding unique, making and designing your e-wedding card is the first and foremost step. When you send your marriage invitation card, you want people to feel happy seeing the news. And that’s why you should put extra effort into making a unique e-wedding invite. Let’s understand how to make a digital wedding card.</p>
+
+            <ol class="list-decimal pl-6 space-y-3 text-gray-700">
+                <li class="text-gray-500 text-sm md:text-xs mb-4 w-full max-w-full leading-5">Since there are different wedding card invitation makers available online, the first step is to choose the right one for you. Check the colours, templates, designs, elements, etc. before choosing the final one.</li>
+                <li class="text-gray-500 text-sm md:text-xs mb-4 w-full max-w-full leading-5">Once you are done with that, you have to choose the wedding invitation card templates. Every e-wedding card maker platform gives you different template options. One small tip: choose the template according to the vibe you want to bring to your wedding.</li>
+                <li class="text-gray-500 text-sm md:text-xs mb-4 w-full max-w-full leading-5">After choosing the theme, you will see the option of customizing your digital wedding card. For this, you will need to fill in a few details—Your name & your partner’s name, wedding date & time, wedding venue, any special invitation message if you want to add, your contact details, etc. Some online wedding card makers also provide you the option to add more than one page to your card.</li>
+                <li class="text-gray-500 text-sm md:text-xs mb-4 w-full max-w-full leading-5">Once you are done filling in the details, you can save/download the card in the desired format. And just like that, your e-wedding card is ready and you can share it with your loved ones online via email, WhatsApp, etc.</li>
+            </ol>
+
+            <p class="text-2xl font-bold mb-4 text-gray-500">What Should a Wedding Invitation Card Include?</p>
+
+            <p class="text-gray-500 text-sm md:text-xs mb-4 w-full max-w-full leading-5">While figuring out the wedding invitation card for your special day, one of the major questions that you face is about the details that should go in your invitation. Well, different people like to add different details to their digital wedding cards. But while making your e-wedding card, you should remember that it should not be overloaded with information; add only the necessary details and not more than that. Simply put, your wedding invitation card tells your loved ones the who, what, when and where of your Shaadi.</p>
+
+            <p class="text-gray-500 text-sm md:text-xs mb-4">Here are some of the details that you must add to your digital wedding invitation card.</p>
+
+            <ol class="list-decimal pl-6 space-y-1 text-gray-700">
+                <li class="text-gray-500 text-sm md:text-xs">A request for attendance & to have fun</li>
+                <li class="text-gray-500 text-sm md:text-xs">Your name & your partner’s name</li>
+                <li class="text-gray-500 text-sm md:text-xs">Date and time of your wedding</li>
+                <li class="text-gray-500 text-sm md:text-xs">Location of your wedding venue (best to attach the directions and Google map link)</li>
+                <li class="text-gray-500 text-sm md:text-xs">Information about your wedding theme & any dress code</li>
+                <li class="text-gray-500 text-sm md:text-xs">Type of reception ( formal, dinner, cocktail, etc.)</li>
+                <li class="text-gray-500 text-sm md:text-xs">RSVP instructions</li>
+            </ol>
+
+            <p class="text-2xl font-bold text-gray-500 py-4">What is the Ideal Time to Send a Digital Wedding Card Invitation?</p>
+
+            <p class="text-gray-500 text-sm md:text-xs mb-3 w-full max-w-full leading-5">Okay, now you know what a digital wedding invitation card is and the details to include in the same, here’s the most important question—when should you send your e-wedding card?</p>
+
+            <p class="text-gray-500 text-sm md:text-xs mb-3 w-full max-w-full leading-5">Nowadays, some people send save-the-dates (telling everyone about the wedding date) before sending the actual digital wedding card to their loved ones. If you are sending it, you should ideally send it four to six months before your wedding. Earlier, if you are planning a destination wedding people can plan accordingly.</p>
+
+            <p class="text-gray-500 text-sm md:text-xs mb-3 w-full max-w-full leading-5">Now let’s come to the ideal time for sending your e-wedding card online. Well, the ideal time frame to send your wedding invitation card is six to eight weeks before your marriage date. The reason behind this time frame is if you send the invite too soon, people might forget about it. If you are sending just one week before your wedding, they might have some priorly committed plans. Also, it’s just rude to send wedding invites at the last minute. So, you should make a list of the people you want to invite and send them the digital wedding card well in advance.</p>
+
+            <p class="text-gray-500 text-sm md:text-xs mb-3 w-full max-w-full leading-5">Also, remember that the ideal time frame changes in case you’re doing a destination wedding instead of a local wedding. So, make sure you account for all these factors before sending an invite.</p>
+
+            <p class="text-2xl font-bold text-gray-500 py-4">Choose from Free Wedding Invitation Templates</p>
+
+            <p class="text-gray-500 text-sm md:text-xs mb-3 w-full max-w-full leading-5">Nowadays, you can send a marriage invitation card online. However, one thing you should remember is people always respect a physical invitation card even though there are leaps and bounds of technological advancements in this category. People still look forward to get the invitation with latest wedding card design to their hands in their house. They feel respected and loved if a person is coming to their home for invitation.</p>
+
+            <p class="text-gray-500 text-sm md:text-xs mb-3 w-full max-w-full leading-5">However, sending wedding invitation card through WhatsApp or Email or any other digital mode has become very popular for the last year. First, it’s convenient. Second, it is cost-efficient. And third, it’s environment-friendly also! Some people opt for both type of wedding invitation cards. They also make the physical card by choosing the wedding invitation cards template. You can find the tons of latest designs online both for physical cards and online cards. So, it’s upto you at the end</p>
+
+            <p class="text-2xl font-bold text-gray-500 py-4">Different Types of Digital Wedding Invitation Cards</p>
+
+            <p class="text-gray-500 text-sm md:text-xs mb-3 w-full max-w-full leading-5">A digital wedding invitation card can be of many types in the current age. It’s one of the most special days in your life and your wedding invitation card should reflect the same. There are different types of digital wedding invitation card templates available online - single-page, multi-page, save-the-date cards, pastel, traditional, modern, floral, minimal, detail-heavy, elemental, city-based, character-based, etc.</p>
+
+            <p class="text-gray-500 text-sm md:text-xs mb-3 w-full max-w-full leading-5">Apart from choosing the different types, you can always try something new and creative by adding a personal touch to your e-wedding card. You can always make it the way you want. After all, it’s your special day. So, if you want a certain wedding card design or a particular wedding card format you saved on Pinterest, go for it! There are extremely low chances that you will send your wedding invitation card again in your life. So, better do it in the right way!</p>
+
+            <p class="text-2xl font-bold text-gray-500 py-4">Frequently Asked Questions (FAQs)</p>
+
+            <p class="text-2xl font-bold text-gray-500 py-2">How long does it take to prepare a wedding card using designs online?</p>
+            <p class="text-gray-500 text-sm md:text-xs mb-3 w-full max-w-full leading-5">With so many online wedding card maker tools available online, you can make your digital wedding card invitation in no time. Just go to one of the online tools, choose the template or theme, fill in your details and you will be able to download your e-wedding card instantly. Some platforms also give you option to share it directly on WhatsApp or Email.</p>
+
+            <p class="text-2xl font-bold text-gray-500 py-2">How much time before should you send the e-invite?</p>
+            <p class="text-gray-500 text-sm md:text-xs mb-3 w-full max-w-full leading-5">You should send your wedding e-invite as soon as you’re done making your online wedding invitation card. The better your guests receive the card, the better it would be for them to make time in their calendar for your wedding.</p>
+
+            <p class="text-2xl font-bold text-gray-500 py-2">Can you make an e-invite by yourself for your wedding?</p>
+            <p class="text-gray-500 text-sm md:text-xs mb-3 w-full max-w-full leading-5">Yes, sure! You can make the online wedding card totally by yourself! It’s so easy to do that.</p>
+
+            <p class="text-2xl font-bold text-gray-500 py-2">What all can you include in an e-invite?</p>
+            <p class="text-gray-500 text-sm md:text-xs mb-3 w-full max-w-full leading-5">It totally depends on you. It can be as detailed or as simple you like. People usually incorporate details like name of the bride & groom, date & time of the wedding, venue details, RSVP option, dress code, gift preferences, etc.</p>
+        </div>
+    </div>
+
+    <!-- Footer - already uses responsive grid -->
+    <footer class="bg-gradient-to-r from-blue-900 to-indigo-900 text-white py-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+                <h2 class="font-semibold text-lg mb-4">Company</h2>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li class="text-white">Careers</li>
+                    <li class="text-white">Register as Partner</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="font-semibold text-lg mb-4">Explore</h2>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li class="text-white">Wedding Ideas</li>
+                    <li class="text-white">Wedding Decorators</li>
+                    <li class="text-white">Wedding Venues</li>
+                    <li class="text-white">Wedding Photographers</li>
+                    <li class="text-white">Wedding Invitation Card</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="font-semibold text-lg mb-4">Contact Us</h2>
+                <p class="text-sm text-gray-300">For Wedding Services</p>
+                <p class="mt-2 text-sm text-gray-300">+91 9538127163</p>
+            </div>
+            <div>
+                <h2 class="font-semibold text-lg mb-4">Follow us on</h2>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li><a href="#" class="flex items-center gap-2 text-white"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    <li><a href="#" class="flex items-center gap-2 text-white"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#" class="flex items-center gap-2 text-white"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#" class="flex items-center gap-2 text-white"><i class="fab fa-x-twitter"></i> X</a></li>
+                    <li><a href="#" class="flex items-center gap-2 text-white"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-8 pt-4">
+            <p class="text-center text-xs text-gray-400 px-6">Disclaimer: To make your experience better we might use your details for marketing purposes. Our wedding experts might contact to understand your need and help you get high quality wedding services.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
