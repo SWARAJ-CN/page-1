@@ -1,0 +1,40 @@
+#logo {
+    width: 15rem;
+}
+
+#main-page {
+    background: #fffee0;
+    background: linear-gradient(165deg, rgba(255, 254, 224, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    height: 100vh;
+
+}
+
+#heading1 {
+    background-color: rgb(138, 61, 120);
+    font-size: 1.6rem;
+}
+
+
+table {
+    border-collapse: collapse;
+
+    width: 100%;
+}
+
+
+th,
+td {
+    border: 1px solid oklch(87.9% 0.169 91.605);
+    padding: 12px;
+    text-align: left;
+}
+
+#footer-logo {
+    width: 18rem;
+}
+#terms p{
+    font-weight: 300;
+}
+#footer-links ul li a:hover{
+    color: #fc8181;
+}
