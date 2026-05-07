@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Wedding | The Wedding Co.</title>
+    <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/eva-icons"></script>
+    <style>
+        .card-img {
+            height: 220px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        @media (max-width: 640px) {
+            .card-img {
+                height: 200px;
+            }
+        }
+
+        .sticky-btn-apply {
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased">
+
+    <!-- nav section  -->
+    <div class="w-full bg-pink-700 flex flex-col md:flex-row justify-between items-center gap-4 p-5 md:p-8">
+        <p class="text-white text-3xl md:text-5xl font-bold flex flex-wrap items-center gap-2">
+            <a href="/index.html"
+                class="text-sm md:text-base text-pink-950 underline transition hover:text-white">back/Home</a>
+            <span class="inline-block">Wedding Venues in Bengaluru</span>
+        </p>
+        <div
+            class="border-white overflow-hidden bg-pink-900 rounded-2xl border-2 flex flex-row items-center px-4 text-white w-full md:w-auto max-w-md">
+            <i class="fa fa-search"></i>
+            <input type="search"
+                class="h-full w-full bg-transparent text-white placeholder:text-white px-3 py-2 outline-none appearance-none [&::-webkit-search-cancel-button]:appearance-none"
+                placeholder="Search Vendor...">
+        </div>
+    </div>
+
+    <!-- filter + grid cards -->
+    <div class="flex flex-col lg:flex-row gap-6 lg:gap-14 w-full h-full px-4 sm:px-6 lg:px-32 py-6 lg:py-20">
+
+        <!-- filter section -->
+        <div
+            class="h-[70vh] md:h-[78vh] relative overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:hidden px-4 pb-4 border rounded-2xl flex flex-col gap-5 w-full lg:w-80 xl:w-96 shadow-sm bg-white">
+            <p class="font-semibold pt-3 text-lg">Filters</p>
+            <hr>
+            <span class="flex flex-row items-center justify-between">
+                <p class="font-semibold">Event city</p> <i class="fa-solid fa-location-crosshairs"
+                    style="color: rgb(238, 7, 136);"></i>
+            </span>
+            <span class="border rounded-[8px] flex flex-row gap-2 items-center text-gray-600 px-5 py-1.5 bg-gray-50">
+                <i data-eva="pin-outline"></i>
+                <p class="text-sm text-gray-700 px-1">Bengaluru</p>
+            </span>
+            <hr>
+            <div
+                class="p-3 bg-[url('./BangloreAssets/minimap.webp')] bg-cover bg-center items-center justify-center flex h-20 rounded-2xl border-2 w-full">
+                <button
+                    class="rounded-3xl font-semibold text-white bg-pink-400 w-full py-2 px-3 text-sm hover:bg-pink-500 transition">View
+                    on map</button>
+            </div>
+
+            <!-- All filter dropdowns  -->
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Locality</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <div
+                        class="w-full border-2 rounded-2xl overflow-hidden flex flex-row gap-1 items-center px-2 text-gray-400">
+                        <i class="fa fa-search"></i>
+                        <input type="search" placeholder="search locality" class="p-3 object-cover outline-none w-full">
+                    </div>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Rajajinagar</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">J P Nagar</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Election City</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Whitefield</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Hebbal</p>
+                    </span>
+                    <span class="flex gap-5 mt-5">
+                        <p class="text-pink-500 cursor-pointer">View All</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>No of guests</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">&lt; 100</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">100 - 250</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">250 - 500</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">500 - 1000</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">&gt; 1000</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Pricing Type</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5">
+                        <p class="text-black text-sm underline font-semibold">Per plate</p>
+                        <p class="text-sm text-gray-400">Per day</p>
+                    </span>
+                    <span
+                        class="flex flex-row items-center justify-between gap-2 w-full relative h-2 bg-pink-800 mt-5 rounded-2xl">
+                        <span class="h-5 w-5 bg-pink-100 border border-pink-400 absolute rounded-full left-0"></span>
+                        <span class="h-5 w-5 bg-pink-100 border border-pink-400 absolute rounded-full right-0"></span>
+                    </span>
+                    <span class="w-full flex flex-row justify-between items-center mt-3">
+                        <p class="text-xs bg-gray-200 px-1">₹0</p>
+                        <p class="text-xs bg-gray-200 px-1">₹5,000</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Food preference</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Vegetarian</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Non - Vegetarian</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Vegan</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Venue Type</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">5 Star Venues</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">4 Star Venues</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">3 Star Venues</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Resorts</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Convention Halls</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Farm Houses</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Kalyan Mantapas</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Heritage Property</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Venue Area</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-black font-bold">Indoor</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Banquet Halls</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Function Halls</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Party Halls</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Amphitheatre</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-black font-bold">Outdoor</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Pool Side</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Open Terrace</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Open Lawn</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Facilities</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <p class="text-black font-bold">Catering</p>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">In-house Catering Only</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside Catering Allowed</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside Catering Only</p>
+                    </span>
+                    <p class="text-black font-bold">Alcohol Policy</p>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">In-house Alcohol Only</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside Alcohol Allowed</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside Alcohol Only</p>
+                    </span>
+                    <p class="text-black font-bold">Decor</p>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">In-house Decoration Only</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside Decoration Allowed</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside Decoration Only</p>
+                    </span>
+                    <p class="text-black font-bold">Entertainment</p>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">In-house DJ Only</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside DJ Allowed</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside DJ Only</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Room Counts</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">&lt; 30</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">30 - 60</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">61 - 100</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">100 - 200</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">200 - 1000</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Ratings</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Rated <i class="fa fa-star"></i> 4.5+</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Rated <i class="fa fa-star"></i> 4+</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Rated <i class="fa fa-star"></i> 3+</p>
+                    </span>
+                </div>
+            </label>
+
+            <!--  FILTER BUTTON -->
+            <div class="sticky bottom-3 z-20 mt-6 mb-1 w-full border-0">
+                <button
+                    class="w-full bg-gray-500 hover:bg-gray-600 text-white font-semibold py-3 rounded-xl shadow-lg transition-all duration-200 flex items-center justify-center gap-2 text-base border-0">
+                    <i class="fa-solid fa-sliders-h"></i> Apply Filters
+                </button>
+            </div>
+        </div>
+        <!-- end filter section -->
+
+        <!-- card section -->
+        <div
+            class="flex flex-col gap-6 h-[70vh] md:h-[78vh] overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:hidden w-full">
+            <p class="text-gray-400 text-xs font-semibold">The Wedding Company / Wedding Venues / <span
+                    class="text-gray-600">Bengaluru</span></p>
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 w-full">
+                <p class="text-xl md:text-3xl text-gray-400 font-semibold">Showing <span class="text-gray-600">1574
+                        results</span> as per your search criteria</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-sm bg-pink-200 px-3 py-1 rounded-[3px] text-pink-500 cursor-pointer">All</span>
+                    <span
+                        class="text-sm bg-gray-200 px-3 py-1 rounded-[3px] text-gray-500 cursor-pointer">Bestsellers</span>
+                    <span
+                        class="text-sm bg-gray-200 px-3 py-1 rounded-[3px] text-gray-500 cursor-pointer">Premium</span>
+                    <span class="text-sm bg-gray-200 px-3 py-1 rounded-[3px] text-gray-500 cursor-pointer">Budget
+                        Friendly</span>
+                    <span class="text-sm bg-gray-200 px-3 py-1 rounded-[3px] text-gray-500 cursor-pointer">TWC's
+                        choice</span>
+                </div>
+            </div>
+
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                <!-- card 1 - The Woodrose -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex flex-row items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full">
+                        <img src="./BangloreAssets/asset_1.webp" class="card-img">
+                        <p class="absolute bottom-16 bg-pink-500 text-white px-4 left-0 shadow-lg text-sm py-1">TWC's choice</p>
+                        <p class="absolute bottom-0 bg-yellow-500 text-white px-4 left-0 shadow-lg text-sm py-1">Premium</p>
+                    </div>
+                    <div class="px-5 py-4 space-y-1">
+                        <p class="text-lg font-semibold">The Woodrose</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.3 <span class="text-gray-400 text-xs">(4744 users)</span></p>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i
+                                class="fa-solid fa-location-dot"></i>
+                            <p>JP Nagar, Bengaluru</p>
+                        </span>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i
+                                data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹1200+</p> <i class="fa-solid fa-user-group ml-1"></i>
+                            <p>40 - 400</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 2 - Moments Bangalore -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex flex-row items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full">
+                        <img src="./BangloreAssets/asset_2.webp" class="card-img">
+                        <p class="absolute bottom-8 bg-pink-500 text-white px-4 left-0 shadow-lg text-sm py-1">Bestseller</p>
+                        <p class="absolute bottom-16 bg-pink-500 text-white px-4 left-0 shadow-lg text-sm py-1">TWC's choice</p>
+                    </div>
+                    <div class="px-5 py-4 space-y-1">
+                        <p class="text-lg font-semibold">Moments Bangalore</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 5 <span class="text-gray-400 text-xs">(11 users)</span></p>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i
+                                class="fa-solid fa-location-dot"></i>
+                            <p>Nelaguli, Bengaluru</p>
+                        </span>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i
+                                data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹600+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>100 - 450</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 3 - Panchavati Retreat -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex flex-row items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full">
+                        <img src="./BangloreAssets/asset_3.webp" class="card-img">
+                        <p class="absolute bottom-0 bg-yellow-500 text-white px-4 left-0 shadow-lg text-sm py-1">Premium</p>
+                    </div>
+                    <div class="px-5 py-4 space-y-1">
+                        <p class="text-lg font-semibold">Panchavati Retreat</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 5 <span class="text-gray-400 text-xs"></span></p>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i
+                                class="fa-solid fa-location-dot"></i>
+                            <p>Nettigere, Bengaluru</p>
+                        </span>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i
+                                data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹700+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>800 - 1500</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 4 - Safina Banquets -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex flex-row items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full">
+                        <img src="./BangloreAssets/asset_4.webp" class="card-img">
+                        <p class="absolute bottom-8 bg-green-500 text-white px-4 left-0 shadow-lg text-sm py-1">Budget Friendly</p>
+                        <p class="absolute bottom-16 bg-blue-500 text-white px-4 left-0 shadow-lg text-sm py-1">Upto 50% savings</p>
+                    </div>
+                    <div class="px-5 py-4 space-y-1">
+                        <p class="text-lg font-semibold">Safina Banquets</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.2 <span class="text-gray-400 text-xs">(208 users)</span></p>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i
+                                class="fa-solid fa-location-dot"></i>
+                            <p>Shivaji Nagar, Bengaluru</p>
+                        </span>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i
+                                data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹200+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>150 - 350</p>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- card 5 - Aura By Area83 -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="./BangloreAssets/asset_5.webp"
+                            class="card-img">
+                        <p class="absolute bottom-8 bg-pink-500 text-white px-4 left-0 text-sm py-1">Bestseller</p>
+                        <p class="absolute bottom-16 bg-pink-500 text-white px-4 left-0 text-sm py-1">TWC's choice</p>
+                        <p class="absolute bottom-0 bg-yellow-500 text-white px-4 left-0 text-sm py-1">Premium</p>
+                    </div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Aura By Area83 - Luxury weddings & Events Venue</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.1 <span class="text-gray-400 text-xs">(13091 users)</span></p><span class="flex gap-2 text-gray-500"><i
+                                class="fa-solid fa-location-dot"></i>
+                            <p>Bannerghatta Road, Bengaluru</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee"
+                                class="w-4"></i>
+                            <p>Per plate ₹1000+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>500 - 1000</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 6 - MRF Greens Pavilion -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="./BangloreAssets/asset_6.jpg"
+                            class="card-img">
+                        <p class="absolute bottom-8 bg-green-500 text-white px-4 left-0 text-sm py-1">Budget Friendly</p>
+                    </div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">MRF Greens Pavilion</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 5 <span class="text-gray-400 text-xs"></span></p><span class="flex gap-2 text-gray-500"><i
+                                class="fa-solid fa-location-dot"></i>
+                            <p>Chikkaluar Road, Bengaluru</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee"
+                                class="w-4"></i>
+                            <p>Per plate ₹200+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>450 - 1000</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 7 - Bella Ciao Resort -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="./BangloreAssets/asset_7.jpeg"
+                            class="card-img">
+                        <p class="absolute bottom-0 bg-yellow-500 text-white px-4 left-0 text-sm py-1">Premium</p>
+                    </div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Bella Ciao Resort</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 5 <span class="text-gray-400 text-xs"></span></p><span class="flex gap-2 text-gray-500"><i
+                                class="fa-solid fa-location-dot"></i>
+                            <p>Jalahalli East, Bengaluru</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee"
+                                class="w-4"></i>
+                            <p>Per plate ₹899+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>500 - 2000</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 8 - GK Hill View Resort -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="./BangloreAssets/asset_8.jpg"
+                            class="card-img">
+                        <p class="absolute bottom-0 bg-yellow-500 text-white px-4 left-0 text-sm py-1">Premium</p>
+                    </div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">GK Hill View Resort</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 5 <span class="text-gray-400 text-xs"></span></p><span class="flex gap-2 text-gray-500"><i
+                                class="fa-solid fa-location-dot"></i>
+                            <p>Muthukadahalli, Bengaluru</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee"
+                                class="w-4"></i>
+                            <p>Per plate ₹900+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>70 - 1000</p>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- card 9 - Valley Vibes Resort -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="./BangloreAssets/asset_9.webp"
+                            class="card-img">
+                        <p class="absolute bottom-0 bg-yellow-500 text-white px-4 left-0 text-sm py-1">Premium</p>
+                    </div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Valley Vibes Resort</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 5 <span class="text-gray-400 text-xs"></span></p><span class="flex gap-2 text-gray-500"><i
+                                class="fa-solid fa-location-dot"></i>
+                            <p>Ramanagara, Bengaluru</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee"
+                                class="w-4"></i>
+                            <p>Per plate ₹475+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>600 - 900</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 10 - The Woodrose (repeat) -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="./BangloreAssets/asset_11.webp"
+                            class="card-img">
+                        <p class="absolute bottom-16 bg-pink-500 text-white px-4 left-0 text-sm py-1">TWC's choice</p>
+                        <p class="absolute bottom-0 bg-yellow-500 text-white px-4 left-0 text-sm py-1">Premium</p>
+                    </div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">The Woodrose</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.3 <span class="text-gray-400 text-xs">(4744 users)</span></p><span class="flex gap-2 text-gray-500"><i
+                                class="fa-solid fa-location-dot"></i>
+                            <p>JP Nagar, Bengaluru</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee"
+                                class="w-4"></i>
+                            <p>Per plate ₹1200+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>40 - 400</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 11 - Moments Bangalore (repeat) -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="./BangloreAssets/12.webp" class="card-img">
+                        <p class="absolute bottom-8 bg-pink-500 text-white px-4 left-0 text-sm py-1">Bestseller</p>
+                        <p class="absolute bottom-16 bg-pink-500 text-white px-4 left-0 text-sm py-1">TWC's choice</p>
+                    </div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Moments Bangalore</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 5 <span class="text-gray-400 text-xs">(11 users)</span></p><span class="flex gap-2 text-gray-500"><i
+                                class="fa-solid fa-location-dot"></i>
+                            <p>Nelaguli, Bengaluru</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee"
+                                class="w-4"></i>
+                            <p>Per plate ₹600+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>100 - 450</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 12 - Panchavati Retreat (repeat) -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="./BangloreAssets/13.webp" class="card-img">
+                        <p class="absolute bottom-0 bg-yellow-500 text-white px-4 left-0 text-sm py-1">Premium</p>
+                    </div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Panchavati Retreat</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 5 <span class="text-gray-400 text-xs"></span></p><span class="flex gap-2 text-gray-500"><i
+                                class="fa-solid fa-location-dot"></i>
+                            <p>Nettigere, Bengaluru</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee"
+                                class="w-4"></i>
+                            <p>Per plate ₹700+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>800 - 1500</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="translate-y-[-0px] flex flex-row flex-wrap gap-4 w-full sticky bottom-0 Z-5 items-center justify-center">
+        <button
+            class="bg-pink-800 text-white font-semibold text-lg rounded-3xl  px-8 py-3 cursor-pointer hover:bg-pink-900  mb-2">Get
+            Free Quote</button>
+        <button
+            class="bg-green-600 text-white font-semibold text-lg rounded-3xl px-8 py-3 cursor-pointer hover:bg-green-700 mb-2"><i
+                class="fa-brands fa-whatsapp"></i> Chat with us</button>
+    </div>
+
+    <footer class="mt-4 flex flex-col gap-3 bg-gray-50 px-10 py-5">
+        <p class="text-gray-500 text-xs">Bangalore is one of India’s top wedding destinations, home to luxury hotels,
+            heritage properties, and lush farmhouses. Couples often choose iconic spaces like The Tamarind Tree, The
+            Leela Palace, and ITC Gardenia for their special day. With so many more options available, planning your
+            wedding can get overwhelming without any help.</p>
+        <p class="text-gray-500 text-xs">Here you’ll find venues by budget, location, and style to help you plan your
+            dream wedding.</p>
+        <p class="text-black font-semibold text-lg">Wedding venues in Bangalore with Price</p>
+        <p class="text-gray-500 text-xs">Want to celebrate your special day in Bangalore? The Wedding Company helps you
+            find the right venue, from elegant banquet halls to open-air resorts. With hundreds of options across the
+            city, we match spaces to your budget and guest list so you can enjoy the journey while we handle the
+            details.</p>
+        <p class="text-black text-base ">Wedding venues under INR 1000 per plate</p>
+        <p class="text-gray-500 text-xs">If you are looking for low budget wedding venues in Bangalore, these places
+            give you value without stretching your budget.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Shibravyi Courtyard</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Kindom Convention Centre</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Sri sai Rukmini Mahal</span></p>
+
+        <p class="text-black text-base ">Wedding venues with a cost between INR 1000 & INR 3000 per plate</p>
+        <p class="text-gray-500 text-xs">These are great value for money wedding venues in Bangalore, offering style and
+            comfort within a mid-range budget.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">The Woodrose</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Clarion Bangalore</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Aura by Area 83</span></p>
+
+        <p class="text-black text-base ">Which are the budget wedding venues in Bangalore under ₹5 lakhs?</p>
+        <p class="text-gray-500 text-xs">For couples searching for affordable wedding venues in Bangalore, these options
+            keep costs manageable without compromising on aesthetics.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">MRF Greens Pavilion</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Lago Palms Resort</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Aura Foothills</span></p>
+
+        <p class="text-black text-base ">What are the best wedding venues in Bangalore under ₹10 lakhs?</p>
+        <p class="text-gray-500 text-xs">These are some of the most popular budget-friendly wedding venues in Bangalore,
+            ideal for stylish weddings.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">The Beginning</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">The Kalanivasthi</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Panchavati The Pavilion</span></p>
+
+        <p class="text-black text-base ">Wedding Venues in Bangalore Between ₹10-20 Lakhs?</p>
+        <p class="text-gray-500 text-xs">For an elegantly breathtaking celebration that leaves a mark, these are some of
+            the most cost-effective wedding venues.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Amita Rasa</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Signature Club Resort</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">JW Marriott Prestige Golfshire Resort</span></p>
+
+        <p class="text-black text-base ">Luxury Venues ₹20 Lakhs+ (₹3000+ per plate)</p>
+        <p class="text-gray-500 text-xs">For those who dream of a grand celebration, these are the most sought-after
+            luxury wedding venues in Bangalore.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline text-black">The Leela Bhartiya City Bengaluru</span>
+        </p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Taj West End, Vasanth Nagar</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline text-black">Hilton Bengaluru Embassy Manyata Business
+                Park</span></p>
+
+        <p class="text-black text-2xl font-bold">Top 10 Wedding Venues in Bangalore With Price & Capacity</p>
+        <p class="text-gray-500 text-xs">These are some of the top wedding venues in Bangalore where you can tie the
+            knot.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">ITC Gardenia, Ashok Nagar</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 100-750 guests</li>
+            <li>Price: ₹15-18L+ per day</li>
+            <li>Best for luxury city weddings.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">2.<span class="underline"> Amita Rasa, Nandi Hills</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 300-800 guests</li>
+            <li>Price: ₹14-24L+ per day</li>
+            <li>Best for nature-embraced weddings.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">3.<span class="underline"> Tamara Weddings and Events Venue, JP Nagar</span>
+        </p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 600-800 guests</li>
+            <li>Price: ₹90K-16.5L+ per day</li>
+            <li>Best for intimate outdoor weddings..</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">4.<span class="underline"> Taj West End, Race Course Road</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 50-1200 guests</li>
+            <li>Price: ₹18-25L+ per day</li>
+            <li>Best for heritage-style luxury weddings.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">5.<span class="underline"> Le Méridien, Vasanth Nagar</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 100-600 guests</li>
+            <li>Price: ₹10-20L+ per day</li>
+            <li>Best for stylish hotel weddings.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">6.<span class="underline"> The Tamarind Tree, Kanakapura Road</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 10-500 guests</li>
+            <li>Price: ₹15-20L+ per day</li>
+            <li>Best for garden and outdoor weddings.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">7.<span class="underline"> ITC Windsor, Palace Grounds</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 200-450 guests</li>
+            <li>Price: ₹12-18L+ per day</li>
+            <li>Best for regal banquet weddings.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">8.<span class="underline"> Gayatri Vihar Sagar, Palace Grounds</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 400-10000 guests</li>
+            <li>Price: ₹15-24L+ per day</li>
+            <li>Best for grand palace ground weddings.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">9.<span class="underline"> The Leela Palace, Kodihalli</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 120-1200 guests</li>
+            <li>Price: ₹25-45L+ per day</li>
+            <li>Best for lavish, intimate weddings.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">10.<span class="underline"> Signature Club Resort, Devanahalli</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 200-800 guests</li>
+            <li>Price: ₹16-19L+ per day</li>
+            <li>Best for lush resort-style weddings.</li>
+        </ul>
+
+         <p class="text-black text-2xl font-bold">Destination Wedding Venues Near Bangalore</p>
+            <ul class="text-gray-500 text-md list-disc px-8">
+            <li><span class="text-black font-semibold">Coorg:</span> Famous for coffee estates, hill views, and boutique resorts.</li>
+            <li><span class="text-black font-semibold">Mysore:</span> Known for palaces, heritage hotels, and luxury resorts.</li>
+            <li><span class="text-black font-semibold">Outskirts of Bangalore:</span> Farmhouses and eco-resorts near Kanakapura Road, Yelahanka, and Devanahalli.</li>
+            <li><span class="text-black font-semibold">Nandi Hills:</span> Loved for its cool weather and hilltop resorts. Sunrise ceremonies here are especially popular.</li>
+            <li><span class="text-black font-semibold">Kabini:</span> Offers riverbank resorts and jungle lodges a few hours away from the city.</li>
+            <li><span class="text-black font-semibold">Chikmagalur:</span> Always coveted for its coffee plantations and misty hills.</li>
+        </ul>
+
+        <p class="text-black text-2xl font-bold">How to Find the Best Wedding Venues in Bangalore</p>
+        <p  class="text-gray-500 text-xs px-8">Finding the right venue means balancing budget, guest count, and location. The Wedding Company makes this easy with end-to-end support. With our top-notch website and services, we help you:</p>
+            <ul class="text-gray-500 text-md list-disc px-8">
+            <li>Shortlist venues by guest count and budget</li>
+            <li>Compare options across the city and the outskirts</li>
+            <li>Check food, decor, and policy details</li>
+            <li>Arrange visits and negotiate prices</li>
+            <p  class="text-gray-500 text-xs mt-2">This saves hours of research and ensures you book a venue that fits your style and budget.</p>
+        </ul>
+
+        <p class="text-black text-xl font-semibold mt-5">Frequently asked questions</p>
+        <p class="text-black text-md font-semibold">What is the average cost of wedding venues in Bangalore?</p>
+        <p class="text-gray-500 text-xs">Most venues charge ₹1,200-₹2,500 per plate. A full one-day wedding usually ranges from ₹10-25 lakhs, depending on guest count, decor, and more.</p>
+
+        <p class="text-black text-md font-semibold mt-5">Which are the most popular wedding venues in Bangalore?</p>
+        <p class="text-gray-500 text-xs">Favourites include The Tamarind Tree, ITC Gardenia, The Leela Palace, Royalton Leisure, and resorts near Nandi Hills.</p>
+
+        <p class="text-black text-md font-semibold mt-5">What is the best time of year to get married in Bangalore?</p>
+        <p class="text-gray-500 text-xs">The best months are October to February. The weather is cooler, and outdoor venues are more comfortable.</p>
+
+
+        <p class="text-black text-md font-semibold mt-5">Do Bangalore venues allow overnight weddings?</p>
+        <p class="text-gray-500 text-xs">Most venues in the city allow overnight weddings for the couple, but do not allow music to play beyond 10 pm. Outskirts resorts may allow late-night or overnight weddings with prior approval.</p>
+
+        <p class="text-black text-md font-semibold mt-5">Which localities near me in Bangalore have the best wedding venues?</p>
+        <p class="text-gray-500 text-xs">Popular areas include Whitefield, Yelahanka, Kanakapura Road, Hebbal, and Vasanth Nagar.</p>
+
+        <p class="text-black text-md font-semibold mt-5">How to find wedding venues in Bangalore near me?</p>
+        <p class="text-gray-500 text-xs">Use The Wedding Company’s platform to filter venues by budget, guest list, and location, then visit shortlisted options.</p>
+
+        <hr class="mt-10 w-full ">
+
+
+        <div class="flex flex-col gap-10 mt-5">
+            <p class="text-black font-semibold text-xl">Types Of Venues in Bengaluru</p>
+            <div class="flex flex-row justify-between">
+                <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best 5 Star Wedding Venues in Bengaluru</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Farm House for Wedding in Bengaluru</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Pool Side Wedding Venues in Bengaluru</p>
+                </span>
+
+                 <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best 4 Star Wedding Venues in Bengaluru</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Kalyan Mandap/Mantapa in Bengaluru</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Marriage Lawns in Bengaluru</p>
+                </span>
+
+                 <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best 3 Star Wedding Venues in Bengaluru</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Banquet Halls in Bengaluru</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Heritage Properties in Bengaluru</p>
+                </span>
+
+                <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Wedding Resorts in Bengaluru</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Function Halls in Bengaluru</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Open Terraces in Bengaluru</p>
+                </span>
+
+                <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Convention Halls in Bengaluru</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Party Halls in Bengaluru</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Amphitheatres in Bengaluru</p>
+                </span>
+            </div>
+        </div>
+
+        <hr class="mt-5 w-full border-pink-200">
+
+
+        <div class="flex flex-col gap-10 mt-5">
+            <p class="text-black font-semibold text-xl">Venues by Top Localities</p>
+            <div class="flex flex-row justify-between">
+                <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Jayanagar</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Electronic City</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Basavanagudi</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Kanakapura Road</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Naagarabhaavi</p>
+                </span>
+
+                <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Koramangala</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Banashankari</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Marathahalli</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Kalyan Nagar</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Vidyaranyapura</p>
+                </span>
+
+                <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Rajajinagar</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Shivaji Nagar</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Vijayanagar</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Banaswadi</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Kengeri</p>
+                </span>
+
+                <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in J. P. Nagar</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Yelahanka</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Malleshwaram</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Devanahalli</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in HSR Layout</p>
+                </span>
+
+                 <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Indiranagar</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Vasanth Nagar</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Sunkadakatte</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Nagavara</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Bellandur</p>
+                </span>
+            </div>
+
+              <hr class="mt-5 w-full border-pink-200">
+
+
+        <div class="flex flex-col gap-10 mt-5">
+            <p class="text-black font-semibold text-xl">Destination Wedding Venues</p>
+            <div class="flex flex-row justify-between">
+                <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Goa</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Lonavala</p>
+                </span>
+
+                <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Udaipur</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Rishikesh</p>
+                </span>
+
+                <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Jaipur</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Lakshadweep</p>
+                </span>
+
+                <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Jim Corbett</p>
+                </span>
+            </div>
+
+            <hr class="mt-5 w-full border-pink-200">
+
+
+        <div class="flex flex-col gap-10 mt-5">
+            <p class="text-black font-semibold text-xl">Other Wedding Services</p>
+            <div class="flex flex-row gap-72">
+                <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Photographers in Bengaluru</p>
+                </span>
+
+                <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Decorators in Bengaluru</p>
+                </span>
+            </div>
+
+
+             <hr class="mt-5 w-full border-pink-200">
+
+
+        <div class="flex flex-col gap-10 mt-5">
+            <p class="text-black font-semibold text-xl">Venues by Top Localities</p>
+            <div class="flex flex-row justify-between">
+                <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Venues by Top Localities</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Electronic City</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Basavanagudi</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Kanakapura Road</p>
+                </span>
+
+                <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Koramangala</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Banashankari</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Marathahalli</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Kalyan Nagar</p>
+                </span>
+
+                <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Rajajinagar</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Shivaji Nagar</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Vijayanagar</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Banaswadi</p>
+                </span>
+
+                <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in J. P. Nagar</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Yelahanka</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Malleshwaram</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Devanahalli</p>
+                </span>
+
+                 <span class="flex flex-col gap-3"> 
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Indiranagar</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Vasanth Nagar</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Sunkadakatte</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues in Nagavara</p>
+                </span>
+            </div>
+        </div>
+        <!-- <hr class="mt-5 w-full border-pink-200"> -->
+    </footer>
+    <section class="w-full h-full bg-gradient-to-r from-pink-950 via-purple-950 to-blue-950 px-14 py-10 mt-10 flex flex-row justify-between">
+           <span class="flex flex-col gap-3"> 
+                    <p class="text-xl text-white hover:text-pink-700 font-semibold cursor-none">Company</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Careers</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Register as Partner</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Client Terms</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Vendor Terms</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Privacy Policy</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Refund Policy</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Service Payment Plan</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">About Us</p>
+            </span>
+
+            <span class="flex flex-col gap-3"> 
+                    <p class="text-xl text-white hover:text-pink-700 font-semibold cursor-none">Explore</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Ideas</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Venues</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Decorators</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Photgraphers</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Services</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Invitation Card</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Blog</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Price Beat Challenge</p>
+            </span>
+
+            <span class="flex flex-col gap-3"> 
+                    <p class="text-xl text-white hover:text-pink-700 font-semibold cursor-none">Contact Us</p>
+                    <p class="text-sm text-gray-500">For Wedding Services</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa fa-phone"></i> +918884090499</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">For Customer Support</p>
+                    <p class="text-sm text-gray-500">Wedding Photgraphers</p>
+                    <p class="text-sm text-black hover:text-pink-700 cursor-pointer"><i class="fa fa-mailbox"></i> support@theweddingcompany.com</p>
+                    <p class="text-sm text-gray-500">Bangalore - Bussiness address/operating address</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Ground Floor, 375,</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer">5th Mail Rd,HSR Layout Sector 6, Bangaluru,Karnataka 560102</p>
+            </span>
+
+            <span class="flex flex-col gap-3"> 
+                    <p class="text-xl text-white hover:text-pink-700 font-semibold cursor-none">Follow Us On</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa-brands fa-instagram"></i> Instagram</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa-brands fa-facebook"></i> Facebook</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa-brands fa-youtube"></i> Youtube</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa-brands fa-linkedin"></i> LinkedIn</p>
+                    <p class="text-sm text-white hover:text-pink-700 cursor-pointer flex "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3500 3500" class="fill-white hover:fill-pink-700 cursor-pointer"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z"/></svg> <span class="absolute ml-10 font-semibold">X</span></p>
+            </span>
+    </section>
+    <script src="./script.js"></script>
+    <script>lucide.createIcons();</script>
+    <script>eva.replace();</script>
+</body>
+
+</html>
