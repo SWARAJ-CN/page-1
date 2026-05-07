@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="decorators.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Geist:wght@100..900&family=Geom:ital,wght@0,300..900;1,300..900&family=Iceberg&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="assets/wedding.png" />
+    <title>Dream Desire event management, Bengaluru - Price and Reviews</title>
+  </head>
+  <body
+    class="overflow-x-hidden [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar]:bg-amber-50 [&::-webkit-scrollbar-thumb]:bg-amber-200 [&::-webkit-scrollbar-thumb]:rounded-2xl"
+  >
+
+    <!-- Hamburger Overlay Checkbox -->
+    <input type="checkbox" id="mobile-menu" class="hidden peer/menu" />
+    
+    <!-- Mobile Sidebar -->
+    <div class="fixed inset-y-0 right-0 w-[85%] sm:w-80 bg-[#fffaeb] z-[10001] translate-x-full peer-checked/menu:translate-x-0 transition-transform duration-300 shadow-2xl flex flex-col pt-6 pb-6 h-full overflow-y-auto">
+      <div class="flex justify-between items-center px-6 pb-4 border-b border-gray-200">
+        <div class="flex items-center gap-2">
+           <img src="./assets/logo.webp" class="w-32" />
+        </div>
+        <label for="mobile-menu" class="cursor-pointer text-gray-500 text-3xl hover:text-pink-600">&times;</label>
+      </div>
+
+      <div class="flex flex-col px-6 py-4 text-[#4a4a4a]">
+        <p class="text-sm font-semibold mb-3">Main Navigation</p>
+        <div class="flex flex-col gap-4 text-[15px] mb-6">
+          <a href="#" class="hover:text-pink-600">Home</a>
+          <a href="#" class="hover:text-pink-600">Wedding Venues</a>
+          <a href="#" class="hover:text-pink-600">Price Beat Challenge</a>
+        </div>
+        
+        <p class="text-sm font-semibold mb-3 border-t border-gray-200 pt-4">More</p>
+        <div class="flex flex-col gap-4 text-[15px] mb-6">
+          <a href="#" class="hover:text-pink-600">Wedding Ideas</a>
+          <a href="#" class="hover:text-pink-600">Wedding Photographers</a>
+          <a href="#" class="hover:text-pink-600">Wedding Blog</a>
+          <a href="#" class="hover:text-pink-600">Invitation Cards</a>
+          <a href="#" class="hover:text-pink-600">End-to-end Wedding Services</a>
+          <a href="#" class="hover:text-pink-600">Refund Policy</a>
+          <a href="#" class="hover:text-pink-600">Service Payment Plan</a>
+          <a href="#" class="hover:text-pink-600">TWC Client Terms</a>
+        </div>
+      </div>
+      
+      <div class="mt-auto px-6 flex justify-between gap-3 border-t border-gray-200 pt-6">
+        <button class="bg-[#25D366] text-white px-2 py-3 rounded-full font-semibold flex-1 text-sm flex justify-center items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i> Whatsapp
+        </button>
+        <button class="bg-[#af2a55] text-white px-2 py-3 rounded-full font-semibold flex-1 text-sm border-2 border-[#af2a55]">
+          Get free Quote
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Overlay -->
+    <label for="mobile-menu" class="fixed inset-0 bg-black/60 z-[10000] opacity-0 pointer-events-none peer-checked/menu:opacity-100 peer-checked/menu:pointer-events-auto transition-opacity duration-300"></label>
+
+
+        <nav
+      class="flex flex-row justify-between items-center w-full py-3 px-6 md:px-16 bg-white/50 backdrop-blur-md z-[9999] border-b shadow-sm relative"
+    >
+      <img src="./assets/logo.webp" class="w-40 sm:w-52" />
+      
+      <label for="mobile-menu" class="md:hidden cursor-pointer flex items-center p-2 text-pink-600 z-[9999]">
+        <i class="fa fa-bars text-2xl"></i>
+      </label>
+
+      <div class="hidden md:flex flex-row gap-6 justify-center items-center">
+        <a href="#" class="hover:text-pink-600 font-medium">Wedding Venues</a>
+        <a href="#" class="hover:text-pink-600 font-medium">Wedding Decorators</a>
+        <a href="#" class="hover:text-pink-600 font-medium">Price Beat Challenge</a>
+
+        <label class="cursor-pointer flex items-center gap-2 relative group">
+          <input type="checkbox" class="peer hidden" />
+          <span class="hover:text-pink-600 font-medium">More</span>
+          <span
+            class="transition-transform duration-300 peer-checked:rotate-180 text-pink-600"
+            ><i class="fa fa-angle-down"></i
+          ></span>
+
+          <div
+            class="absolute top-full right-0 mt-4 rounded-2xl p-4 w-72 bg-white/95 backdrop-blur-md shadow-xl flex flex-col opacity-0 scale-95 pointer-events-none peer-checked:opacity-100 peer-checked:scale-100 peer-checked:pointer-events-auto transition-all duration-300 origin-top-right z-50 border border-gray-100"
+          >
+            <p class="text-xs font-bold text-gray-400 mb-5 uppercase tracking-wider">Other services</p>
+            <div class="flex flex-col gap-2 ml-5 text-sm text-gray-700 font-medium">
+              <a href="#" class="hover:text-pink-600 hover:bg-pink-50 p-2 rounded-lg transition-colors">Wedding Ideas</a>
+              <a href="#" class="hover:text-pink-600 hover:bg-pink-50 p-2 rounded-lg transition-colors">Wedding Photographs</a>
+              <a href="#" class="hover:text-pink-600 hover:bg-pink-50 p-2 rounded-lg transition-colors">Wedding Blog</a>
+              <a href="#" class="hover:text-pink-600 hover:bg-pink-50 p-2 rounded-lg transition-colors">Invitation Cards</a>
+              <a href="#" class="hover:text-pink-600 hover:bg-pink-50 p-2 rounded-lg transition-colors">End-to-end Wedding Services</a>
+            </div>
+            <p class="text-xs font-bold text-gray-400 mb-5 mt-4 uppercase tracking-wider">About</p>
+            <div class="flex flex-col gap-2 ml-5 text-sm text-gray-700 font-medium">
+              <a href="#" class="hover:text-pink-600 hover:bg-pink-50 p-2 rounded-lg transition-colors">Refund Policy</a>
+              <a href="#" class="hover:text-pink-600 hover:bg-pink-50 p-2 rounded-lg transition-colors">Service Payment Plan</a>
+              <a href="#" class="hover:text-pink-600 hover:bg-pink-50 p-2 rounded-lg transition-colors">TWC Client Terms</a>
+            </div>
+          </div>
+        </label>
+      </div>
+    </nav>
+
+    <input type="checkbox" id="gallery" class="hidden peer" />
+
+    <div class="w-full flex items-center justify-center mt-6 lg:mt-20 px-4 lg:px-0">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center overflow-hidden rounded-xl w-full max-w-6xl"
+      >
+        <div class="w-full h-48 lg:w-[500px] lg:h-[520px] overflow-hidden">
+          <img
+            src="assets/d1.png"
+            class="object-cover h-full w-full transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+
+        <div class="grid grid-cols-2 grid-rows-2 gap-4">
+          <div class="w-full h-32 lg:w-[250px] lg:h-[250px] overflow-hidden">
+            <img
+              src="assets/d2.png"
+              class="object-cover h-full w-full transition-transform duration-300 hover:scale-105"
+            />
+          </div>
+
+          <div class="w-full h-32 lg:w-[250px] lg:h-[250px] overflow-hidden">
+            <img
+              src="assets/d4.png"
+              class="object-cover h-full w-full transition-transform duration-300 hover:scale-105"
+            />
+          </div>
+
+          <div class="w-full h-32 lg:w-[250px] lg:h-[250px] overflow-hidden">
+            <img
+              src="assets/d3.jpg"
+              class="object-cover h-full w-full transition-transform duration-300 hover:scale-105"
+            />
+          </div>
+
+          <div class="w-full h-32 lg:w-[250px] lg:h-[250px] overflow-hidden relative">
+            <img src="assets/d5.jpg" class="object-cover h-full w-full" />
+
+            <label
+              for="gallery"
+              class="bg-black/40 absolute inset-0 cursor-pointer flex items-center justify-center"
+            >
+              <span
+                class="bg-white px-4 py-3 rounded-3xl shadow text-[#ff5b91] border border-[#ff5b91]"
+              >
+                View all images
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="fixed inset-0 bg-black/40 hidden peer-checked:flex justify-center items-center z-50"
+    >
+      <div
+        class="bg-gray-100 w-[75%] h-[85%] rounded-2xl shadow-xl flex flex-col"
+      >
+        <div class="flex justify-between items-center px-6 py-4">
+          <p class="font-semibold text-lg">Dream Desire event management</p>
+          <label for="gallery" class="text-2xl cursor-pointer">✖</label>
+        </div>
+
+        <div class="h-[80%] mx-6 mb-6 overflow-y-auto">
+          <div class="grid grid-cols-3 gap-5">
+            <img
+              src="assets/d1.png"
+              class="rounded-xl w-full h-[220px] object-cover"
+            />
+            <img
+              src="assets/d2.png"
+              class="rounded-xl w-full h-[220px] object-cover"
+            />
+            <img
+              src="assets/d3.jpg"
+              class="rounded-xl w-full h-[220px] object-cover"
+            />
+            <img
+              src="assets/d4.png"
+              class="rounded-xl w-full h-[220px] object-cover"
+            />
+            <img
+              src="assets/d5.jpg"
+              class="rounded-xl w-full h-[220px] object-cover"
+            />
+            <img
+              src="assets/d6.jpg"
+              class="rounded-xl w-full h-[220px] object-cover"
+            />
+            <img
+              src="assets/d7.jpg"
+              class="rounded-xl w-full h-[220px] object-cover"
+            />
+            <img
+              src="assets/d8.png"
+              class="rounded-xl w-full h-[220px] object-cover"
+            />
+            <img
+              src="assets/d9.png"
+              class="rounded-xl w-full h-[220px] object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- main -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 mb-8 max-w-6xl mx-auto w-full gap-6 lg:gap-10 px-4 lg:px-0">
+      <div class="col-span-1 lg:col-span-2 mt-4 lg:mt-10 space-y-4 lg:space-y-8">
+        <div class="flex flex-col gap-4">
+          <p class="text-sm text-[#808080]">
+            <a href="#">The Wedding Company</a>
+            /
+            <a href="decorators.html">Wedding Decorators</a>
+            / Bengaluru /
+            <span class="font-medium">Dream Desire event management</span>
+          </p>
+          <div class="bg-[#fbfbfb] flex flex-col rounded-3xl p-6 gap-3">
+            <div class="flex gap-5">
+              <div class="w-14 h-14 rounded-lg overflow-hidden">
+                <img
+                  src="assets/generic_business-71.png"
+                  alt=""
+                  class="object-fit-cover"
+                />
+              </div>
+              <div>
+                <div class="flex gap-5">
+                  <p class="font-semibold text-[20px]">
+                    Dream Desire event management
+                  </p>
+                  <div
+                    class="text-[12px] bg-white flex gap-1 justify-center items-center h-8 px-2 rounded-3xl text-yellow-500"
+                  >
+                    <i class="fa-solid fa-award"></i> Partner
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 text-sm">
+                  <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                  <span>5 (6 users)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex bg-white rounded-3xl px-4 py-4 text-[13px] border">
+              <div class="flex gap-2">
+                <i
+                  class="fa-solid fa-location-dot text-pink-600 text-[18px]"
+                ></i>
+                <p class="w-[90%]">
+                  33, Begur Road, 560068, Bengaluru, Karnataka
+                </p>
+              </div>
+              <div class="flex w-[25%] justify-center items-center">
+                <i class="fa-solid fa-location-dot text-pink-500"></i>
+                <a
+                  class="underline decoration-pink-500 font-semibold text-pink-500"
+                  href="https://www.google.com/maps/place/SS+decorator/@13.0229626,77.7166166,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae11d2ff3b01cb:0xfca3344d06d5407b!8m2!3d13.0229626!4d77.7166166!16s%2Fg%2F11ryj6dy4z?hl=en-IN&entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D"
+                  >View on map</a
+                >
+              </div>
+            </div>
+
+            <div class="flex justify-around">
+              <p class="bg-white px-4 py-2 rounded-2xl">
+                Outdoor starting price ₹150000+
+              </p>
+              <p class="bg-white px-4 py-2 rounded-2xl">
+                Indoor starting price ₹60000+
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <div class="flex gap-10 font-semibold text-lg border-b px-6 py-2">
+            <p>Occasions</p>
+            <p>About Us</p>
+          </div>
+          <div class="bg-[#fbfbfb] flex flex-col rounded-3xl p-6 gap-3">
+            <p class="font-semibold text-lg">Occasions</p>
+            <div class="grid grid-cols-4 gap-3">
+              <div class="w-full h-full overflow-hidden rounded-lg relative">
+                <img
+                  class="object-cover"
+                  src="https://storage.googleapis.com/bh_dev_bucket/weddings/decoration/occasions/4101.webp"
+                  width="100%"
+                  height="100%"
+                  alt=""
+                />
+                <div
+                  class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/70 to-transparent"
+                ></div>
+                <p
+                  class="absolute bottom-2 flex justify-center items-center w-full text-white text-[13px]"
+                >
+                  Lawn decor
+                </p>
+              </div>
+              <div class="w-full h-full overflow-hidden rounded-lg relative">
+                <img
+                  class="object-cover"
+                  src="https://storage.googleapis.com/bh_dev_bucket/weddings/decoration/occasions/4102.webp"
+                  width="100%"
+                  height="100%"
+                  alt=""
+                />
+                <div
+                  class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/70 to-transparent"
+                ></div>
+                <p
+                  class="absolute bottom-2 flex justify-center items-center w-full text-white text-[13px]"
+                >
+                  Wedding decor
+                </p>
+              </div>
+              <div class="w-full h-full overflow-hidden rounded-lg relative">
+                <img
+                  class="object-cover"
+                  src="https://storage.googleapis.com/bh_dev_bucket/weddings/decoration/occasions/4103.webp"
+                  width="100%"
+                  height="100%"
+                  alt=""
+                />
+                <div
+                  class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/70 to-transparent"
+                ></div>
+                <p
+                  class="absolute bottom-2 flex justify-center items-center w-full text-white text-[13px]"
+                >
+                  Engagement decor
+                </p>
+              </div>
+              <div class="w-full h-full overflow-hidden rounded-lg relative">
+                <img
+                  class="object-cover"
+                  src="https://storage.googleapis.com/bh_dev_bucket/weddings/decoration/occasions/4104.webp"
+                  width="100%"
+                  height="100%"
+                  alt=""
+                />
+                <div
+                  class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/70 to-transparent"
+                ></div>
+                <p
+                  class="absolute bottom-2 flex justify-center items-center w-full text-white text-[13px]"
+                >
+                  Sangeet decor
+                </p>
+              </div>
+              <div class="w-full h-full overflow-hidden rounded-lg relative">
+                <img
+                  class="object-cover"
+                  src="https://storage.googleapis.com/bh_dev_bucket/weddings/decoration/occasions/4105.webp"
+                  width="100%"
+                  height="100%"
+                  alt=""
+                />
+                <div
+                  class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/70 to-transparent"
+                ></div>
+                <p
+                  class="absolute bottom-2 flex justify-center items-center w-full text-white text-[13px]"
+                >
+                  Mehandi decor
+                </p>
+              </div>
+              <div class="w-full h-full overflow-hidden rounded-lg relative">
+                <img
+                  class="object-cover"
+                  src="https://storage.googleapis.com/bh_dev_bucket/weddings/decoration/occasions/4106.webp"
+                  width="100%"
+                  height="100%"
+                  alt=""
+                />
+                <div
+                  class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/70 to-transparent"
+                ></div>
+                <p
+                  class="absolute bottom-2 flex justify-center items-center w-full text-white text-[13px]"
+                >
+                  Reception decor
+                </p>
+              </div>
+              <div class="w-full h-full overflow-hidden rounded-lg relative">
+                <img
+                  class="object-cover"
+                  src="https://storage.googleapis.com/bh_dev_bucket/weddings/decoration/occasions/4107.webp"
+                  width="100%"
+                  height="100%"
+                  alt=""
+                />
+                <div
+                  class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black/70 to-transparent"
+                ></div>
+                <p
+                  class="absolute bottom-2 flex justify-center items-center w-full text-white text-[13px]"
+                >
+                  Haldi decor
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="border-t"></div>
+          <div class="flex flex-col gap-5">
+            <p class="font-semibold text-lg">
+              About Dream Desire event management
+            </p>
+            <div>
+              <p class="font-semibold text-lg">
+                Dream Desire event management - Wedding Decorators in
+                Krishnarajapura, Bengaluru
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Planning an unforgettable wedding? That's where Dream Desire
+                Event Management comes in, your premier choice for marriage
+                decoration in Bangalore. They specialize in transforming
+                ordinary spaces into breathtaking spectacles of love and
+                romance. They understand that your wedding day is a
+                once-in-a-lifetime event, and they're dedicated to creating a
+                setting that reflects your personal style and dreams. They use
+                only the highest quality wedding decor items to bring your
+                chosen wedding theme to life. Whether you envision a classic,
+                elegant affair or a modern celebration, they have the expertise
+                and creativity to make it a reality.
+              </p>
+            </div>
+            <div>
+              <p class="font-semibold text-sm">
+                Wedding Decor Theme offered by Dream Desire Event Management
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Floral arrangements
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                South Indian wedding
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Royal
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Decorative Draping
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Vintage
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Mandap decor
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Event ideation & Design
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Audio Visuals
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Table Decoration
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Venue Entrance Decoration
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Furniture
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Centerpiece
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Gift wrapping
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Decorative Draping
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Reception Backdrop
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Linen Decor
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Theme Weddings
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Home Decorations
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Car Decoration
+              </p>
+            </div>
+            <div>
+              <p class="font-semibold text-sm">
+                Pricing Info of Dream Desire Event Management
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Indoor Budget per event. ₹6,00,000+
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Outdoor Budget per event. ₹15,00,000+
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Banquet decor price. ₹6,00,000
+              </p>
+            </div>
+            <div>
+              <p class="font-semibold text-sm">
+                Address of Dream Desire Event Management
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Dream Desire Event Management is a wedding decoration company
+                based in Bommanahalli, Bengaluru.
+              </p>
+            </div>
+            <div>
+              <p class="font-semibold text-lg">FAQs</p>
+              <p class="font-semibold text-sm">
+                Q1. Which year did Dream Desire Event Management start providing
+                decoration services?
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Ans. Dream Desire Event Management started providing its
+                decoration services in 2017.
+              </p>
+            </div>
+            <div>
+              <p class="font-semibold text-sm">
+                Q2. What are the types of events for which Dream Desire Event
+                Management provides services?
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Ans. Dream Desire Event Management provides services for
+                weddings, poojas, birthdays, cocktail parties, corporate events,
+                and upanayana ceremonies.
+              </p>
+            </div>
+            <div>
+              <p class="font-semibold text-sm">
+                Q3. What are the different types of traditional decoration Dream
+                Desire Event Management can provide?
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Ans. Dream Desire Event Management provides traditional floral
+                decorations and mandap decorations for conventional weddings.
+              </p>
+            </div>
+            <div>
+              <p class="font-semibold text-sm">
+                Q4. What are the different types of modern decoration Dream
+                Desire Event Management can provide?
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Ans. Dream Desire Event Management provides thematic and
+                customized designs for modern decoration.
+              </p>
+            </div>
+            <div>
+              <p class="font-semibold text-sm">
+                Q5. Which forms of payment do Dream Desire Event Management
+                accept?
+              </p>
+              <p class="text-[#808080] text-xs text-justify leading-relaxed">
+                Ans. Dream Desire Event Management accepts all types of payment
+                methods.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="col-span-1 mt-6 lg:mt-10 mb-20 flex justify-center lg:justify-end">
+        <div class="border border-gray-200 rounded-2xl w-full max-w-md flex flex-col gap-5 h-fit sticky top-24 bg-white shadow-sm pb-6">
+          <div class="bg-[#fff9ea] font-semibold flex justify-center items-center px-8 py-8 text-center border-b border-[#f0eadc] rounded-t-2xl">
+            <p class="text-[17px] text-black leading-relaxed font-bold">
+              Get <span class="text-pink-500">FREE</span> wedding consultation at your doorstep & upto 30% off on wedding services
+            </p>
+          </div>
+          
+          <div class="px-8 flex flex-col gap-5">
+            <p class="flex justify-center items-center font-bold text-black text-lg">
+              Enter your details to get started!
+            </p>
+            
+            <input class="text-[15px] bg-[#f5f6f8] px-4 py-3 rounded-lg w-full outline-none placeholder:text-gray-400 focus:ring-1 focus:ring-pink-500 transition-shadow border border-transparent focus:border-pink-500" type="text" placeholder="Enter your name" />
+            
+            <div class="flex flex-col gap-2">
+              <p class="text-[14px] text-black font-medium">Tell us your event location</p>
+              <div class="relative">
+                <select class="text-[15px] rounded-lg px-4 py-3 bg-[#f5f6f8] w-full appearance-none outline-none focus:ring-1 focus:ring-pink-500 text-gray-500 border border-transparent focus:border-pink-500 cursor-pointer">
+                  <option disabled selected class="hidden">Select event location</option>
+                  <option>Bangalore</option>
+                  <option>Mumbai</option>
+                  <option>Delhi</option>
+                </select>
+                <i class="fa fa-angle-down absolute right-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
+              </div>
+            </div>
+            
+            <div class="flex flex-col gap-1">
+              <div class="flex gap-2">
+                <div class="bg-[#f5f6f8] px-3 py-3 rounded-lg text-[15px] flex items-center gap-2 text-black font-medium relative cursor-pointer border border-transparent focus-within:border-pink-500 focus-within:ring-1 focus-within:ring-pink-500">
+                  <span>+91</span>
+                  <i class="fa fa-angle-down text-sm text-gray-500"></i>
+                </div>
+                <input class="bg-[#f5f6f8] w-full px-4 py-3 rounded-lg text-[15px] outline-none placeholder:text-gray-400 border border-transparent focus:border-pink-500 focus:ring-1 focus:ring-pink-500" type="tel" placeholder="Enter your mobile number" />
+              </div>
+              <p class="text-[12px] text-black font-medium mt-1">
+                We'll send an OTP to verify your number
+              </p>
+            </div>
+            
+            <button class="bg-[#808080] hover:bg-[#6c6c6c] transition-colors mt-2 py-3 w-full rounded-full text-white text-[15px] font-semibold">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer
+      class="bg-[linear-gradient(146deg,_#3d1b3b,_#0c0e36)] py-12 px-8 text-white border-t border-gray-200"
+    >
+      <div class="max-w-7xl mx-auto">
+        <!-- Main Grid Section -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Column 1: Company -->
+          <div>
+            <h3 class="font-semibold uppercase tracking-wider mb-4">Company</h3>
+            <ul class="space-y-3 text-sm font-medium text-[#cccccc]">
+              <li><a href="#" class="hover:text-pink-500">Careers</a></li>
+              <li>
+                <a href="#" class="hover:text-pink-500">Register as Partner</a>
+              </li>
+              <li><a href="#" class="hover:text-pink-500">Client Terms</a></li>
+              <li><a href="#" class="hover:text-pink-500">Vendor Terms</a></li>
+              <li>
+                <a href="#" class="hover:text-pink-500">Privacy Policy</a>
+              </li>
+              <li><a href="#" class="hover:text-pink-500">Refund Policy</a></li>
+              <li>
+                <a href="#" class="hover:text-pink-500">Service Payment Plan</a>
+              </li>
+              <li><a href="#" class="hover:text-pink-500">About Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Explore -->
+          <div>
+            <h3 class="font-semibold uppercase tracking-wider mb-4">Explore</h3>
+            <ul class="space-y-3 text-sm font-medium text-[#cccccc]">
+              <li><a href="#" class="hover:text-pink-500">Wedding Ideas</a></li>
+              <li>
+                <a href="#" class="hover:text-pink-500">Wedding Venues</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-pink-500">Wedding Decorators</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-pink-500"
+                  >Wedding Photographers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-pink-500">Wedding Services</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-pink-500"
+                  >Wedding Invitation Card</a
+                >
+              </li>
+              <li><a href="#" class="hover:text-pink-500">Wedding Blog</a></li>
+              <li>
+                <a href="#" class="hover:text-pink-500">Price Beat Challenge</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact Us -->
+          <div>
+            <h3 class="font-semibold uppercase tracking-wider mb-4">
+              Contact Us
+            </h3>
+            <div class="space-y-4 text-sm">
+              <div>
+                <p class="text-[#808080] font-semibold mb-1">
+                  For Wedding Services
+                </p>
+                <p
+                  class="flex items-center gap-2 font-medium text-[#cccccc] hover:text-pink-500 cursor-pointer"
+                >
+                  <span><i class="fa-solid fa-phone"></i></span> +91 8884090499
+                </p>
+              </div>
+              <div>
+                <p class="text-[#808080] font-semibold mb-1">
+                  For Customer Support
+                </p>
+                <p
+                  class="flex items-center gap-2 font-medium text-black hover:text-pink-500"
+                >
+                  <span><i class="fa-regular fa-envelope"></i></span>
+                  support@theweddingcompany.com
+                </p>
+              </div>
+              <div>
+                <p class="text-[#808080] font-semibold mb-1 leading-tight">
+                  Bangalore - Business address/operating address
+                </p>
+                <address
+                  class="not-italic text-[#cccccc] font-medium leading-relaxed mt-2"
+                >
+                  Ground Floor, 375, <br />
+                  5th Main Rd, <br />
+                  HSR Layout Sector 6, <br />
+                  Bengaluru, Karnataka 560102
+                </address>
+              </div>
+            </div>
+          </div>
+          <!-- Column 4: Follow Us On -->
+          <div>
+            <h3 class="font-semibold uppercase tracking-wider mb-4">
+              Follow Us On
+            </h3>
+            <ul class="space-y-3 text-sm text-[#cccccc] font-medium">
+              <li class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center text-2xl"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+                <a href="#" class="hover:text-pink-500">Instagram</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center text-2xl"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <a href="#" class="hover:text-pink-500">Facebook</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center text-2xl"
+                >
+                  <i class="fa-brands fa-youtube"></i>
+                </div>
+                <a href="#" class="hover:text-pink-500">Youtube</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center text-2xl"
+                >
+                  <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <a href="#" class="hover:text-pink-500">LinkedIn</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center text-2xl"
+                >
+                  <i class="fa-brands fa-x-twitter"></i>
+                </div>
+                <a href="#" class="hover:text-pink-500">X</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Bottom Disclaimer -->
+        <div class="mt-12 pb-6">
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Disclaimer: To make your experience better we might use your details
+            for marketing purposes. Our wedding experts might contact to
+            understand your need and help you get high quality wedding services.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- bottom buttons -->
+    <div class="fixed bottom-4 left-1/2 -translate-x-1/2 w-[95%] sm:w-auto flex flex-row justify-center gap-2 sm:gap-4 z-50">
+      <button
+        class="bg-pink-800 text-white px-4 sm:px-10 py-2 sm:py-3 rounded-3xl font-semibold text-sm sm:text-lg shadow w-1/2 sm:w-auto text-center"
+      >
+        Get Free Quote
+      </button>
+
+      <button
+        class="bg-green-600 text-white px-4 sm:px-10 py-2 sm:py-3 rounded-3xl font-semibold text-sm sm:text-lg shadow w-1/2 sm:w-auto text-center flex items-center justify-center gap-2 whitespace-nowrap"
+      >
+        <i class="fa-brands fa-whatsapp"></i> Chat With Us
+      </button>
+    </div>
+  </body>
+</html>

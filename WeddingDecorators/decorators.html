@@ -1,0 +1,1542 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="decorators.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Geist:wght@100..900&family=Geom:ital,wght@0,300..900;1,300..900&family=Iceberg&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="assets/wedding.png" />
+    <title>The Wedding Company | Wedding Decorators</title>
+  </head>
+  <body
+    class="overflow-x-hidden w-full [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar]:bg-amber-50 [&::-webkit-scrollbar-thumb]:bg-amber-200 [&::-webkit-scrollbar-thumb]:rounded-2xl"
+  >
+
+    <!-- Hamburger Overlay Checkbox -->
+    <input type="checkbox" id="mobile-menu" class="hidden peer/menu" />
+    
+    <!-- Mobile Sidebar -->
+    <div class="fixed inset-y-0 right-0 w-[85%] sm:w-80 bg-[#fffaeb] z-[10001] translate-x-full peer-checked/menu:translate-x-0 transition-transform duration-300 shadow-2xl flex flex-col pt-6 pb-6 h-full overflow-y-auto">
+      <div class="flex justify-between items-center px-6 pb-4 border-b border-gray-200">
+        <div class="flex items-center gap-2">
+           <img src="./assets/logo.webp" class="w-32" />
+        </div>
+        <label for="mobile-menu" class="cursor-pointer text-gray-500 text-3xl hover:text-pink-600">&times;</label>
+      </div>
+
+      <div class="flex flex-col px-6 py-4 text-[#4a4a4a]">
+        <p class="text-sm font-semibold mb-3">Main Navigation</p>
+        <div class="flex flex-col gap-4 text-[15px] mb-6">
+          <a href="#" class="hover:text-pink-600">Home</a>
+          <a href="#" class="hover:text-pink-600">Wedding Venues</a>
+          <a href="#" class="hover:text-pink-600">Price Beat Challenge</a>
+        </div>
+        
+        <p class="text-sm font-semibold mb-3 border-t border-gray-200 pt-4">More</p>
+        <div class="flex flex-col gap-4 text-[15px] mb-6">
+          <a href="#" class="hover:text-pink-600">Wedding Ideas</a>
+          <a href="#" class="hover:text-pink-600">Wedding Photographers</a>
+          <a href="#" class="hover:text-pink-600">Wedding Blog</a>
+          <a href="#" class="hover:text-pink-600">Invitation Cards</a>
+          <a href="#" class="hover:text-pink-600">End-to-end Wedding Services</a>
+          <a href="#" class="hover:text-pink-600">Refund Policy</a>
+          <a href="#" class="hover:text-pink-600">Service Payment Plan</a>
+          <a href="#" class="hover:text-pink-600">TWC Client Terms</a>
+        </div>
+      </div>
+      
+      <div class="mt-auto px-6 flex justify-between gap-3 border-t border-gray-200 pt-6">
+        <button class="bg-[#25D366] text-white px-2 py-3 rounded-full font-semibold flex-1 text-sm flex justify-center items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i> Whatsapp
+        </button>
+        <button class="bg-[#af2a55] text-white px-2 py-3 rounded-full font-semibold flex-1 text-sm border-2 border-[#af2a55]">
+          Get free Quote
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Overlay -->
+    <label for="mobile-menu" class="fixed inset-0 bg-black/60 z-[10000] opacity-0 pointer-events-none peer-checked/menu:opacity-100 peer-checked/menu:pointer-events-auto transition-opacity duration-300"></label>
+
+
+        <nav
+      class="flex flex-row justify-between items-center w-full py-3 px-6 md:px-16 bg-white/50 backdrop-blur-md z-[9999] border-b shadow-sm relative"
+    >
+      <img src="./assets/logo.webp" class="w-40 sm:w-52" />
+      
+      <label for="mobile-menu" class="md:hidden cursor-pointer flex items-center p-2 text-pink-600 z-[9999]">
+        <i class="fa fa-bars text-2xl"></i>
+      </label>
+
+      <div class="hidden md:flex flex-row gap-6 justify-center items-center">
+        <a href="#" class="hover:text-pink-600 font-medium">Wedding Venues</a>
+        <a href="#" class="hover:text-pink-600 font-medium">Wedding Decorators</a>
+        <a href="#" class="hover:text-pink-600 font-medium">Price Beat Challenge</a>
+
+        <label class="cursor-pointer flex items-center gap-2 relative group">
+          <input type="checkbox" class="peer hidden" />
+          <span class="hover:text-pink-600 font-medium">More</span>
+          <span
+            class="transition-transform duration-300 peer-checked:rotate-180 text-pink-600"
+            ><i class="fa fa-angle-down"></i
+          ></span>
+
+          <div
+            class="absolute top-full right-0 mt-4 rounded-2xl p-4 w-72 bg-white/95 backdrop-blur-md shadow-xl flex flex-col opacity-0 scale-95 pointer-events-none peer-checked:opacity-100 peer-checked:scale-100 peer-checked:pointer-events-auto transition-all duration-300 origin-top-right z-50 border border-gray-100"
+          >
+            <p class="text-xs font-bold text-gray-400 mb-5 uppercase tracking-wider">Other services</p>
+            <div class="flex flex-col gap-2 ml-5 text-sm text-gray-700 font-medium">
+              <a href="#" class="hover:text-pink-600 hover:bg-pink-50 p-2 rounded-lg transition-colors">Wedding Ideas</a>
+              <a href="#" class="hover:text-pink-600 hover:bg-pink-50 p-2 rounded-lg transition-colors">Wedding Photographs</a>
+              <a href="#" class="hover:text-pink-600 hover:bg-pink-50 p-2 rounded-lg transition-colors">Wedding Blog</a>
+              <a href="#" class="hover:text-pink-600 hover:bg-pink-50 p-2 rounded-lg transition-colors">Invitation Cards</a>
+              <a href="#" class="hover:text-pink-600 hover:bg-pink-50 p-2 rounded-lg transition-colors">End-to-end Wedding Services</a>
+            </div>
+            <p class="text-xs font-bold text-gray-400 mb-5 mt-4 uppercase tracking-wider">About</p>
+            <div class="flex flex-col gap-2 ml-5 text-sm text-gray-700 font-medium">
+              <a href="#" class="hover:text-pink-600 hover:bg-pink-50 p-2 rounded-lg transition-colors">Refund Policy</a>
+              <a href="#" class="hover:text-pink-600 hover:bg-pink-50 p-2 rounded-lg transition-colors">Service Payment Plan</a>
+              <a href="#" class="hover:text-pink-600 hover:bg-pink-50 p-2 rounded-lg transition-colors">TWC Client Terms</a>
+            </div>
+          </div>
+        </label>
+      </div>
+    </nav>
+
+    <!-- hero -->
+    <div
+      class="bg-pink-700 w-full min-h-[120px] py-6 md:py-0 text-white flex flex-col md:flex-row justify-center md:justify-between items-center gap-4 md:gap-0"
+    >
+      <p class="text-3xl md:text-[50px] font-[600] text-center md:ml-10 lg:ml-[100px]">Wedding Decorators</p>
+      <div
+        class="bg-pink-950 w-11/12 md:w-72 h-12 pl-3 pt-3 pb-2 md:mr-10 lg:mr-24 flex gap-2 items-start rounded-xl border border-white"
+      >
+        <i class="fa-solid fa-magnifying-glass pt-1"></i
+        ><input
+          type="search"
+          class="bg-transparent outline-none text-white placeholder-white caret-pink-500 w-full pr-2"
+          placeholder="Search vendor..."
+        />
+      </div>
+    </div>
+
+    <!-- main div -->
+    <div class="flex flex-col lg:flex-row w-full gap-4 px-4 md:px-10 lg:px-0">
+      <!-- Sidebar -->
+      <div
+        class="static lg:sticky top-4 h-fit shrink-0 border border-[#e5e7eb] rounded-lg w-full lg:w-[320px] flex flex-col gap-3 mt-8 md:mt-14 lg:ml-10"
+      >
+        <div class="flex flex-col gap-3 px-5 py-5">
+          <p class="font-medium">Filters</p>
+          <div class="border border-t[#e5e7eb]"></div>
+          <div class="flex justify-between">
+            <p class="font-medium">Event City</p>
+            <i class="fa-solid fa-crosshairs text-pink-500 text-sm"></i>
+          </div>
+          <div
+            class="flex items-center bg-white border border-gray-300 rounded-md px-3 py-2 gap-2 text-gray-400"
+          >
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="search" placeholder="Search your event city" />
+          </div>
+          <p class="text-[#9c9c9c] mt-2">POPULAR CITIES</p>
+          <div class="flex flex-wrap gap-2">
+            <button class="px-3 py-1 rounded-lg bg-gray-100 font-medium text-[14px]">Bengaluru</button>
+            <button class="px-3 py-1 rounded-lg bg-gray-100 font-medium text-[14px]">Mumbai</button>
+            <button class="px-3 py-1 rounded-lg bg-gray-100 font-medium text-[14px]">Goa</button>
+            <button class="px-3 py-1 rounded-lg bg-gray-100 font-medium text-[14px]">Delhi</button>
+            <button class="px-3 py-1 rounded-lg bg-gray-100 font-medium text-[14px]">Gurugram</button>
+            <button class="px-3 py-1 rounded-lg bg-gray-100 font-medium text-[14px]">Noida</button>
+            <button class="px-3 py-1 rounded-lg bg-gray-100 font-medium text-[14px]">Jaipur</button>
+          </div>
+          <div class="border border-t[#e5e7eb] mt-4"></div>
+        </div>
+
+        <div
+          class="border-t-2 border-b-2 rounded-b-lg p-6 flex justify-center items-center mt-8 lg:mt-24"
+        >
+          <button
+            class="bg-[#8d8d8d] w-full py-4 rounded-[40px] text-white font-semibold flex-1"
+          >
+            Apply Filters
+          </button>
+        </div>
+      </div>
+
+      <!-- decos -->
+      <div class="flex-1 min-w-0 mt-8 lg:mt-14 pb-14">
+        <div>
+          <p class="text-sm text-[#808080] mb-5">
+            <a href="#">The Wedding Company</a> /
+            <span class="font-medium">Wedding Decorators</span>
+          </p>
+          <div class="flex flex-col lg:flex-row justify-between mb-3 gap-4 lg:gap-0">
+            <p class="text-lg md:text-xl text-gray-500">
+              Showing <span class="font-semibold">2637 results</span> as per
+              your search criteria
+            </p>
+            <div class="flex flex-wrap gap-2 lg:gap-3 lg:mr-16">
+              <button
+                class="px-3 rounded-lg bg-gray-100 text-gray-600 font-medium text-[12px] active:bg-pink-100 active:text-pink-600"
+              >
+                All
+              </button>
+              <button
+                class="px-2 rounded-lg bg-gray-100 text-gray-600 font-medium text-[12px] active:bg-pink-100 active:text-pink-600"
+              >
+                Bestsellers
+              </button>
+              <button
+                class="px-2 rounded-lg bg-gray-100 text-gray-600 font-medium text-[12px] active:bg-pink-100 active:text-pink-600"
+              >
+                Premium
+              </button>
+              <button
+                class="px-2 rounded-lg bg-gray-100 text-gray-600 font-medium text-[12px] active:bg-pink-100 active:text-pink-600"
+              >
+                Budget Friendly
+              </button>
+              <button
+                class="px-2 rounded-lg bg-gray-100 text-gray-600 font-medium text-[12px] active:bg-pink-100 active:text-pink-600"
+              >
+                TWC's choice
+              </button>
+            </div>
+          </div>
+
+          <!-- cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 pt-3 lg:pr-12">
+            <div
+              class="bg-white rounded-2xl border border-[#e5e7eb] shadow overflow-hidden h-[400px]"
+            >
+              <div
+                class="bg-yellow-500 text-white text-sm text-center py-2 font-semibold"
+              >
+                <i class="fa-solid fa-award"></i> TWC Partner
+              </div>
+
+              <div
+                class="relative h-60 overflow-hidden group card cursor-pointer"
+              >
+                <a href="details1.html">
+                  <div class="slider flex transition-transform duration-500">
+                    <img
+                      src="./assets/ss1.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/ss2.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/ss3.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/ss4.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                  </div>
+                </a>
+
+                <button
+                  class="prevBtn absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button
+                  class="nextBtn absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <div
+                  class="dots absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2"
+                >
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                </div>
+              </div>
+
+              <div class="p-4 flex flex-col gap-2">
+                <h3 class="font-semibold text-lg">SS decorator</h3>
+
+                <div class="flex items-center gap-2 text-sm">
+                  <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                  <span>5 (3 users)</span>
+                </div>
+
+                <div class="flex items-center gap-2 text-gray-500">
+                  <i class="fa-solid fa-location-dot text-lg"></i>
+                  <span>Bengaluru, Karnataka</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl border border-[#e5e7eb] shadow overflow-hidden h-[400px]"
+            >
+              <div
+                class="bg-yellow-500 text-white text-sm text-center py-2 font-semibold"
+              >
+                <i class="fa-solid fa-award"></i> TWC Partner
+              </div>
+
+              <div
+                class="relative h-60 overflow-hidden group card cursor-pointer"
+              >
+                <a href="details2.html">
+                  <div class="slider flex transition-transform duration-500">
+                    <img
+                      src="./assets/b1.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/b2.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/b3.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/b4.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                  </div>
+                </a>
+
+                <button
+                  class="prevBtn absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button
+                  class="nextBtn absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <div
+                  class="dots absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2"
+                >
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                </div>
+              </div>
+
+              <div class="p-4 flex flex-col gap-2">
+                <h3 class="font-semibold text-lg">B URS events</h3>
+
+                <div class="flex items-center gap-2 text-sm">
+                  <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                  <span>5 (4 users)</span>
+                </div>
+
+                <div class="flex items-center gap-2 text-gray-500">
+                  <i class="fa-solid fa-location-dot text-lg"></i>
+                  <span>Banashankari, Bengaluru</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl border border-[#e5e7eb] shadow overflow-hidden h-[400px]"
+            >
+              <div
+                class="bg-yellow-500 text-white text-sm text-center py-2 font-semibold"
+              >
+                <i class="fa-solid fa-award"></i> TWC Partner
+              </div>
+
+              <div
+                class="relative h-60 overflow-hidden group card cursor-pointer"
+              >
+                <a href="details3.html">
+                  <div class="slider flex transition-transform duration-500">
+                    <img
+                      src="./assets/sv1.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/sv2.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/sv3.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/sv4.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                  </div>
+                </a>
+
+                <button
+                  class="prevBtn absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button
+                  class="nextBtn absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <div
+                  class="dots absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2"
+                >
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                </div>
+              </div>
+
+              <div class="p-4 flex flex-col gap-2">
+                <h3 class="font-semibold text-lg">SV Events Group</h3>
+
+                <div class="flex items-center gap-2 text-sm">
+                  <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                  <span>5 (10 users)</span>
+                </div>
+
+                <div class="flex items-center gap-2 text-gray-500">
+                  <i class="fa-solid fa-location-dot text-lg"></i>
+                  <span>Btm Layout, Bengaluru</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl border border-[#e5e7eb] shadow overflow-hidden h-[400px]"
+            >
+              <div
+                class="bg-yellow-500 text-white text-sm text-center py-2 font-semibold"
+              >
+                <i class="fa-solid fa-award"></i> TWC Partner
+              </div>
+
+              <div
+                class="relative h-60 overflow-hidden group card cursor-pointer"
+              >
+                <a href="details4.html">
+                  <div class="slider flex transition-transform duration-500">
+                    <img
+                      src="./assets/e1.jpg"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/e2.jpg"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/e3.jpg"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/e4.jpg"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                  </div>
+                </a>
+
+                <button
+                  class="prevBtn absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button
+                  class="nextBtn absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <div
+                  class="dots absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2"
+                >
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                </div>
+              </div>
+
+              <div class="p-4 flex flex-col gap-2">
+                <h3 class="font-semibold text-lg">Event Cloud Solutions</h3>
+
+                <div class="flex items-center gap-2 text-sm">
+                  <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                  <span>5 (46 users)</span>
+                </div>
+
+                <div class="flex items-center gap-2 text-gray-500">
+                  <i class="fa-solid fa-location-dot text-lg"></i>
+                  <span>Shivaji Nagar, Bengaluru</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl border border-[#e5e7eb] shadow overflow-hidden h-[400px]"
+            >
+              <div
+                class="bg-yellow-500 text-white text-sm text-center py-2 font-semibold"
+              >
+                <i class="fa-solid fa-award"></i> TWC Partner
+              </div>
+
+              <div
+                class="relative h-60 overflow-hidden group card cursor-pointer"
+              >
+                <a href="details5.html">
+                  <div class="slider flex transition-transform duration-500">
+                    <img
+                      src="./assets/d1.png"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/d2.png"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/d3.jpg"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/d4.png"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                  </div>
+                </a>
+
+                <button
+                  class="prevBtn absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button
+                  class="nextBtn absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <div
+                  class="dots absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2"
+                >
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                </div>
+              </div>
+
+              <div class="p-4 flex flex-col gap-2">
+                <h3 class="font-semibold text-lg">
+                  Dream Desire event management
+                </h3>
+
+                <div class="flex items-center gap-2 text-sm">
+                  <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                  <span>5 (6 users)</span>
+                </div>
+
+                <div class="flex items-center gap-2 text-gray-500">
+                  <i class="fa-solid fa-location-dot text-lg"></i>
+                  <span>Bommanahalli, Bengaluru</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl border border-[#e5e7eb] shadow overflow-hidden h-[400px]"
+            >
+              <div
+                class="bg-yellow-500 text-white text-sm text-center py-2 font-semibold"
+              >
+                <i class="fa-solid fa-award"></i> TWC Partner
+              </div>
+
+              <div
+                class="relative h-60 overflow-hidden group card cursor-pointer"
+              >
+                <a href="details6.html">
+                  <div class="slider flex transition-transform duration-500">
+                    <img
+                      src="./assets/ben1.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/ben2.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/ben3.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/ben4.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                  </div>
+                </a>
+
+                <button
+                  class="prevBtn absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button
+                  class="nextBtn absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <div
+                  class="dots absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2"
+                >
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                </div>
+              </div>
+
+              <div class="p-4 flex flex-col gap-2">
+                <h3 class="font-semibold text-lg">Bengaluru Event Planners</h3>
+
+                <div class="flex items-center gap-2 text-sm">
+                  <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                  <span>4.9 (44 users)</span>
+                </div>
+
+                <div class="flex items-center gap-2 text-gray-500">
+                  <i class="fa-solid fa-location-dot text-lg"></i>
+                  <span>T. Dasarahalli, Bengaluru</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl border border-[#e5e7eb] shadow overflow-hidden h-[400px]"
+            >
+              <div
+                class="bg-yellow-500 text-white text-sm text-center py-2 font-semibold"
+              >
+                <i class="fa-solid fa-award"></i> TWC Partner
+              </div>
+
+              <div
+                class="relative h-60 overflow-hidden group card cursor-pointer"
+              >
+                <a href="details7.html">
+                  <div class="slider flex transition-transform duration-500">
+                    <img
+                      src="./assets/m1.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/m2.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/m3.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/m4.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                  </div>
+                </a>
+
+                <button
+                  class="prevBtn absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button
+                  class="nextBtn absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <div
+                  class="dots absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2"
+                >
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                </div>
+              </div>
+
+              <div class="p-4 flex flex-col gap-2">
+                <h3 class="font-semibold text-lg">Mahinava Events official</h3>
+
+                <div class="flex items-center gap-2 text-sm">
+                  <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                  <span>4.9 (135 users)</span>
+                </div>
+
+                <div class="flex items-center gap-2 text-gray-500">
+                  <i class="fa-solid fa-location-dot text-lg"></i>
+                  <span>Krishnarajapura, Bengaluru</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl border border-[#e5e7eb] shadow overflow-hidden h-[400px]"
+            >
+              <div
+                class="bg-yellow-500 text-white text-sm text-center py-2 font-semibold"
+              >
+                <i class="fa-solid fa-award"></i> TWC Partner
+              </div>
+
+              <div
+                class="relative h-60 overflow-hidden group card cursor-pointer"
+              >
+                <a href="details8.html">
+                  <div class="slider flex transition-transform duration-500">
+                    <img
+                      src="./assets/h1.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/h2.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/h3.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/h4.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                  </div>
+                </a>
+
+                <button
+                  class="prevBtn absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button
+                  class="nextBtn absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <div
+                  class="dots absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2"
+                >
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                </div>
+              </div>
+
+              <div class="p-4 flex flex-col gap-2">
+                <h3 class="font-semibold text-lg">HKGN flower merchant</h3>
+
+                <div class="flex items-center gap-2 text-sm">
+                  <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                  <span>4.8 (27 users)</span>
+                </div>
+
+                <div class="flex items-center gap-2 text-gray-500">
+                  <i class="fa-solid fa-location-dot text-lg"></i>
+                  <span>Bommanahalli, Bengaluru</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl border border-[#e5e7eb] shadow overflow-hidden h-[400px]"
+            >
+              <div
+                class="bg-yellow-500 text-white text-sm text-center py-2 font-semibold"
+              >
+                <i class="fa-solid fa-award"></i> TWC Partner
+              </div>
+
+              <div
+                class="relative h-60 overflow-hidden group card cursor-pointer"
+              >
+                <a href="details9.html">
+                  <div class="slider flex transition-transform duration-500">
+                    <img
+                      src="./assets/ra1.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/ra2.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/ra3.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                    <img
+                      src="./assets/ra4.webp"
+                      class="w-full h-60 object-cover flex-shrink-0"
+                    />
+                  </div>
+                </a>
+
+                <button
+                  class="prevBtn absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button
+                  class="nextBtn absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
+                >
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <div
+                  class="dots absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2"
+                >
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                  <span class="dot w-2 h-2 bg-white/50 rounded-full"></span>
+                </div>
+              </div>
+
+              <div class="p-4 flex flex-col gap-2">
+                <h3 class="font-semibold text-lg">Ra Entertainment</h3>
+
+                <div class="flex items-center gap-2 text-sm">
+                  <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                  <span>2.5 (4 users)</span>
+                </div>
+
+                <div class="flex items-center gap-2 text-gray-500">
+                  <i class="fa-solid fa-location-dot text-lg"></i>
+                  <span>Ashok Vihar, Delhi</span>
+                </div>
+              </div>
+            </div>
+
+            <script>
+              const cards = document.querySelectorAll(".card");
+
+              cards.forEach((card) => {
+                const slider = card.querySelector(".slider");
+                const nextBtn = card.querySelector(".nextBtn");
+                const prevBtn = card.querySelector(".prevBtn");
+                const dots = card.querySelectorAll(".dot");
+
+                let index = 0;
+                const total = dots.length;
+
+                function updateSlider() {
+                  slider.style.transform = `translateX(-${index * 100}%)`;
+
+                  dots.forEach((dot) => dot.classList.remove("bg-white"));
+                  dots[index].classList.add("bg-white");
+                }
+
+                nextBtn.addEventListener("click", () => {
+                  index = (index + 1) % total;
+                  updateSlider();
+                });
+
+                prevBtn.addEventListener("click", () => {
+                  index = (index - 1 + total) % total;
+                  updateSlider();
+                });
+
+                dots.forEach((dot, i) => {
+                  dot.addEventListener("click", () => {
+                    index = i;
+                    updateSlider();
+                  });
+                });
+
+                updateSlider();
+              });
+            </script>
+          </div>
+        </div>
+        <div class="w-full flex justify-center mt-3">
+          <button
+            class="border-2 border-[#ff5b95] text-[#ff5b95] font-semibold px-8 py-2 rounded-3xl transition duration-200 hover:bg-[#FF5B9533]"
+          >
+            Show More
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#fbfbfb] flex flex-col px-6 md:px-12 lg:px-20 py-10 gap-6 mt-10">
+      <p class="text-[#808080] text-sm text-justify leading-relaxed">
+        India, a country with a history of rich culture and traditions, has
+        always celebrated love extravagantly! Weddings in India are more than
+        just celebrations; they are lifetime memories filled with fun, laughter,
+        traditions, and emotions. Once you have picked the perfect venue for
+        your special day, the next thing on your checklist is to ensure that the
+        venue glams up right on your wedding day. From breathtaking
+        rustic-themed wedding decor to glamorous Bollywood-inspired ones, you
+        will never run out of choices when choosing wedding ceremony decorations
+        in India. How do you choose the perfect one? Well, leave it to the
+        experts! The top wedding decorators in India listed on the website, and
+        will not only help you pick the best wedding decor for your big day, but
+        they ensure that every little detail of your wedding decor is executed
+        perfectly on your special day.
+      </p>
+      <p class="text-[#808080] text-sm text-justify leading-relaxed">
+        We have chosen the finest Indian wedding decorators in all categories
+        and budgets and listed them with all their details and portfolios for
+        you to look at and choose the most suitable one. All you must do is set
+        the filters per your preference, and voila! You have a list of the best
+        wedding decorators in India curated exclusively for you.
+      </p>
+
+      <div>
+        <p class="text-xl font-semibold">
+          Wedding Event Decoration In Different Indian Cities
+        </p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Different states in India have unique ways of celebrating their
+          weddings. From partying all night to celebrate the start of a new
+          journey in Punjab to a serene day wedding in Kerala, weddings in India
+          are different. Yet, each one of them is elevated with exquisite
+          decorations. It's best to hire local wedding decoration experts to
+          create the perfect wedding setting, for they will be well-versed in
+          your culture. Let's look at the wedding decorators for hire in
+          different cities in India.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Wedding Decorators In Bangalore</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          The ‘IT capital of India’ is known for its sophisticated weddings.
+          From dainty floral arrangements to graceful table settings, everything
+          is crafted beautifully by these professionals. Hire your favourite
+          decorators for your wedding!
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Wedding Decorators In Delhi</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Attend a wedding in Delhi to know the real flavour of a grand Indian
+          wedding. The best wedding decorators in the country beautify these
+          lavish Delhi weddings. Choose the artist to craft your gorgeous
+          wedding today!
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Wedding Decorators In Hyderabad</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Weddings are celebrated elegantly in this ‘city of Nawabs.’ Hire
+          professional decorators in the city who will create the perfect
+          wedding setting for you to promise each other ‘a forever.’
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Wedding Decorators In Mumbai</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Mumbaikars might not have time for everyday catch-ups! But the city
+          knows how to party. Mumbai weddings are a sight to behold, all thanks
+          to the talented decorators for curating these beautiful weddings.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Wedding Decorators In Jaipur</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          The pink city is home to numerous exquisite palaces, among all things
+          royal. The wedding decorators in the city craft modern decor settings
+          without losing the touch of the city’s traditions.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Wedding Decorators In Goa</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Is a sundowner wedding what you dream of? Goa is the perfect
+          destination. The beach weddings in Goa are decorated with grace and
+          elegance by the creative artists in the state.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Wedding Decorators In Coimbatore</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Our Coimbatore-based wedding decorators bring your dreams to life
+          amidst lush greenery and tranquil landscapes, blending nature's beauty
+          with exquisite floral arrangements, creating an enchanting atmosphere
+          for your special day.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Wedding Decorators In Chennai</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          With a deep appreciation for Chennai's rich cultural heritage, our
+          decorators combine traditional elements with a modern aesthetic,
+          crafting weddings that resonate with elegance and authenticity,
+          ensuring your celebration reflects the city's grace.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Wedding Decorators In Pune</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Embrace the cosmopolitan allure of Pune with our decorators, who
+          artfully weave contemporary sophistication into your wedding decor,
+          delivering a stylish and refined ambience that mirrors the city's
+          dynamic spirit.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Wedding Decorators In Lucknow</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Revel in the opulence of Lucknow as our decorators immerse your
+          wedding in regal grandeur, adorning your venue with intricate details
+          and traditional motifs, ensuring a celebration fit for royalty.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Wedding Decorators In Kolkata</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Celebrate the cultural vibrancy of Kolkata with our decorators, who
+          infuse artistic brilliance into your wedding decor, enveloping your
+          venue in grandeur and elegance capturing the essence of the city's
+          lively soul.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Wedding Decorators In Bhubaneswar</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Let the tranquil beauty of Bhubaneswar inspire your wedding decor as
+          our experts craft serene and enchanting settings, blending nature's
+          charm with artistic design to create a truly memorable celebration.
+        </p>
+      </div>
+
+      <p class="font-semibold text-xl">
+        Popular Wedding Venue Decorations in India
+      </p>
+
+      <div>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Your wedding aesthetics play a major role in turning your dream
+          wedding into reality, and your wedding decor takes centre stage when
+          it comes to wedding aesthetics. Beginning with an engagement party,
+          the talented wedding decorators in India have unique and gorgeous
+          decor ideas for every step of your wedding journey. Have a look at the
+          most popular wedding decorations offered by our decorators.
+        </p>
+        <p class="font-semibold">Haldi Decoration</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Embracing the joy of pre-wedding rituals, Haldi decorations drench the
+          venue in yellow hues and fragrant blooms. Turmeric's auspicious
+          essence fills the air, setting the stage for a vibrant celebration of
+          purity and love.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Car Decoration For Wedding</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          The wedding journey begins with a beautifully adorned car, symbolizing
+          the couple's journey into a new chapter of life. Intricate floral
+          arrangements, ribbons, and garlands transform the vehicle into a
+          mobile symbol of love.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Wedding Stage Decoration</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          The stage is a canvas of dreams at the heart of the wedding. Elaborate
+          backdrops, drapes, and floral arrangements frame the couple, creating
+          a mesmerizing focal point for rituals and photographs.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Mandap Decoration</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Mandaps are sacred spaces where vows are exchanged. Intricate mandap
+          decorations blend traditional elements with modern design, creating an
+          enchanting ambience for the union of two souls.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Bride-To-Be Decorations</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Special decor packages are offered by wedding decorators in India for
+          bachelorette and other bridal parties.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">First Night Room Decoration</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          The couple's first night together is filled with romance and
+          anticipation. Room decorations with candles, petals, and soft lighting
+          set the mood for an intimate beginning.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Mehendi Decoration</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Mehendi ceremonies come alive with vibrant decor, often featuring
+          bohemian-inspired elements, floral arrangements, and cosy seating,
+          creating an atmosphere of fun and celebration.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Wedding Room Decoration</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          The newlywed's room is transformed into a romantic haven with soft
+          colours, floral touches, and personalized details, creating a cosy
+          retreat for the couple.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Wedding Gate Decoration</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Grand entrances are adorned with intricate gate decorations,
+          reflecting the couple's style and the grandeur of the celebration.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Mangala Snanam Decoration</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Mangala Snanam, a sacred ritual, is celebrated with purity and grace.
+          Decorations feature traditional elements like banana leaves, flowers,
+          and auspicious symbols.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Sangeet Decoration</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Sangeet ceremonies burst with energy and colour, and vibrant decor,
+          music, and dance elements infuse the celebration with joy and rhythm.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Simple Wedding Decorations</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Elegance in simplicity shines through minimalistic decor, focusing on
+          subtle, refined details that enhance the beauty of the occasion.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Wedding Hall Decoration</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Wedding halls are transformed into enchanting spaces with drapes,
+          lighting, and thematic decor, enveloping guests in splendour.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Wedding Light Decoration</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          The play of lights creates a magical atmosphere, with intricate
+          patterns, lanterns, and fairy lights enhancing the ambience.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Wedding Tent Decoration</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Outdoor weddings come to life under beautifully decorated tents,
+          blending the natural surroundings with elegant decor for a captivating
+          experience.
+        </p>
+        <p class="font-semibold text-xl">
+          Other Trending Marriage Decoration You Must Check Out
+        </p>
+      </div>
+
+      <div>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          The wedding decoration trends in India are continuously evolving. Each
+          wedding season brings fresh ideas and innovations that redefine the
+          concept of wedding aesthetics. Whether you're planning a traditional
+          ceremony, a contemporary soirée, or something in between, exploring
+          the latest trends in decoration can inspire you to infuse your
+          celebration with modern elegance, personal touches, and unique
+          experiences.
+        </p>
+        <ul class="text-[#808080] text-justify leading-relaxed list-disc pl-5">
+          <li>Wedding Backdrop Decoration</li>
+          <li>Wedding Tray Decoration</li>
+          <li>Church Wedding Decorations</li>
+          <li>Outdoor Wedding Decorations</li>
+          <li>Wedding Pandal Decoration</li>
+          <li>Beach Wedding Decorations</li>
+          <li>Garden Wedding Decorations</li>
+          <li>Traditional Wedding Decor</li>
+          <li>Wedding Party Decorations</li>
+        </ul>
+      </div>
+
+      <p class="font-semibold text-xl">
+        Tips To Keep in Mind When Hiring Wedding Decorators in India
+      </p>
+
+      <div>
+        <p class="font-semibold">Hire In Advance:</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          You must start looking and hire your favourite wedding decorator as
+          soon as you decide the venue you want to get married in! The popular
+          ones usually get booked months in advance, especially during the
+          wedding season.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Define Your Style</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Before you start looking for the decorator of your choice, you must
+          have an idea about what you are looking for. For this, you must
+          research the types of wedding decor. This will help you narrow down
+          your options, and you will have to look into the details of the
+          decorators whose style aligns with your vision.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Review Portfolios</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Your next step in the quest to find the perfect wedding decorator for
+          your big day is to look through the portfolios of the decorators.
+          Carefully look at the portfolios and figure out if their style matches
+          your dream wedding.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Ask for Recommendations</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          One of the best ways to hire the best wedding decorators in India is
+          to consult the experts. Talk to the experts and they will help you
+          connect with the best-suited decorators as per your needs and budget.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Set a Budget</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Determine a budget for your wedding decor. This will help you narrow
+          down your options and ensure you're not overspending.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Meet in Person</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Schedule face-to-face meetings with potential decorators. This allows
+          you to discuss your ideas, see their work samples, and gauge if they
+          are a good match for you.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Discuss Themes and Styles</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Share your wedding theme and style preferences with the decorator.
+          Ensure they can adapt to your vision and offer creative ideas to
+          enhance it.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Discuss Setup and Cleanup</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Clarify who will handle the setup and cleanup. Some decorators offer
+          this as part of their service, while others may charge extra.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Timeline</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Creating a detailed timeline for decorating activities is essential
+          for a smooth and stress-free wedding day. A well-structured timeline
+          ensures that everything is prepared and executed flawlessly, from
+          setup to teardown, leaving you to enjoy your special day without
+          worry.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Contracts and Agreements</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Ensure all details discussed are included in the contract. This
+          includes the theme, colour schemes, types of decorations, and any
+          special arrangements.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Stay Involved</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          While you've hired professionals, it's important to stay involved in
+          the process. Regular check-ins and updates will help ensure everything
+          is going according to plan.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Plan for Contingencies</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          Discuss backup plans for unexpected situations, like bad weather for
+          outdoor events.
+        </p>
+      </div>
+
+      <div>
+        <p class="font-semibold">Stay Flexible</p>
+        <p class="text-[#808080] text-sm text-justify leading-relaxed">
+          While it's important to have a clear vision, be open to some
+          flexibility. Sometimes, certain elements may need to be adjusted due
+          to logistical or practical reasons.
+        </p>
+        <p class="font-semibold text-xl">
+          Hire the Top Wedding Decorators in India
+        </p>
+      </div>
+
+      <p class="text-[#808080] text-sm text-justify leading-relaxed">
+        When it comes to creating the wedding of your dreams, look no further.
+        We take immense pride in connecting you with the best Indian wedding
+        decorators who are masters of their craft. Be it a traditional one or a
+        modern wedding, our wedding decorators turn your vision into reality,
+        ensuring every detail of your special day is perfect. So, wait no more!
+        Head to the list of decorators on the website. Set the filters as per
+        your preference, and hire your favourite ones before they get booked!
+      </p>
+    </div>
+
+    <!-- footer -->
+    <footer
+      class="bg-[linear-gradient(146deg,_#3d1b3b,_#0c0e36)] py-12 px-8 text-white border-t border-gray-200"
+    >
+      <div class="max-w-7xl mx-auto">
+        <!-- Main Grid Section -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Column 1: Company -->
+          <div>
+            <h3 class="font-semibold uppercase tracking-wider mb-4">Company</h3>
+            <ul class="space-y-3 text-sm font-medium text-[#cccccc]">
+              <li><a href="#" class="hover:text-pink-500">Careers</a></li>
+              <li>
+                <a href="#" class="hover:text-pink-500">Register as Partner</a>
+              </li>
+              <li><a href="#" class="hover:text-pink-500">Client Terms</a></li>
+              <li><a href="#" class="hover:text-pink-500">Vendor Terms</a></li>
+              <li>
+                <a href="#" class="hover:text-pink-500">Privacy Policy</a>
+              </li>
+              <li><a href="#" class="hover:text-pink-500">Refund Policy</a></li>
+              <li>
+                <a href="#" class="hover:text-pink-500">Service Payment Plan</a>
+              </li>
+              <li><a href="#" class="hover:text-pink-500">About Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Explore -->
+          <div>
+            <h3 class="font-semibold uppercase tracking-wider mb-4">Explore</h3>
+            <ul class="space-y-3 text-sm font-medium text-[#cccccc]">
+              <li><a href="#" class="hover:text-pink-500">Wedding Ideas</a></li>
+              <li>
+                <a href="#" class="hover:text-pink-500">Wedding Venues</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-pink-500">Wedding Decorators</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-pink-500"
+                  >Wedding Photographers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-pink-500">Wedding Services</a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-pink-500"
+                  >Wedding Invitation Card</a
+                >
+              </li>
+              <li><a href="#" class="hover:text-pink-500">Wedding Blog</a></li>
+              <li>
+                <a href="#" class="hover:text-pink-500">Price Beat Challenge</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact Us -->
+          <div>
+            <h3 class="font-semibold uppercase tracking-wider mb-4">
+              Contact Us
+            </h3>
+            <div class="space-y-4 text-sm">
+              <div>
+                <p class="text-[#808080] font-semibold mb-1">
+                  For Wedding Services
+                </p>
+                <p
+                  class="flex items-center gap-2 font-medium text-[#cccccc] hover:text-pink-500 cursor-pointer"
+                >
+                  <span><i class="fa-solid fa-phone"></i></span> +91 8884090499
+                </p>
+              </div>
+              <div>
+                <p class="text-[#808080] font-semibold mb-1">
+                  For Customer Support
+                </p>
+                <p
+                  class="flex items-center gap-2 font-medium text-black hover:text-pink-500"
+                >
+                  <span><i class="fa-regular fa-envelope"></i></span>
+                  support@theweddingcompany.com
+                </p>
+              </div>
+              <div>
+                <p class="text-[#808080] font-semibold mb-1 leading-tight">
+                  Bangalore - Business address/operating address
+                </p>
+                <address
+                  class="not-italic text-[#cccccc] font-medium leading-relaxed mt-2"
+                >
+                  Ground Floor, 375, <br />
+                  5th Main Rd, <br />
+                  HSR Layout Sector 6, <br />
+                  Bengaluru, Karnataka 560102
+                </address>
+              </div>
+            </div>
+          </div>
+          <!-- Column 4: Follow Us On -->
+          <div>
+            <h3 class="font-semibold uppercase tracking-wider mb-4">
+              Follow Us On
+            </h3>
+            <ul class="space-y-3 text-sm text-[#cccccc] font-medium">
+              <li class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center text-2xl"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </div>
+                <a href="#" class="hover:text-pink-500">Instagram</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center text-2xl"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <a href="#" class="hover:text-pink-500">Facebook</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center text-2xl"
+                >
+                  <i class="fa-brands fa-youtube"></i>
+                </div>
+                <a href="#" class="hover:text-pink-500">Youtube</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center text-2xl"
+                >
+                  <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <a href="#" class="hover:text-pink-500">LinkedIn</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <div
+                  class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center text-2xl"
+                >
+                  <i class="fa-brands fa-x-twitter"></i>
+                </div>
+                <a href="#" class="hover:text-pink-500">X</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Bottom Disclaimer -->
+        <div class="mt-12 pb-6">
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Disclaimer: To make your experience better we might use your details
+            for marketing purposes. Our wedding experts might contact to
+            understand your need and help you get high quality wedding services.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- bottom buttons -->
+    <div class="fixed bottom-4 left-1/2 -translate-x-1/2 w-[95%] sm:w-auto flex flex-row justify-center gap-2 sm:gap-4 z-50">
+      <button
+        class="bg-pink-800 text-white px-4 sm:px-10 py-2 sm:py-3 rounded-3xl font-semibold text-sm sm:text-lg shadow w-1/2 sm:w-auto text-center"
+      >
+        Get Free Quote
+      </button>
+
+      <button
+        class="bg-green-600 text-white px-4 sm:px-10 py-2 sm:py-3 rounded-3xl font-semibold text-sm sm:text-lg shadow w-1/2 sm:w-auto text-center flex items-center justify-center gap-2 whitespace-nowrap"
+      >
+        <i class="fa-brands fa-whatsapp"></i> Chat With Us
+      </button>
+    </div>
+  </body>
+</html>
