@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding | The Wedding Co.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/eva-icons"></script>
+    <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
+</head>
+
+<body
+    class="[&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar]:bg-amber-50 [&::-webkit-scrollbar-thumb]:bg-amber-200 [&::-webkit-scrollbar-thumb]:rounded-2xl">
+    <style>
+        * {
+            font-family: 'Playfair Display', serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+
+
+    <div class="relative w-full h-auto flex flex-col gap-5 items-center justify-center p-20 drop-shadow-lg border z-50">
+
+
+        <div
+            class="absolute top-5 rounded-3xl w-[45%] h-[80px] overflow-hidden flex flex-col p-3 bg-white items-start transition-all duration-500 ease-in-out focus-within:h-[810px] shadow-lg z-50">
+
+            <div class="flex flex-row gap-3 w-full shrink-0 ">
+                <input type="search" placeholder="search for"
+                    class="rounded-full px-5 w-full h-14 outline-none [&::-webkit-search-cancel-button]:appearance-none">
+                <div class="h-14 flex items-center justify-center ">
+                    <i class="fas fa-search mr-5 text-pink-400"></i>
+                </div>
+            </div>
+            <div
+                class="flex flex-col gap-4 px-5 py-5 w-full overflow-y-auto  [&::-webkit-scrollbar]:hidden  [-ms-overflow-style:none] [scrollbar-width:none] z-50">
+                <p class="font-bold text-xl">Top Searches</p>
+                <span class="flex flex-row gap-5 mt-5">
+                    <p
+                        class="text-sm px-4 bg-gray-200 transition-all duration-300 hover:bg-gray-300 cursor-pointer py-2 rounded-full font-semibold">
+                        Wedding Dresses</p>
+                    <p
+                        class="text-sm px-4 bg-gray-200 transition-all duration-300 hover:bg-gray-300 cursor-pointer py-2 rounded-full font-semibold">
+                        Decoration Ideas</p>
+                    <p
+                        class="text-sm px-4 bg-gray-200 transition-all duration-300 hover:bg-gray-300 cursor-pointer py-2 rounded-full font-semibold">
+                        Jewellery</p>
+                    <p
+                        class="text-sm px-4 bg-gray-200 transition-all duration-300 hover:bg-gray-300 cursor-pointer py-2 rounded-full font-semibold">
+                        Groom Dresses</p>
+                </span>
+                <p class="font-bold text-xl mt-5">Browse through categories</p>
+                <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <span
+                        class="flex flex-row gap-5 items-center border border-gray-300 p-4 rounded-2xl group hover:bg-gray-100 cursor-pointer transition-all duration-300">
+                        <div class="flex flex-col gap-2">
+                            <p class="text-xl font-bold">Bridal Lehengas</p>
+                            <p class="text-gray-400 text-sm">Explore the allure of bridal</p>
+                            <p class="text-gray-400 text-sm">lehengas,each intricately...</p>
+                        </div>
+                        <div class="overflow-hidden h-32 w-32 rounded-[8px]">
+                            <img src="../assets/search_1.webp" alt="..."
+                                class="h-full w-full object-cover transition-all duration-300 group-hover:scale-105">
+                        </div>
+                    </span>
+                    <span
+                        class="flex flex-row gap-5 items-center border border-gray-300 p-4 rounded-2xl group hover:bg-gray-100 cursor-pointer transition-all duration-300">
+                        <div class="flex flex-col gap-2">
+                            <p class="text-xl font-bold">Wedding Dresses</p>
+                            <p class="text-gray-400 text-sm">Journey through an exquisite</p>
+                            <p class="text-gray-400 text-sm">range of indian wedding outfits...</p>
+                        </div>
+                        <div class="overflow-hidden h-32 w-32 rounded-[8px]">
+                            <img src="../assets/search_2.webp" alt="..."
+                                class="h-full w-full object-cover transition-all duration-300 group-hover:scale-105">
+                        </div>
+                    </span>
+                    <span
+                        class="flex flex-row gap-5 items-center border border-gray-300 p-4 rounded-2xl group hover:bg-gray-100 cursor-pointer transition-all duration-300">
+                        <div class="flex flex-col gap-2">
+                            <p class="text-xl font-bold">Blouse Designs</p>
+                            <p class="text-gray-400 text-sm">Delve into the world of artistic</p>
+                            <p class="text-gray-400 text-sm">blouse designs,showcasing a...</p>
+                        </div>
+                        <div class="overflow-hidden h-32 w-32 rounded-[8px]">
+                            <img src="../assets/search_3.webp" alt="..."
+                                class="object-cover h-full w-full transition-all duration-300 group-hover:scale-105">
+                        </div>
+                    </span>
+                    <span
+                        class="flex flex-row gap-5 items-center border border-gray-300 p-4 rounded-2xl group hover:bg-gray-100 cursor-pointer transition-all duration-300">
+                        <div class="flex flex-col gap-2">
+                            <p class="text-xl font-bold">Sarees</p>
+                            <p class="text-gray-400 text-sm">Celebrate the timeless charm of</p>
+                            <p class="text-gray-400 text-sm">sarees, ranging from inda's...</p>
+                        </div>
+                        <div class="overflow-hidden h-32 w-32 rounded-[8px]">
+                            <img src="../assets/search_4.webp" alt="..."
+                                class="object-cover h-full w-full transition-all duration-300 group-hover:scale-105">
+                        </div>
+                    </span>
+                    <span
+                        class="flex flex-row gap-5 items-center border border-gray-300 p-4 rounded-2xl group hover:bg-gray-100 cursor-pointer transition-all duration-300">
+                        <div class="flex flex-col gap-2">
+                            <p class="text-xl font-bold">Mehandi Designs</p>
+                            <p class="text-gray-400 text-sm">Experience the artistry of</p>
+                            <p class="text-gray-400 text-sm">mehendi,where each design...</p>
+                        </div>
+                        <div class="overflow-hidden h-32 w-32 rounded-[8px]">
+                            <img src="../assets/search_5.webp" alt="..."
+                                class="object-cover h-full w-full transition-all duration-300 group-hover:scale-105">
+                        </div>
+                    </span>
+                    <span
+                        class="flex flex-row gap-5 items-center border border-gray-300 p-4 rounded-2xl group hover:bg-gray-100 cursor-pointer transition-all duration-300">
+                        <div class="flex flex-col gap-2">
+                            <p class="text-xl font-bold">Jewellery</p>
+                            <p class="text-gray-400 text-sm">Immerse yourself in a curated</p>
+                            <p class="text-gray-400 text-sm">collection that honors indian's...</p>
+                        </div>
+                        <div class="overflow-hidden h-32 w-32 rounded-[8px]">
+                            <img src="../assets/search_6.webp" alt="..."
+                                class="object-cover h-full w-full transition-all duration-300 group-hover:scale-105">
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header ending -->
+
+    <div class="w-full px-32 py-3 flex items-center"> <a href="/pages/WeddingIdeas/page/Ideas.html"
+            class="px-5 py-2 flex gap-2 items-center"> <span>back</span> <i class="fa fa-arrow-left"></i></a>
+        <p class="text-xl font-semibold">Bridal Lehengas <span class="ml-2 text-gray-400">( 1411 results )</span></p>
+    </div>
+
+    <!-- categories section -->
+    <div
+        class="w-full overflow-x-scroll py-5 flex flex-row items-center [&::-webkit-scrollbar]:hidden gap-10  px-10 drop-shadow-lg border">
+        <a href="#first" class="sticky left-0">
+            <div
+                class="sticky left-0 bg-white drop-shadow-lg hover:cursor-pointer hover:scale-105 transition-all duration-300 rounded-full h-10 w-10 p-5 flex items-center justify-center z-10">
+                <i class="fa-solid fa-angle-left text-2xl"></i>
+            </div>
+        </a>
+        <div class=" flex flex-row gap-10">
+            <a href="#" class="flex flex-col gap-2 items-center" id="first">
+                <p
+                    class="w-52 bg-gray-200 rounded-full text-center px-2 py-2 transition-all duration-300 hover:scale-105 hover:bg-gray-300">
+                    Rajasthani Lehenga</p>
+            </a>
+
+            <a href="#" class="flex flex-col gap-2 items-center">
+                <p
+                    class="w-52 bg-gray-200 rounded-full text-center px-2 py-2 transition-all duration-300 hover:scale-105 hover:bg-gray-300">
+                    Gujarati Lehenga</p>
+            </a>
+
+            <a href="#" class="flex flex-col gap-2 items-center">
+                <p
+                    class="w-52 bg-gray-200 rounded-full text-center px-2 py-2 transition-all duration-300 hover:scale-105 hover:bg-gray-300">
+                    South Indian Lehenga</p>
+            </a>
+
+
+            <a href="#" class="flex flex-col gap-2 items-center">
+                <p
+                    class="w-52 bg-gray-200 rounded-full text-center px-2 py-2 transition-all duration-300 hover:scale-105 hover:bg-gray-300">
+                    Designer Lehenga</p>
+            </a>
+
+            <a href="#" class="flex flex-col gap-2 items-center">
+                <p
+                    class="w-52 bg-gray-200 rounded-full text-center px-2 py-2 transition-all duration-300 hover:scale-105 hover:bg-gray-300">
+                    Sequin Lehenga</p>
+            </a>
+
+            <a href="#" class="flex flex-col gap-2 items-center">
+                <p
+                    class="w-52 bg-gray-200 rounded-full text-center px-2 py-2 transition-all duration-300 hover:scale-105 hover:bg-gray-300">
+                    Velvet Lehenga</p>
+            </a>
+
+            <a href="#" class="flex flex-col gap-2 items-center">
+                <p
+                    class="w-52 bg-gray-200 rounded-full text-center px-2 py-2 transition-all duration-300 hover:scale-105 hover:bg-gray-300">
+                    Pastel Lehenga</p>
+            </a>
+
+            <a href="#" class="flex flex-col gap-2 items-center">
+                <p
+                    class="w-52 bg-gray-200 rounded-full text-center px-2 py-2 transition-all duration-300 hover:scale-105 hover:bg-gray-300">
+                    Georgette Lehenga</p>
+            </a>
+
+            <a href="#" class="flex flex-col gap-2 items-center">
+                <p
+                    class="w-52 bg-gray-200 rounded-full text-center px-2 py-2 transition-all duration-300 hover:scale-105 hover:bg-gray-300">
+                    Chikankari Lehenga</p>
+            </a>
+
+            <a href="#" class="flex flex-col gap-2 items-center">
+                <p
+                    class="w-52 bg-gray-200 rounded-full text-center px-2 py-2 transition-all duration-300 hover:scale-105 hover:bg-gray-300">
+                    Zardozi Lehenga</p>
+            </a>
+
+            <a href="#" class="flex flex-col gap-2 items-center">
+                <p
+                    class="w-52 bg-gray-200 rounded-full text-center px-2 py-2 transition-all duration-300 hover:scale-105 hover:bg-gray-300">
+                    Mirror Work Lehenga</p>
+            </a>
+        </div>
+        <a href="#last" class="sticky right-0">
+            <div
+                class="sticky right-0 bg-white drop-shadow-lg hover:cursor-pointer hover:scale-105 transition-all duration-300 rounded-full h-10 w-10 p-5 flex items-center justify-center">
+                <i class="fa-solid fa-angle-right text-2xl"></i>
+            </div>
+        </a>
+    </div>
+    <!-- categories ending -->
+
+    <!-- image cards starting-->
+    <!-- Hidden checkbox for modal logic -->
+    <input type="checkbox" id="login-modal-toggle" class="peer hidden">
+
+    <!-- image cards starting-->
+    <div class="columns-1 md:columns-2 lg:columns-3 gap-5 px-52 mt-5 space-y-5">
+
+        <div class="h-auto p-4 w-70 gap-3 flex flex-col bg-pink-50 overflow-hidden rounded-2xl break-inside-avoid">
+            <img src="../assets/svg.webp" alt="" class="rounded-xl w-10">
+            <p class="text-black text-xl font-semibold">Bridal Lehengas</p>
+            <p class="text-gray-500 text-sm">
+                Explore the allure of bridal lehengas, each intricately crafted, reflecting India's rich tapestry of colors and designs. Perfectly tailored for brides seeking a harmonious blend of tradition and contemporary style.
+            </p>
+        </div>
+
+        <!-- Image Card 1 -->
+        <div class="h-auto w-auto relative group break-inside-avoid">
+            <label for="login-modal-toggle"
+                class="absolute transition-all duration-300 opacity-0 group-hover:opacity-100 cursor-pointer bg-black/40 flex h-full w-full items-center justify-center rounded-xl">
+                <p class="bg-white/60 p-4 rounded-full space-x-4"> <i class="fa-regular fa-bookmark"></i> <span> Add to
+                        ideabook</span> </p>
+            </label>
+            <img src="../assets/image_1.jpeg" alt="" class="rounded-xl w-full">
+        </div>
+
+        <!-- Image Card 2 -->
+        <div class="h-auto w-auto relative group break-inside-avoid">
+            <label for="login-modal-toggle"
+                class="absolute transition-all duration-300 opacity-0 group-hover:opacity-100 cursor-pointer bg-black/40 flex h-full w-full items-center justify-center rounded-xl">
+                <p class="bg-white/60 p-4 rounded-full space-x-4"> <i class="fa-regular fa-bookmark"></i> <span> Add to
+                        ideabook</span> </p>
+            </label>
+            <img src="../assets/image_2.jpeg" alt="" class="rounded-xl w-full">
+        </div>
+
+        <!-- Image Card 3 -->
+        <div class="h-auto w-auto relative group break-inside-avoid">
+            <label for="login-modal-toggle"
+                class="absolute transition-all duration-300 opacity-0 group-hover:opacity-100 cursor-pointer bg-black/40 flex h-full w-full items-center justify-center rounded-xl">
+                <p class="bg-white/60 p-4 rounded-full space-x-4"> <i class="fa-regular fa-bookmark"></i> <span> Add to
+                        ideabook</span> </p>
+            </label>
+            <img src="../assets/image_3.jpeg" alt="" class="rounded-xl w-full">
+        </div>
+
+        <!-- Image Card 4 -->
+        <div class="h-auto w-auto relative group break-inside-avoid">
+            <label for="login-modal-toggle"
+                class="absolute transition-all duration-300 opacity-0 group-hover:opacity-100 cursor-pointer bg-black/40 flex h-full w-full items-center justify-center rounded-xl">
+                <p class="bg-white/60 p-4 rounded-full space-x-4"> <i class="fa-regular fa-bookmark"></i> <span> Add to
+                        ideabook</span> </p>
+            </label>
+            <img src="../assets/image_4.jpeg" alt="" class="rounded-xl w-full">
+        </div>
+
+        <!-- Image Card 5 -->
+        <div class="h-auto w-auto relative group break-inside-avoid">
+            <label for="login-modal-toggle"
+                class="absolute transition-all duration-300 opacity-0 group-hover:opacity-100 cursor-pointer bg-black/40 flex h-full w-full items-center justify-center rounded-xl">
+                <p class="bg-white/60 p-4 rounded-full space-x-4"> <i class="fa-regular fa-bookmark"></i> <span> Add to
+                        ideabook</span> </p>
+            </label>
+            <img src="../assets/image_5.jpeg" alt="" class="rounded-xl w-full">
+        </div>
+
+        <!-- Image Card 6 -->
+        <div class="h-auto w-auto relative group break-inside-avoid">
+            <label for="login-modal-toggle"
+                class="absolute transition-all duration-300 opacity-0 group-hover:opacity-100 cursor-pointer bg-black/40 flex h-full w-full items-center justify-center rounded-xl">
+                <p class="bg-white/60 p-4 rounded-full space-x-4"> <i class="fa-regular fa-bookmark"></i> <span> Add to
+                        ideabook</span> </p>
+            </label>
+            <img src="../assets/image_6.jpeg" alt="" class="rounded-xl w-full">
+        </div>
+
+        <!-- Image Card 7 -->
+        <div class="h-auto w-auto relative group break-inside-avoid">
+            <label for="login-modal-toggle"
+                class="absolute transition-all duration-300 opacity-0 group-hover:opacity-100 cursor-pointer bg-black/40 flex h-full w-full items-center justify-center rounded-xl">
+                <p class="bg-white/60 p-4 rounded-full space-x-4"> <i class="fa-regular fa-bookmark"></i> <span> Add to
+                        ideabook</span> </p>
+            </label>
+            <img src="../assets/image_7.jpeg" alt="" class="rounded-xl w-full">
+        </div>
+
+        <!-- Image Card 8 -->
+        <div class="h-auto w-auto relative group break-inside-avoid">
+            <label for="login-modal-toggle"
+                class="absolute transition-all duration-300 opacity-0 group-hover:opacity-100 cursor-pointer bg-black/40 flex h-full w-full items-center justify-center rounded-xl">
+                <p class="bg-white/60 p-4 rounded-full space-x-4"> <i class="fa-regular fa-bookmark"></i> <span> Add to
+                        ideabook</span> </p>
+            </label>
+            <img src="../assets/image_8.jpeg" alt="" class="rounded-xl w-full">
+        </div>
+
+        <!-- Image Card 9 -->
+        <div class="h-auto w-auto relative group break-inside-avoid">
+            <label for="login-modal-toggle"
+                class="absolute transition-all duration-300 opacity-0 group-hover:opacity-100 cursor-pointer bg-black/40 flex h-full w-full items-center justify-center rounded-xl">
+                <p class="bg-white/60 p-4 rounded-full space-x-4"> <i class="fa-regular fa-bookmark"></i> <span> Add to
+                        ideabook</span> </p>
+            </label>
+            <img src="../assets/image_9.jpeg" alt="" class="rounded-xl w-full">
+        </div>
+
+        <!-- Image Card 10 -->
+        <div class="h-auto w-auto relative group break-inside-avoid">
+            <label for="login-modal-toggle"
+                class="absolute transition-all duration-300 opacity-0 group-hover:opacity-100 cursor-pointer bg-black/40 flex h-full w-full items-center justify-center rounded-xl">
+                <p class="bg-white/60 p-4 rounded-full space-x-4"> <i class="fa-regular fa-bookmark"></i> <span> Add to
+                        ideabook</span> </p>
+            </label>
+            <img src="../assets/image_10.jpeg" alt="" class="rounded-xl w-full">
+        </div>
+
+    </div>
+    <!-- image cards ending -->
+
+    <!-- Modal Window -->
+    <div class="fixed inset-0 z-50 hidden peer-checked:flex items-center justify-center bg-black/50 backdrop-blur-sm">
+        <div class="bg-white p-8 rounded-3xl shadow-2xl w-96 flex flex-col items-center relative">
+            <!-- Close button via label -->
+            <label for="login-modal-toggle"
+                class="absolute top-4 right-5 text-gray-400 hover:text-black cursor-pointer">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </label>
+
+            <h2 class="text-2xl font-bold mb-2">Save to Ideabook</h2>
+            <p class="text-gray-500 text-center mb-6 text-sm">Login to save your favorite designs and access them
+                anywhere.</p>
+
+            <button
+                class="w-full flex items-center justify-center gap-3 border border-gray-300 p-3 rounded-full hover:bg-gray-50 transition-colors mb-4">
+                <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5 h-5" alt="Google">
+                <span class="font-medium text-gray-700">Continue with Google</span>
+            </button>
+
+            <p class="text-[10px] text-gray-400 text-center uppercase tracking-widest">or login with email</p>
+        </div>
+    </div>
+
+
+    <div class="p-4 w-full flex items-center justify-center ">
+        <span
+            class="inline-block animate-spin w-10 h-10 border-4 border-pink-400 border-t-transparent rounded-full"></span>
+    </div>
+
+
+    <!-- Footer - Bridal Lehenga content -->
+    <footer class="mt-4 flex flex-col gap-3 bg-gray-50 px-10 py-5">
+        <p class="text-gray-500 text-xs">Indian weddings are more than mere celebrations; they are once-in-a-lifetime
+            experiences filled with love, laughter, fun, thrill and emotions. This special day in every woman’s life
+            becomes more special when she walks down the aisle in her favourite bridal lehenga made specially for her.
+            Lehenga is a traditional Indian outfit for women that consists of a long, flowy, & voluminous skirt, a sleek
+            fit blouse & a trendy yet traditional dupatta. Lehengas are often made in the most luxurious fabrics in
+            India including silk, velvet, net, georgette, chiffon and many more. Further, the heavy bridal lehengas are
+            usually embellished with zari and threadwork. Stones, beads, mirrors and sequins turn these lehengas into
+            the most magical outfits.</p>
+        <p class="text-gray-500 text-xs">Weddings By Betterhalf have come up with an exclusive ideabook featuring
+            trending and latest bridal lehenga designs for you. Browse the list & bookmark your favourite ones today!
+        </p>
+        <p class="text-black font-semibold text-lg">Which Are The Trending Bridal Wedding Lehenga Styles?</p>
+        <p class="text-gray-500 text-xs">Wedding fashion is celebrated in India. Designers work day and night to create
+            the best wedding outfits for Indian couples to look mesmerising at their wedding ceremony. The Dulhan
+            lehenga is one of the most talked about wedding outfits. After all, have we all not dreamt about our wedding
+            lehenga forever? While we have all been dreaming about it, different women have different preferences when
+            it comes to their lehenga. Look at the most popular styles from simple bridal lehenga to traditional ones.
+        </p>
+
+        <p class="text-black text-base ">Rajasthani Lehenga</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Traditional red with mirror work and gota
+                patti</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Bandhani dupatta with heavy border</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Kundan and stone embellished blouse</span></p>
+
+        <p class="text-black text-base ">Gujarati Lehenga</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Panetar colour combination (white and red)</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Heavy gharchola work</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Traditional coin jewellery pairing</span></p>
+
+        <p class="text-black text-base ">South Indian Lehenga</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Silk lehenga with temple border</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Kasavu dupatta in off-white and gold</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Antique gold jewellery style</span></p>
+
+        <p class="text-black text-base ">Designer Lehenga</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Sabyasachi-inspired vintage silk</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Manish Malhotra contemporary sequin</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Tarun Tahiliani chikankari and mukaish</span></p>
+
+        <p class="text-black text-base ">Traditional Lehenga</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Deep red with heavy zardozi</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Maroon and gold tissue dupatta</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Classic round or fish-cut lehenga</span></p>
+
+        <p class="text-black text-base ">Punjabi Lehenga</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Phulkari embroidered lehenga</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Bright colours like yellow, pink, orange</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Patiala salwar style fusion</span></p>
+
+        <p class="text-black text-base ">Floral Lehenga</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">3D flower appliqué work</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Pastel base with floral thread embroidery</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Rose gold and ivory colour palette</span></p>
+
+        <p class="text-black text-base ">Sequin Lehenga</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">All-over silver or gold sequin</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Sequinned net dupatta with border</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Perfect for sangeet or reception</span></p>
+
+        <p class="text-black text-base ">Velvet Lehenga</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Rich jewel tones (emerald, royal blue,
+                burgundy)</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Heavy zari and dabka work</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Velvet blouse with deep neck</span></p>
+
+        <p class="text-black text-base ">Pastel Lehenga</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Mint green, blush pink, powder blue</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Light floral or threadwork</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Sheer or organza dupatta</span></p>
+
+        <p class="text-black text-base ">Georgette Lehenga</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Lightweight and flowy for summer weddings</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Digital print or light sequin scatter</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Easy to carry and drape</span></p>
+
+        <p class="text-black text-base ">Chikankari Lehenga</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Lucknowi chikankari on georgette or silk</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">White, pastels or powder pink base</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Mukaish or kamdani work</span></p>
+
+        <p class="text-black text-base ">Zardozi Lehenga</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Heavy metal embroidery on silk or velvet</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Traditional red, maroon or deep green</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Best for royal-themed weddings</span></p>
+
+        <p class="text-black text-base ">Mirror Work Lehenga</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Gujarati or Rajasthani mirror inlays</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Bright colours like orange, pink, yellow</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Perfect for daytime or mehendi</span></p>
+
+        <p class="text-black text-base ">Simple Lehengas</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Minimal embroidery or plain with border</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Light fabrics like cotton silk or raw silk</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Best for intimate weddings or court marriages</span>
+        </p>
+
+        <p class="text-black text-2xl font-bold">What Are The Latest Wedding Lehenga Designs For This Wedding Season?
+        </p>
+        <p class="text-gray-500 text-xs">With the wedding season in full swing, brides-to-be are on the hunt for the
+            perfect lehenga to dazzle on their special day. This year, trends are moving beyond the traditional red and
+            embracing an array of colours, from blush pink and mint green to bold royal blue. Minimal bridal lehenga-new
+            design is also taking centre stage, with intricate threadwork and subtle embellishments replacing heavy
+            embroidery. The A-line dulhan lehenga design remains a popular choice for a flattering silhouette, while the
+            lehenga-saree fusion offers a unique and unconventional twist. And for the eco-conscious bride, sustainable
+            fabrics like organic silk and khadi are making a statement. Remember, the most important thing is to choose
+            a lehenga that makes you feel confident and radiantly beautiful – after all, it's your day to shine!</p>
+
+        <p class="text-black text-2xl font-bold">Which Colour Is Trending Now In Bridal Lehenga?</p>
+        <p class="text-gray-500 text-xs">Certain colours including red, yellow and maroon are considered auspicious and
+            Indian brides have been donning these colours for the longest time. However, modern brides are experimenting
+            with unique colours and trends like pastel colours and muted tones. While keeping the trends in mind is a
+            good thing, be sure that you aren’t following trends blindly while choosing your bridal lehenga. Weddings By
+            Betterhalf’s Ideabook with the most exquisite bridal lehenga collection features lehengas in all colours and
+            trends for you to choose the best ones.</p>
+
+        <p class="text-black text-2xl font-bold">How Much Do Wedding Lehengas Cost?</p>
+        <p class="text-gray-500 text-xs">The cost incurred in your bridal lehenga depends on several factors. To start
+            with, the fabric used to create the lehenga and the intricacy of the work decides the price of the lehenga.
+            Further, the designer label matters a lot regarding your lehenga’s cost. In India, you can get a bridal
+            lehenga for as little as ₹15,000 from a local market, and the prices can go up to ₹8,00,000- ₹10,00,000
+            depending on the designer. Explore the Indian fashion market with bridal lehenga at prices, and pick your
+            favourite lehengas to make your special day even more special.</p>
+
+        <p class="text-black text-2xl font-bold">Latest Bridal Lehenga Trends of Indian Wedding</p>
+        <p class="text-gray-500 text-xs">The trending bridal lehengas in our ideabook blend traditional charm with
+            modern styles, making them perfect for women on their wedding day. Whether you're the bride (dulhan) looking
+            for the ideal lehenga for wedding or just a fan of wedding fashion, these Indian wedding lehengas are
+            designed to stand out. They feature beautiful fabrics and detailed embroidery, telling a story of elegance
+            and glamour. Explore these stylish wedding lehengas to ensure you look stunning and shine on your special
+            day. Choose the most popular and sought-after wedding lehenga for women, adding a touch of classic beauty
+            and contemporary flair to your bridal look.</p>
+
+        <p class="text-black text-xl font-semibold mt-5">How soon should you start shopping for Bridal Lehengas?</p>
+        <p class="text-gray-500 text-xs">Ideally, 6 to 9 months. Your wedding is a once-in-lifetime event and you got to
+            look perfect on this special day. You must start looking for your options at least 6-9 months before the
+            wedding day. This can be done by keeping an eye on bridal fashion shows, visiting designer stores, and
+            browsing the latest bridal lehnga for wedding trends in Weddings By Betterhalf’s ideabook. 4-6 months before
+            your wedding is the time when you must have a narrowed-down list of options for your bridal couture. 2-3
+            months before your wedding is the time to decide on your ultimate lehenga for wedding. The stitching of your
+            lehenga must be done a month before your wedding. Remember to try your outfit a week before your wedding to
+            make sure it fits.</p>
+
+        <p class="text-black text-xl font-semibold mt-5">Who is the famous Bridal lehenga designer?</p>
+        <p class="text-gray-500 text-xs">There are several renowned bridal lehenga designers in India, each known for
+            their unique styles and contributions to the world of bridal fashion. Some of the most popular names include
+            Sabyasachi Mukherjee, Manish Malhotra, Tarun Tahiliani, Anita Dongre, Abu Jani Sandeep Khosla, Ritu Kumar,
+            and many more.</p>
+
+        <p class="text-black text-xl font-semibold mt-5">How to Choose the Perfect Bridal Lehenga</p>
+        <p class="text-gray-500 text-xs">A beautiful bridal lehenga is a blend of personal style, comfort, and cultural
+            aesthetics. Starting the search early allows for a thoughtful exploration of various designs and styles.
+            Setting a budget is key, ensuring that the dream lehenga aligns with financial considerations. Consider your
+            body type and opt for a silhouette that enhances your natural beauty. The choice of fabric, whether silk,
+            velvet, or georgette, should harmonize with the wedding season. While traditional reds and maroons are
+            timeless, contemporary brides are embracing a spectrum of colours, letting personal preferences and the
+            overall theme guide their choice. Comfort is paramount for a day filled with festivities, and a trial is
+            essential to assess fit and movement. Trusting your instincts in the selection process ensures that the
+            chosen bridal lehenga not only complements the celebration's aesthetics but also becomes a cherished
+            reflection of your unique style and the joy of the occasion.</p>
+
+        <hr class="mt-10 w-full">
+
+
+    </footer>
+
+    <section
+        class="w-full h-full bg-gradient-to-r from-pink-950 via-purple-950 to-blue-950 px-14 py-10 mt-10 flex flex-row justify-between">
+        <span class="flex flex-col gap-3">
+            <p class="text-xl text-white hover:text-pink-700 font-semibold cursor-none">Company</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Careers</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Register as Partner</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Client Terms</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Vendor Terms</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Privacy Policy</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Refund Policy</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Service Payment Plan</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">About Us</p>
+        </span>
+
+        <span class="flex flex-col gap-3">
+            <p class="text-xl text-white hover:text-pink-700 font-semibold cursor-none">Explore</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Ideas</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Venues</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Decorators</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Photgraphers</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Services</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Invitation Card</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Blog</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Price Beat Challenge</p>
+        </span>
+
+        <span class="flex flex-col gap-3">
+            <p class="text-xl text-white hover:text-pink-700 font-semibold cursor-none">Contact Us</p>
+            <p class="text-sm text-gray-500">For Wedding Services</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa fa-phone"></i> +918884090499
+            </p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">For Customer Support</p>
+            <p class="text-sm text-gray-500">Wedding Photgraphers</p>
+            <p class="text-sm text-black hover:text-pink-700 cursor-pointer"><i class="fa fa-mailbox"></i>
+                support@theweddingcompany.com</p>
+            <p class="text-sm text-gray-500">Bangalore - Bussiness address/operating address</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Ground Floor, 375,</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">5th Mail Rd,HSR Layout Sector 6,
+                Bangaluru,Karnataka 560102</p>
+        </span>
+
+        <span class="flex flex-col gap-3">
+            <p class="text-xl text-white hover:text-pink-700 font-semibold cursor-none">Follow Us On</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa-brands fa-instagram"></i>
+                Instagram</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa-brands fa-facebook"></i>
+                Facebook</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa-brands fa-youtube"></i>
+                Youtube</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa-brands fa-linkedin"></i>
+                LinkedIn</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer flex "><svg
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3500 3500"
+                    class="fill-white hover:fill-pink-700 cursor-pointer"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                    <path
+                        d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z" />
+                </svg> <span class="absolute ml-10 font-semibold">X</span></p>
+        </span>
+    </section>
+
+
+
+
+    <script src="./script.js"></script>
+    <script>lucide.createIcons();</script>
+    <script>eva.replace();</script>
+</body>
+
+</html>

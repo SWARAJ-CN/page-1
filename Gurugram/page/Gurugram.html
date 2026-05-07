@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Wedding | The Wedding Co.</title>
+    <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/eva-icons"></script>
+    <style>
+        .card-img {
+            height: 220px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        @media (max-width: 640px) {
+            .card-img {
+                height: 200px;
+            }
+        }
+
+        .sticky-btn-apply {
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased">
+
+    <!-- nav section  -->
+    <div class="w-full bg-pink-700 flex flex-col md:flex-row justify-between items-center gap-4 p-5 md:p-8">
+        <p class="text-white text-3xl md:text-5xl font-bold flex flex-wrap items-center gap-2">
+            <a href="/index.html"
+                class="text-sm md:text-base text-pink-950 underline transition hover:text-white">back/Home</a>
+            <span class="inline-block">Wedding Venues in Gurugram</span>
+        </p>
+        <div
+            class="border-white overflow-hidden bg-pink-900 rounded-2xl border-2 flex flex-row items-center px-4 text-white w-full md:w-auto max-w-md">
+            <i class="fa fa-search"></i>
+            <input type="search"
+                class="h-full w-full bg-transparent text-white placeholder:text-white px-3 py-2 outline-none appearance-none [&::-webkit-search-cancel-button]:appearance-none"
+                placeholder="Search Vendor...">
+        </div>
+    </div>
+
+    <!-- filter + grid cards -->
+    <div class="flex flex-col lg:flex-row gap-6 lg:gap-14 w-full h-full px-4 sm:px-6 lg:px-32 py-6 lg:py-20">
+
+        <!-- filter section (updated for Gurugram) -->
+        <div
+            class="h-[70vh] md:h-[78vh] relative overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:hidden px-4 pb-4 border rounded-2xl flex flex-col gap-5 w-full lg:w-80 xl:w-96 shadow-sm bg-white">
+            <p class="font-semibold pt-3 text-lg">Filters</p>
+            <hr>
+            <span class="flex flex-row items-center justify-between">
+                <p class="font-semibold">Event city</p> <i class="fa-solid fa-location-crosshairs"
+                    style="color: rgb(238, 7, 136);"></i>
+            </span>
+            <span class="border rounded-[8px] flex flex-row gap-2 items-center text-gray-600 px-5 py-1.5 bg-gray-50">
+                <i data-eva="pin-outline"></i>
+                <p class="text-sm text-gray-700 px-1">Gurugram</p>
+            </span>
+            <hr>
+            <div
+                class="p-3 bg-[url('./BangloreAssets/minimap.webp')] bg-cover bg-center items-center justify-center flex h-20 rounded-2xl border-2 w-full">
+                <button
+                    class="rounded-3xl font-semibold text-white bg-pink-400 w-full py-2 px-3 text-sm hover:bg-pink-500 transition">View
+                    on map</button>
+            </div>
+
+            <!-- Locality dropdown (Gurugram specific) -->
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Locality</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <div
+                        class="w-full border-2 rounded-2xl overflow-hidden flex flex-row gap-1 items-center px-2 text-gray-400">
+                        <i class="fa fa-search"></i>
+                        <input type="search" placeholder="search locality" class="p-3 object-cover outline-none w-full">
+                    </div>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Sector 29</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Sohna Road</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Golf Course Road</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Manesar</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Sector 56</p>
+                    </span>
+                    <span class="flex gap-5 mt-5">
+                        <p class="text-pink-500 cursor-pointer">View All</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>No of guests</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">&lt; 100</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">100 - 250</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">250 - 500</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">500 - 1000</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">&gt; 1000</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Pricing Type</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5">
+                        <p class="text-black text-sm underline font-semibold">Per plate</p>
+                        <p class="text-sm text-gray-400">Per day</p>
+                    </span>
+                    <span
+                        class="flex flex-row items-center justify-between gap-2 w-full relative h-2 bg-pink-800 mt-5 rounded-2xl">
+                        <span class="h-5 w-5 bg-pink-100 border border-pink-400 absolute rounded-full left-0"></span>
+                        <span class="h-5 w-5 bg-pink-100 border border-pink-400 absolute rounded-full right-0"></span>
+                    </span>
+                    <span class="w-full flex flex-row justify-between items-center mt-3">
+                        <p class="text-xs bg-gray-200 px-1">₹0</p>
+                        <p class="text-xs bg-gray-200 px-1">₹5,000</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Food preference</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Vegetarian</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Non - Vegetarian</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Vegan</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Venue Type</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">5 Star Venues</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">4 Star Venues</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">3 Star Venues</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Resorts</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Convention Halls</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Farm Houses</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Kalyan Mantapas</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Heritage Property</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Venue Area</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-black font-bold">Indoor</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Banquet Halls</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Function Halls</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Party Halls</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Amphitheatre</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-black font-bold">Outdoor</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Pool Side</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Open Terrace</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Open Lawn</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Facilities</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <p class="text-black font-bold">Catering</p>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">In-house Catering Only</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside Catering Allowed</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside Catering Only</p>
+                    </span>
+                    <p class="text-black font-bold">Alcohol Policy</p>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">In-house Alcohol Only</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside Alcohol Allowed</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside Alcohol Only</p>
+                    </span>
+                    <p class="text-black font-bold">Decor</p>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">In-house Decoration Only</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside Decoration Allowed</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside Decoration Only</p>
+                    </span>
+                    <p class="text-black font-bold">Entertainment</p>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">In-house DJ Only</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside DJ Allowed</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Outside DJ Only</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Room Counts</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">&lt; 30</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">30 - 60</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">61 - 100</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">100 - 200</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">200 - 1000</p>
+                    </span>
+                </div>
+            </label>
+
+            <label class="flex items-start gap-4 cursor-pointer flex-col w-full">
+                <input type="checkbox" class="peer hidden" checked>
+                <span class="flex flex-row justify-between items-center w-full">
+                    <p>Ratings</p><i class="fa fa-angle-down transition peer-checked:rotate-180"></i>
+                </span>
+                <div class="hidden bg-white peer-checked:block flex flex-col gap-5 w-full">
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Rated <i class="fa fa-star"></i> 4.5+</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Rated <i class="fa fa-star"></i> 4+</p>
+                    </span>
+                    <span class="flex gap-5 mt-5"><input type="checkbox">
+                        <p class="text-gray-500">Rated <i class="fa fa-star"></i> 3+</p>
+                    </span>
+                </div>
+            </label>
+
+            <!--  FILTER BUTTON -->
+            <div class="sticky bottom-3 z-20 mt-6 mb-1 w-full border-0">
+                <button
+                    class="w-full bg-gray-500 hover:bg-gray-600 text-white font-semibold py-3 rounded-xl shadow-lg transition-all duration-200 flex items-center justify-center gap-2 text-base border-0">
+                    <i class="fa-solid fa-sliders-h"></i> Apply Filters
+                </button>
+            </div>
+        </div>
+        <!-- end filter section -->
+
+        <!-- card section -->
+        <div
+            class="flex flex-col gap-6 h-[70vh] md:h-[78vh] overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:hidden w-full">
+            <p class="text-gray-400 text-xs font-semibold">The Wedding Company / Wedding Venues / <span
+                    class="text-gray-600">Gurugram</span></p>
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 w-full">
+                <p class="text-xl md:text-3xl text-gray-400 font-semibold">Showing <span class="text-gray-600">276
+                        results</span> as per your search criteria</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-sm bg-pink-200 px-3 py-1 rounded-[3px] text-pink-500 cursor-pointer">All</span>
+                    <span
+                        class="text-sm bg-gray-200 px-3 py-1 rounded-[3px] text-gray-500 cursor-pointer">Bestsellers</span>
+                    <span
+                        class="text-sm bg-gray-200 px-3 py-1 rounded-[3px] text-gray-500 cursor-pointer">Premium</span>
+                    <span class="text-sm bg-gray-200 px-3 py-1 rounded-[3px] text-gray-500 cursor-pointer">Budget
+                        Friendly</span>
+                    <span class="text-sm bg-gray-200 px-3 py-1 rounded-[3px] text-gray-500 cursor-pointer">TWC's
+                        choice</span>
+                </div>
+            </div>
+
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                <!-- card 1 - Crowne Plaza Gurgaon -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex flex-row items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full">
+                        <img src="../assets/asset_1.webp" class="card-img">
+                    </div>
+                    <div class="px-5 py-4 space-y-1">
+                        <p class="text-lg font-semibold">Crowne Plaza Gurgaon</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.5 <span class="text-gray-400 text-xs">(13374 users)</span></p>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sector 29, Gurugram</p>
+                        </span>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹4000+</p> <i class="fa-solid fa-user-group ml-1"></i>
+                            <p>25 - 2500</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 2 - Taj Damdama Resort -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex flex-row items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full">
+                        <img src="../assets/asset_2.png" class="card-img">
+                    </div>
+                    <div class="px-5 py-4 space-y-1">
+                        <p class="text-lg font-semibold">Taj Damdama Resort</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.4 <span class="text-gray-400 text-xs">(5363 users)</span></p>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sohna-gurgaon Road, Gurugram</p>
+                        </span>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹4000+</p> <i class="fa-solid fa-user-group ml-1"></i>
+                            <p>100 - 500</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 3 - Karma Lakelands -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex flex-row items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full">
+                        <img src="../assets/asset_3.webp" class="card-img">
+                    </div>
+                    <div class="px-5 py-4 space-y-1">
+                        <p class="text-lg font-semibold">Karma Lakelands</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.4 <span class="text-gray-400 text-xs">(8153 users)</span></p>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sector 80, Gurugram</p>
+                        </span>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹3800+</p> <i class="fa-solid fa-user-group ml-1"></i>
+                            <p>30 - 1000</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 4 - Royal Swan -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex flex-row items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full">
+                        <img src="../assets/asset_4.jpg" class="card-img">
+                    </div>
+                    <div class="px-5 py-4 space-y-1">
+                        <p class="text-lg font-semibold">Royal Swan</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.3 <span class="text-gray-400 text-xs">(272 users)</span></p>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sector 33, Gurugram</p>
+                        </span>
+                        <span class="w-full items-center flex flex-row gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹1800+</p> <i class="fa-solid fa-user-group ml-1"></i>
+                            <p>75 - 1000</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 5 - Heritage Village -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="../assets/asset_5.webp" class="card-img"></div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Heritage Village</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.3 <span class="text-gray-400 text-xs">(7369 users)</span></p><span class="flex gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Manesar, Gurugram</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹4350+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>50 - 450</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 6 - Clarens -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="../assets/asset_6.jpg" class="card-img"></div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Clarens</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.2 <span class="text-gray-400 text-xs">(2189 users)</span></p><span class="flex gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sector 29, Gurugram</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹1800+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>50 - 150</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 7 - Country Touch Resort - Gurgaon -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="../assets/asset_7.webp" class="card-img"></div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Country Touch Resort - Gurgaon</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.1 <span class="text-gray-400 text-xs">(311 users)</span></p><span class="flex gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sohna Road, Gurugram</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹1000+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>700 - 1100</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 8 - Club Florence -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="../assets/asset_8.webp" class="card-img"></div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Club Florence</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.1 <span class="text-gray-400 text-xs">(3275 users)</span></p><span class="flex gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sector 56, Gurugram</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹1300+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>30 - 400</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 9 - Botanix Nature Resort -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="../assets/asset_9.webp" class="card-img"></div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Botanix Nature Resort</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 3.9 <span class="text-gray-400 text-xs">(1332 users)</span></p><span class="flex gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sohna, Gurugram</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹2700+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>160 - 1000</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 10 - Crowne Plaza repeat -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="../assets/asset_10.webp" class="card-img"></div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Crowne Plaza Gurgaon</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.5 <span class="text-gray-400 text-xs">(13374 users)</span></p><span class="flex gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sector 29, Gurugram</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹4000+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>25 - 2500</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 11 - Taj Damdama repeat -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="../assets/asset_11.webp" class="card-img"></div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Taj Damdama Resort</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.4 <span class="text-gray-400 text-xs">(5363 users)</span></p><span class="flex gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sohna-gurgaon Road, Gurugram</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹4000+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>100 - 500</p>
+                        </span>
+                    </div>
+                </div>
+                <!-- card 12 - Karma Lakelands repeat -->
+                <div class="border rounded-2xl overflow-hidden shadow-sm bg-white transition hover:shadow-md">
+                    <div class="w-full bg-yellow-500 py-2">
+                        <p class="text-sm text-white font-semibold flex items-center justify-center gap-2"><i
+                                class="fa-solid fa-award"></i>TWC partner</p>
+                    </div>
+                    <div class="relative overflow-hidden w-full"><img src="../assets/asset_12.jpg" class="card-img"></div>
+                    <div class="px-5 py-4">
+                        <p class="text-lg font-semibold">Karma Lakelands</p>
+                        <p><i class="fa fa-star text-yellow-400"></i> 4.4 <span class="text-gray-400 text-xs">(8153 users)</span></p><span class="flex gap-2 text-gray-500"><i class="fa-solid fa-location-dot"></i>
+                            <p>Sector 80, Gurugram</p>
+                        </span><span class="flex gap-2 text-gray-500"><i data-lucide="badge-indian-rupee" class="w-4"></i>
+                            <p>Per plate ₹3800+</p> <i class="fa-solid fa-user-group"></i>
+                            <p>30 - 1000</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="translate-y-[-0px] flex flex-row flex-wrap gap-4 w-full sticky bottom-0 Z-5 items-center justify-center">
+        <button
+            class="bg-pink-800 text-white font-semibold text-lg rounded-3xl  px-8 py-3 cursor-pointer hover:bg-pink-900  mb-2">Get
+            Free Quote</button>
+        <button
+            class="bg-green-600 text-white font-semibold text-lg rounded-3xl px-8 py-3 cursor-pointer hover:bg-green-700 mb-2"><i
+                class="fa-brands fa-whatsapp"></i> Chat with us</button>
+    </div>
+
+    <!-- Footer - Gurugram content -->
+    <footer class="mt-4 flex flex-col gap-3 bg-gray-50 px-10 py-5">
+        <p class="text-gray-500 text-xs">Gurugram is now one of the most popular wedding destinations in Delhi NCR. This locale has everything from stylish banquet halls to open-air lawns and private farmhouses. Couples can plan intimate gatherings or large celebrations with ease. The Wedding Company makes the process simple by helping you compare venues by budget, size, and style.</p>
+        <p class="text-gray-500 text-xs">Here you’ll find venues by budget, location, and style to help you plan your dream wedding.</p>
+        <p class="text-black font-semibold text-lg">Wedding Venues in Gurugram with Price</p>
+        <p class="text-gray-500 text-xs">Gurugram has venue options for every type of wedding. The city also offers a variety of prices, guest capacity, and services, so it is easy to shortlist the right venue for your big day.</p>
+        
+        <p class="text-black text-base ">Wedding venues under INR 1000 per plate</p>
+        <p class="text-gray-500 text-xs">These budget-friendly venues in Gurugram give you stylish and comfortable spaces for intimate weddings without stretching your budget.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Vamsor Heights</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Hotel Green Earth</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Shagun A Perfect Party Lawn</span></p>
+
+        <p class="text-black text-base ">Wedding venues with Cost between INR 1000 & INR 3000 per plate</p>
+        <p class="text-gray-500 text-xs">Mid-range venues in Gurugram offer a perfect mix of elegance and convenience, providing good facilities at affordable prices.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Royal Swan</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Holiday Inn</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Cuisineo Banquet</span></p>
+
+        <p class="text-black text-base ">Which are the budget wedding venues in Gurugram under ₹5 lakhs?</p>
+        <p class="text-gray-500 text-xs">For couples looking to save costs, these venues provide beautiful wedding spaces while keeping overall expenses low.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Jain Farms</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Double Tree Hilton - Golf Course Road</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">V Club - Gurgaon</span></p>
+
+        <p class="text-black text-base ">What are the best wedding venues in Gurugram under ₹10 lakhs?</p>
+        <p class="text-gray-500 text-xs">These venues balance style and affordability, making them ideal for couples planning a memorable wedding without overspending.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Radisson Hotel Gurugram Sohna Road City Center</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Crossroads Banquets Conventions</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Dreams Garden</span></p>
+
+        <p class="text-black text-base ">Wedding Venues in Gurugram Between ₹10-20 Lakhs</p>
+        <p class="text-gray-500 text-xs">If you want a classy wedding without going overboard, these venues offer elegant settings and premium services at mid-range prices.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline">Club Florence</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Best Western - Manesar</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline">Golden Tulip</span></p>
+
+        <p class="text-black text-base ">Luxury Venues ₹20 Lakhs+ (₹3000+ per plate)</p>
+        <p class="text-gray-500 text-xs">For a truly grand celebration, these luxury venues in Gurugram provide top-tier experiences, premium service, and opulent settings.</p>
+        <p class="text-gray-500 text-xs">1.<span class="underline text-black">Leela Ambience</span></p>
+        <p class="text-gray-500 text-xs">2.<span class="underline">Taj Damdama Resort</span></p>
+        <p class="text-gray-500 text-xs">3.<span class="underline text-black">ITC Grand Bharat Manesar</span></p>
+
+        <p class="text-black text-2xl font-bold">Top 10 Wedding Venues in Gurugram With Price & Capacity</p>
+        <p class="text-gray-500 text-xs">1. <span class="underline">The Leela Ambience Gurugram</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 70-800 guests</li>
+            <li>Price: ₹6000 per plate</li>
+            <li>Best For: Luxury weddings with grand banquet halls and elegant indoor and outdoor spaces.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">2. <span class="underline">Trident Hotel, Gurugram</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 20-800 guests</li>
+            <li>Price: ₹6000 per plate</li>
+            <li>Best For: Upscale weddings with versatile halls and modern amenities.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">3. <span class="underline">The Oberoi, Gurugram</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 150-1000 guests</li>
+            <li>Price: ₹3300 per plate</li>
+            <li>Best For: Premium weddings with refined indoor spaces and landscaped lawns.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">4. <span class="underline">ITC Grand Bharat, Manesar</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 30-400 guests</li>
+            <li>Price: ₹4000 per plate</li>
+            <li>Best For: Lavish weddings in a luxury resort with multiple event spaces.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">5. <span class="underline">The Westin Gurgaon</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 15-525 guests</li>
+            <li>Price: ₹2800-3000 per plate</li>
+            <li>Best For: Stylish weddings in serene surroundings.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">6. <span class="underline">Taj City Centre, Gurugram</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 100-450 guests</li>
+            <li>Price: ₹5000 per plate</li>
+            <li>Best For: Elegant weddings with premium banquet halls and attentive service.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">7. <span class="underline">Royal Swan Banquet</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 150-1000 guests</li>
+            <li>Price: ₹1900-2100 per plate</li>
+            <li>Best For: Budget-friendly weddings with spacious halls and contemporary facilities.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">8. <span class="underline">Club Florence, Sector 56</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 30-400 guests</li>
+            <li>Price: ₹1400-1500 per plate</li>
+            <li>Best For: Mid-sized celebrations with modern amenities and comfortable indoor spaces.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">9. <span class="underline">Kanerbaag</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 700-800 guests</li>
+            <li>Price: ₹1400-1700 per plate</li>
+            <li>Best For: Intimate and mid-range weddings with banquet halls and outdoor lawns.</li>
+        </ul>
+
+        <p class="text-gray-500 text-xs">10. <span class="underline">Karma Lakelands, Sector 80</span></p>
+        <ul class="text-gray-500 text-xs list-disc px-8">
+            <li>Capacity: 30-1500 guests</li>
+            <li>Price: ₹4800-5100 per plate</li>
+            <li>Best For: Weddings with a variety of indoor and outdoor venues in a resort-style setting.</li>
+        </ul>
+
+        <p class="text-black text-2xl font-bold">Destination Wedding Venues Near Gurugram</p>
+        <p class="text-gray-500 text-xs">Gurugram is surrounded by several scenic spots perfect for destination weddings:</p>
+        <ul class="text-gray-500 text-md list-disc px-8">
+            <li><span class="text-black font-semibold">Neemrana:</span> Historic forts and heritage hotels perfect for regal weddings with vintage charm.</li>
+            <li><span class="text-black font-semibold">Manesar:</span> Luxury resorts and green landscapes ideal for grand celebrations close to the city.</li>
+            <li><span class="text-black font-semibold">Sariska:</span> Wildlife resorts and heritage hotels for adventurous yet luxurious weddings.</li>
+            <li><span class="text-black font-semibold">Alwar:</span> Palaces and forts offering a royal and majestic backdrop for weddings.</li>
+            <li><span class="text-black font-semibold">Agra:</span> Iconic Mughal architecture and heritage hotels perfect for romantic weddings.</li>
+        </ul>
+
+        <p class="text-black text-2xl font-bold">How to Find the Best Wedding Venues in Gurugram</p>
+        <p class="text-gray-500 text-xs px-8">Finding the right wedding venue in Gurugram depends on your budget, guest list, and event style. Our team makes the process easier by:</p>
+        <ul class="text-gray-500 text-md list-disc px-8">
+            <li>Shortlisting hotels, resorts, and banquet halls that match your guest count and budget.</li>
+            <li>Comparing options across luxury resorts, boutique stays, and open-air lawns.</li>
+            <li>Checking catering, decor, and vendor policies before you confirm.</li>
+            <li>Organising site visits and helping you get the best deals.</li>
+            <p class="text-gray-500 text-xs mt-2">This way, your chosen venue fits both your vision and your budget.</p>
+        </ul>
+
+        <p class="text-black text-xl font-semibold mt-5">What to Consider Before Booking a Wedding Venue in Gurugram</p>
+        <ul class="text-gray-500 text-md list-disc px-8">
+            <li><span class="font-semibold text-black">Date:</span> Popular venues in Gurugram get booked quickly, so block your dates early.</li>
+            <li><span class="font-semibold text-black">Guest count:</span> Make sure the seating and floating capacities meet your needs.</li>
+            <li><span class="font-semibold text-black">Budget:</span> Review rental charges, per-plate rates, and package inclusions.</li>
+            <li><span class="font-semibold text-black">Location:</span> Choose a venue that is convenient from Delhi and Gurugram airports and highways.</li>
+            <li><span class="font-semibold text-black">Parking:</span> Check parking availability for your guest count.</li>
+            <li><span class="font-semibold text-black">Timings:</span> Confirm rules on music curfews, late-night events, and multi-day celebrations.</li>
+        </ul>
+
+        <p class="text-black text-xl font-semibold mt-5">Frequently asked questions</p>
+        <p class="text-black text-md font-semibold">What is the average cost of wedding venues in Gurugram?</p>
+        <p class="text-gray-500 text-xs">The average cost of wedding venues in Gurugram ranges from ₹5-10 lakhs for a two-day wedding, depending on size, facilities, and services. Smaller banquet halls can host weddings under ₹5 lakhs, while luxury resorts often start from ₹8 lakhs and above.</p>
+
+        <p class="text-black text-md font-semibold mt-5">Which are the most popular wedding venues in Gurugram?</p>
+        <p class="text-gray-500 text-xs">Some of the well-known venues include The Leela Ambience Gurugram, Hyatt Regency Gurugram, ITC Grand Bharat, Trident Gurugram, Karma Lakelands, and The Westin Sohna Resort & Spa.</p>
+
+        <p class="text-black text-md font-semibold mt-5">What is the best time of year to get married in Gurugram?</p>
+        <p class="text-gray-500 text-xs">The most suitable season is from October to March, when the weather is pleasant for both indoor and outdoor weddings.</p>
+
+        <p class="text-black text-md font-semibold mt-5">Do Gurugram venues allow overnight weddings?</p>
+        <p class="text-gray-500 text-xs">Yes, most resorts and banquet halls in Gurugram allow overnight stays and multi-day celebrations. Music and outdoor event curfews may differ by venue, so it is best to confirm in advance.</p>
+
+        <p class="text-black text-md font-semibold mt-5">Which localities near me in Gurugram have the best wedding venues?</p>
+        <p class="text-gray-500 text-xs">Top areas for weddings in Gurugram include Sohna Road, MG Road, Golf Course Extension, Manesar, and Sector 29. These offer a mix of luxury resorts, banquet halls, and boutique venues.</p>
+
+        <p class="text-black text-md font-semibold mt-5">How to find wedding venues in Gurugram near me?</p>
+        <p class="text-gray-500 text-xs">You can search venues by budget, guest capacity, and location using our platform. We also help with site visits, vendor coordination, and bookings to make the planning process seamless.</p>
+
+        <hr class="mt-10 w-full">
+
+        <div class="flex flex-col gap-10 mt-5">
+            <p class="text-black font-semibold text-xl">Types Of Venues in Gurugram</p>
+            <div class="flex flex-row justify-between flex-wrap gap-5">
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best 5 Star Wedding Venues in Gurugram</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best 4 Star Wedding Venues in Gurugram</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best 3 Star Wedding Venues in Gurugram</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Wedding Resorts in Gurugram</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Convention Halls in Gurugram</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Farm House for Wedding in Gurugram</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Kalyan Mandap/Mantapa in Gurugram</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Banquet Halls in Gurugram</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Function Halls in Gurugram</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Party Halls in Gurugram</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Pool Side Wedding Venues in Gurugram</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Marriage Lawns in Gurugram</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Heritage Properties in Gurugram</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Open Terraces in Gurugram</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Best Amphitheatres in Gurugram</p>
+                </span>
+            </div>
+        </div>
+
+        <hr class="mt-5 w-full border-pink-200">
+
+        <div class="flex flex-col gap-10 mt-5">
+            <p class="text-black font-semibold text-xl">Venues based on locality</p>
+            <div class="flex flex-row justify-between flex-wrap gap-5">
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Sector 29</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Sohna Road</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Golf Course Road</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Manesar</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues In Delhi</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues In Noida</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues In Faridabad</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues In Ghaziabad</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues In South Delhi</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues In West Delhi</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues In East Delhi</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Venues In North Delhi</p>
+                </span>
+            </div>
+        </div>
+
+        <hr class="mt-5 w-full border-pink-200">
+
+        <div class="flex flex-col gap-10 mt-5">
+            <p class="text-black font-semibold text-xl">Destination Wedding Venues</p>
+            <div class="flex flex-row justify-between flex-wrap gap-5">
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Goa</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Udaipur</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Jaipur</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Jim Corbett</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Lonavala</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Rishikesh</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Destination Wedding in Lakshadweep</p>
+                </span>
+            </div>
+        </div>
+
+        <hr class="mt-5 w-full border-pink-200">
+
+        <div class="flex flex-col gap-10 mt-5">
+            <p class="text-black font-semibold text-xl">Other Wedding Services</p>
+            <div class="flex flex-row gap-72 flex-wrap">
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Photographers in Gurugram</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Decorators in Gurugram</p>
+                </span>
+            </div>
+        </div>
+
+        <hr class="mt-5 w-full border-pink-200">
+
+        <div class="flex flex-col gap-10 mt-5">
+            <p class="text-black font-semibold text-xl">Explore Wedding Ideas</p>
+            <div class="flex flex-row justify-between flex-wrap gap-5">
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Bridal Lehenga Designs</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Cakes Ideas</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Invitations Design</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Mehendi Design Photos</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Saree Design</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Blouse Design Photos</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Decoration Ideas</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Photoshoot Poses</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Bridal Makeup</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Jewellery Designs</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Dresses</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Groom Dresses</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Accessories</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Gift Ideas</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Hairstyles</p>
+                </span>
+                <span class="flex flex-col gap-3">
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Pre Wedding Photoshoot Ideas</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Wedding Themes</p>
+                    <p class="text-sm text-gray-500 hover:underline cursor-pointer">Venue Ideas</p>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <section
+        class="w-full h-full bg-gradient-to-r from-pink-950 via-purple-950 to-blue-950 px-14 py-10 mt-10 flex flex-row justify-between">
+        <span class="flex flex-col gap-3">
+            <p class="text-xl text-white hover:text-pink-700 font-semibold cursor-none">Company</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Careers</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Register as Partner</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Client Terms</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Vendor Terms</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Privacy Policy</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Refund Policy</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Service Payment Plan</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">About Us</p>
+        </span>
+
+        <span class="flex flex-col gap-3">
+            <p class="text-xl text-white hover:text-pink-700 font-semibold cursor-none">Explore</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Ideas</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Venues</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Decorators</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Photgraphers</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Services</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Invitation Card</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Wedding Blog</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Price Beat Challenge</p>
+        </span>
+
+        <span class="flex flex-col gap-3">
+            <p class="text-xl text-white hover:text-pink-700 font-semibold cursor-none">Contact Us</p>
+            <p class="text-sm text-gray-500">For Wedding Services</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa fa-phone"></i> +918884090499
+            </p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">For Customer Support</p>
+            <p class="text-sm text-gray-500">Wedding Photgraphers</p>
+            <p class="text-sm text-black hover:text-pink-700 cursor-pointer"><i class="fa fa-mailbox"></i>
+                support@theweddingcompany.com</p>
+            <p class="text-sm text-gray-500">Bangalore - Bussiness address/operating address</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">Ground Floor, 375,</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer">5th Mail Rd,HSR Layout Sector 6,
+                Bangaluru,Karnataka 560102</p>
+        </span>
+
+        <span class="flex flex-col gap-3">
+            <p class="text-xl text-white hover:text-pink-700 font-semibold cursor-none">Follow Us On</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa-brands fa-instagram"></i>
+                Instagram</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa-brands fa-facebook"></i>
+                Facebook</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa-brands fa-youtube"></i>
+                Youtube</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer"><i class="fa-brands fa-linkedin"></i>
+                LinkedIn</p>
+            <p class="text-sm text-white hover:text-pink-700 cursor-pointer flex "><svg
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3500 3500"
+                    class="fill-white hover:fill-pink-700 cursor-pointer"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                    <path
+                        d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z" />
+                </svg> <span class="absolute ml-10 font-semibold">X</span></p>
+        </span>
+    </section>
+    <script src="./script.js"></script>
+    <script>lucide.createIcons();</script>
+    <script>eva.replace();</script>
+</body>
+
+</html>
